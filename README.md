@@ -1,1 +1,2 @@
-# BSPWM Configurations for exodia
+# BSPWM-Exodia 
+BSPWM Configurations for exodia
