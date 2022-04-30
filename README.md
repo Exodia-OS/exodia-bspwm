@@ -13,8 +13,8 @@ BSPWM Configurations for exodia
 
 <!-- # ------------ Our Plan ------------ # -->
 
-## Our Plan (supported Architecture)
-
+<h2 align="center"> Our Plan (supported Architecture) </h3>
+ 
 - [ ] Intel/AMD-x64 _ Intel/AMD-x86.
 - [ ] ARM (Raspberry Pi ,Pine64, HardKernel, etc...).
 - [ ] Live image (CD/DVD/USB/PXE).
@@ -26,7 +26,27 @@ BSPWM Configurations for exodia
 <!-- # ------------ Our Plan ------------ # -->
 
 
+<!-- # ------------ ARM Images ------------ # -->
+
+<h2 align="center"> ARM Images </h3>
+
+| ARM Images   |       Wifi-Slax       |  EXodia*OS*  | 
+| -------------------- |:---------------------:|:----------------------:|
+| [Raspberry Pi](https://www.raspberrypi.org/) Image (Pi 4, Pi 3, Pi 2, Pi 1, Pi Zero)|   No  |  Yes &emsp; Progressing...  |
+| [Pine64](https://www.pine64.org/) Image   |          No           |  Yes &emsp; Progressing...  |
+| [HardKernel](https://www.hardkernel.com/) Image |  No |  Yes &emsp; Progressing...  |
+| [FriendlyARM](https://www.friendlyarm.com/) Image   | No |  Yes &emsp; Progressing...  |
+| [Banana Pi](https://www.banana-pi.org/) Image   | No  |  Yes &emsp; Progressing...  |
+| [Gateworks](https://www.gateworks.com/) Image   | No |  Yes &emsp; Progressing...  |
+| [USB armory MkII](http://inversepath.com/usbarmory) Image   | No |  Yes &emsp; Progressing...  |
+| [Jetson](https://developer.nvidia.com/buy-jetson) Image   | No |  Yes &emsp; Progressing...  |
+
+<!-- # ------------ ARM Images ------------ # -->
+
+
 <!-- # ------------ Wifi-Slax Vs  EXodia OS ------------ # -->
+
+<h2 align="center"> Wifi-Slax Vs  EXodia OS </h3>
 
 | Feature Supporting   |       Wifi-Slax       |  EXodia*OS*  | 
 | -------------------- |:---------------------:|:------------------:|
@@ -44,25 +64,12 @@ BSPWM Configurations for exodia
 <!-- # ------------ Wifi-Slax Vs  EXodia OS ------------ # -->
 
 
-<!-- # ------------ ARM Images ------------ # -->
 
-| ARM Images   |       Wifi-Slax       |  EXodia*OS*  | 
-| -------------------- |:---------------------:|:----------------------:|
-| [Raspberry Pi](https://www.raspberrypi.org/) Image (Pi 4, Pi 3, Pi 2, Pi 1, Pi Zero)|   No  |  Yes &emsp; Progressing...  |
-| [Pine64](https://www.pine64.org/) Image   |          No           |  Yes &emsp; Progressing...  |
-| [HardKernel](https://www.hardkernel.com/) Image |  No |  Yes &emsp; Progressing...  |
-| [FriendlyARM](https://www.friendlyarm.com/) Image   | No |  Yes &emsp; Progressing...  |
-| [Banana Pi](https://www.banana-pi.org/) Image   | No  |  Yes &emsp; Progressing...  |
-| [Gateworks](https://www.gateworks.com/) Image   | No |  Yes &emsp; Progressing...  |
-| [USB armory MkII](http://inversepath.com/usbarmory) Image   | No |  Yes &emsp; Progressing...  |
-| [Jetson](https://developer.nvidia.com/buy-jetson) Image   | No |  Yes &emsp; Progressing...  |
-
-<!-- # ------------ ARM Images ------------ # -->
 
 
 <!-- # ------------ Future Work ------------ # -->
 
-## Future Work
+<h2 align="center"> Future Work </h3>
 
 - [ ] Creat Community For Distro(Forum, wiki).
 - [ ] Community Mobile App For Android & IOS(Forum, wiki).
