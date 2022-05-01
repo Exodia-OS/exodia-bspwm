@@ -5,3 +5,6 @@ mv homeConfig/* ~/
 
 # move all files to .config directory 
 mv dotConfig/* ~/.config/
+
+# remove unneeded files
+cd .. && rm -rf exodia-bspwm
