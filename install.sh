@@ -1,8 +1,7 @@
 #!/bin/bash
 
-mv bspwm ~/.config/
-mv sxhkd ~/.config/
-mv dunst ~/.config/
-mv networkmanager-dmenu ~/.config/
+# move all files to home directory 
 mv homeConfig/* ~/
 
+# move all files to .config directory 
+mv dotConfig/* ~/.config/
