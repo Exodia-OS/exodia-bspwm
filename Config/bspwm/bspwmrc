@@ -104,6 +104,8 @@ bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 bspc rule -a Brave-browser desktop='^2' follow=on focus=on
+# Windscribe2 VPN
+bspc rule -a Windscribe2 desktop='^2' state=floating follow=on focus=on
 
 # ------------ apps open in web workspaces
 
