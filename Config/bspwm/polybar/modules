@@ -130,18 +130,18 @@ format-full = <label-full>
 format-full-prefix = " "
 format-full-prefix-font = 5
 format-full-prefix-foreground = ${color.BACKGROUND}
-format-full-prefix-background = ${color.ALTGREEN}
+format-full-prefix-background = ${color.MAGENTA}
 
-label-charging = "%percentage%% "
-label-discharging = "%percentage%% "
-label-full = "%percentage%% "
+label-charging = "%percentage%% | "
+label-discharging = "%percentage%% | "
+label-full = "%percentage%% | "
 
-label-charging-background = ${color.ALTGREEN}
-label-discharging-background = ${color.ALTGREEN}
-label-full-background = ${color.ALTGREEN}
+label-charging-background = ${color.MAGENTA}
+label-discharging-background = ${color.MAGENTA}
+label-full-background = ${color.MAGENTA}
 
-label-charging-foreground = ${color.ALTMAGENTA}
-label-discharging-foreground = ${color.ALTRED}
+label-charging-foreground = ${color.BACKGROUND}
+label-discharging-foreground = ${color.BACKGROUND}
 label-full-foreground = ${color.BACKGROUND}
 
 label-charging-font = 4
@@ -156,8 +156,8 @@ ramp-capacity-4 = " "
 
 ramp-capacity-font = 5
 
-ramp-capacity-foreground = ${color.ALTRED}
-ramp-capacity-background = ${color.ALTGREEN}
+ramp-capacity-foreground = ${color.BACKGROUND}
+ramp-capacity-background = ${color.MAGENTA}
 
 animation-charging-0 = " "
 animation-charging-1 = " "
@@ -167,8 +167,8 @@ animation-charging-4 = " "
 
 animation-charging-font = 5
 
-animation-charging-foreground = ${color.ALTMAGENTA}
-animation-charging-background = ${color.ALTGREEN}
+animation-charging-foreground = ${color.BACKGROUND}
+animation-charging-background = ${color.MAGENTA}
 animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -198,7 +198,7 @@ ws-icon-7 = VIII;
 ws-icon-default = 
 
 format = <label-state>
-format-font = 1
+format-font = 2
 
 label-monitor = %name%
 
@@ -217,26 +217,26 @@ label-focused = %name%
 label-focused-foreground = ${color.BLUE}
 label-focused-background = ${color.BACKGROUND}
 label-focused-underline = ${color.BLUE}
-label-focused-padding = 1
+label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = ${color.GREEN}
 label-occupied-background = ${color.BACKGROUND}
 ;label-occupied-underline = ${color.GREEN}
-label-occupied-padding = 1
+label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.RED}
 label-urgent-background = ${color.BACKGROUND}
 label-urgent-underline = ${color.RED}
-label-urgent-padding = 1
+label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = ${color.FOREGROUND}
-label-empty-padding = 1
+label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = "∙"
+label-separator = " ∙ "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
 

@@ -64,9 +64,10 @@ font-3 = "Iosevka:style=bold:"size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 
 
+
 modules-left = LDmod mod RDmod pip xkeyboard pip bspwm pip
 modules-center = pip mpd pip  
-modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery RDB space LDD date RDD
+modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery  date RDD
 
 separator =
 spacing = 0

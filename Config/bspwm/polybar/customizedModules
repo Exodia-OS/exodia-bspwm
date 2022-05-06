@@ -53,7 +53,7 @@ content-padding = 2
 type = custom/text
 content = "%{T5}%{T-}"
 content-background = ${color.background}
-content-foreground = ${color.ALTGREEN}
+content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
