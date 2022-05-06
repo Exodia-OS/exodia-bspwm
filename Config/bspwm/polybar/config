@@ -13,8 +13,18 @@ margin-top = 0
 
 include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/colors
+
+# contains brightness, workspaces, Date, etc.... #
 include-file = ~/.config/bspwm/polybar/modules
-include-file = ~/.config/bspwm/polybar/customizedModules
+
+# contains Music, microphone, etc.... #
+include-file = ~/.config/bspwm/polybar/mediaModules
+
+# contains CPU, Temperature, etc.... #
+include-file = ~/.config/bspwm/polybar/monitoringModules
+
+# contains the separators (e.g  , | , <| ,  ,etc..) #
+include-file = ~/.config/bspwm/polybar/separatorsModules
 
 
 [bar/main]
@@ -25,9 +35,9 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 99%
+width = 98%
 height = 27
-offset-x = 0.5%
+offset-x = 1%
 offset-y = 0.5%
 
 # width = 100%
@@ -40,8 +50,8 @@ offset-y = 0.5%
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 1.5
-radius-bottom = 1.5
+radius-top = 1
+radius-bottom = 1
 
 # radius-top = 0.0
 # radius-bottom = 0.0
@@ -52,7 +62,7 @@ line-color = ${color.BLUE}
 border-size = 4
 border-color = ${color.BACKGROUND}
 
-padding = 1
+padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
@@ -66,7 +76,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 modules-left = LDmod mod RDmod pip xkeyboard pip bspwm pip
-modules-center = pip mpd pip  
+modules-center = Lpip mpd Rpip  
 modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery  date RDD
 
 separator =

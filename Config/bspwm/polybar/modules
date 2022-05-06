@@ -5,50 +5,6 @@
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/volume]
-type = internal/pulseaudio
-
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-; If not, uses default sink
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
-
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
-use-ui-max = false
-
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 5
-
-format-volume = <ramp-volume> <label-volume>
-
-format-muted = <label-muted>
-format-muted-prefix = 婢
-format-muted-prefix-font = 2
-format-muted-prefix-foreground = ${color.RED}
-
-label-volume = %percentage%%
-label-muted = " Mute"
-label-muted-foreground = #757575
-
-ramp-volume-0 = 奄
-ramp-volume-1 = 奄
-ramp-volume-2 = 奄
-ramp-volume-3 = 奔
-ramp-volume-4 = 奔
-ramp-volume-5 = 奔
-ramp-volume-6 = 墳
-ramp-volume-7 = 墳
-ramp-volume-8 = 墳
-ramp-volume-9 = 墳
-ramp-volume-font = 2
-ramp-volume-foreground = ${color.BLUE}
-
-ramp-headphones-0 = 
-ramp-headphones-1 = 
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/bna]
 type = custom/text
 
@@ -108,68 +64,6 @@ ramp-9 = 
 ramp-font = 2
 ramp-foreground = ${color.MAGENTA}
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/battery]
-type = internal/battery
-
-full-at = 99
-
-battery = ${system.battery}
-adapter = ${system.adapter}
-
-poll-interval = 2
-time-format = %H:%M
-
-format-charging = <animation-charging><label-charging>
-format-charging-prefix = 
-
-format-discharging = <ramp-capacity><label-discharging>
-
-format-full = <label-full>
-format-full-prefix = " "
-format-full-prefix-font = 5
-format-full-prefix-foreground = ${color.BACKGROUND}
-format-full-prefix-background = ${color.MAGENTA}
-
-label-charging = "%percentage%% | "
-label-discharging = "%percentage%% | "
-label-full = "%percentage%% | "
-
-label-charging-background = ${color.MAGENTA}
-label-discharging-background = ${color.MAGENTA}
-label-full-background = ${color.MAGENTA}
-
-label-charging-foreground = ${color.BACKGROUND}
-label-discharging-foreground = ${color.BACKGROUND}
-label-full-foreground = ${color.BACKGROUND}
-
-label-charging-font = 4
-label-discharging-font = 4
-label-full-font = 4
-
-ramp-capacity-0 = " "
-ramp-capacity-1 = " "
-ramp-capacity-2 = " "
-ramp-capacity-3 = " "
-ramp-capacity-4 = " "
-
-ramp-capacity-font = 5
-
-ramp-capacity-foreground = ${color.BACKGROUND}
-ramp-capacity-background = ${color.MAGENTA}
-
-animation-charging-0 = " "
-animation-charging-1 = " "
-animation-charging-2 = " "
-animation-charging-3 = " "
-animation-charging-4 = " "
-
-animation-charging-font = 5
-
-animation-charging-foreground = ${color.BACKGROUND}
-animation-charging-background = ${color.MAGENTA}
-animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -283,48 +177,6 @@ label-font = 4
 label-foreground = ${color.BACKGROUND}
 label-background = ${color.MAGENTA}
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/mpd]
-type = internal/mpd
-
-;;host = 127.0.0.1
-;;port = 6600
-;;password = mysecretpassword
-
-interval = 2
-
-format-online = <label-song> <icon-prev> <toggle> <icon-next>
-format-online-prefix = " "
-format-online-prefix-foreground = ${color.GREEN}
-
-format-playing = ${self.format-online}
-format-paused = <label-song> <toggle>
-
-format-offline = <label-offline>
-format-offline-prefix = " "
-format-offline-prefix-foreground = ${color.RED}
-label-offline = "Offline"
-
-;label-song =  "%title% | %artist%"
-label-song =  "%title% "
-label-song-maxlen = 40
-label-song-ellipsis = true
-
-icon-play = 
-icon-play-font = 2
-icon-play-foreground = ${color.GREEN}
-icon-pause = 
-icon-pause-font = 2
-icon-pause-foreground = ${color.YELLOW}
-icon-stop = 
-icon-stop-foreground = ${color.RED}
-icon-prev = 玲
-icon-prev-font = 2
-icon-prev-foreground = ${color.CYAN}
-icon-next = 怜
-icon-next-font = 2
-icon-next-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -382,44 +234,6 @@ ramp-signal-4 = 
 ramp-signal-font = 3
 ramp-signal-foreground = ${color.CYAN}
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-
-[module/cpu]
-type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-
-; Available tags:
-;   <label> (default)
-;   <bar-load>
-;   <ramp-load>
-;   <ramp-coreload>
-;;format = <label> <ramp-coreload>
-format = <label>
-;format-prefix = 
-;format-prefix =
-format-prefix =  
-format-prefix-font = 3
-format-prefix-foreground = ${color.YELLOW}
-
-; Available tokens:
-;   %percentage% (default) - total cpu load averaged over all cores
-;   %percentage-sum% - Cumulative load on all cores
-;   %percentage-cores% - load percentage for each core
-;   %percentage-core[1-9]% - load percentage for specific core
-label = " %percentage%%"
-label-font = 3
-
-; Spacing between individual per-core ramps
-;;ramp-coreload-spacing = 1
-;;ramp-coreload-0 = 
-;;ramp-coreload-1 = 
-;;ramp-coreload-2 = 
-;;ramp-coreload-3 = 
-;;ramp-coreload-4 = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -435,27 +249,3 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-foreground = ${colors.background}
 label-indicator-background = ${colors.secondary}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/cpuTemp]
-type = custom/script
-exec = ~/.config/bspwm/polybar/scripts/heatSensors
-interval = 0.5
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/info-cava]
-type = custom/script
-exec =  ~/.config/bspwm/polybar/scripts/info-cava.py -f 24 -b 12 -e fffdfc,fffafe,ffeafa,ffc3d2 -c average
-tail = true
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/pipewire-microphone]
-type = custom/script
-exec = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh
-tail = true
-click-left = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh --toggle &
-
-

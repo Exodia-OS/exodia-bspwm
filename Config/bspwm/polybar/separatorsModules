@@ -24,6 +24,29 @@ content-foreground = ${color.BLACK}
 content-padding = 1
 content-font = 5
 
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Lpip]
+type = custom/text
+content = "<|"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.BLACK}
+content-padding = 1
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Rpip]
+type = custom/text
+content = "|>"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.BLACK}
+content-padding = 1
+content-font = 5
+
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/space]
@@ -69,7 +92,12 @@ content-foreground = ${color.MAGENTA}
 
 [module/LDmod]
 type = custom/text
+
 content = "%{T5}%{T-}"
+
+;content = "%{T5}%{T-}"
+;content = "%{T5}█%{T-}"
+
 content-background = ${color.BACKGROUND}
 content-foreground =  ${color.YELLOW}
 
@@ -99,7 +127,10 @@ content-foreground = ${color.ALTGREEN}
 
 [module/RDD]
 type = custom/text
+
+;content = "%{T5}█%{T-}"
 content = "%{T5}%{T-}"
+
 content-background = ${color.background}
 content-foreground = ${color.MAGENTA}
 
@@ -120,10 +151,13 @@ content-foreground = ${color.YELLOW}
 
 [module/PLD]
 type = custom/text
-content = "%{T5}%{T-}"
+
+content = "%{T5}█%{T-}"
+;content = "%{T5}%{T-}"
+
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.ALTGREEN}
+content-foreground = ${color.MAGENTA}
 
 
 
