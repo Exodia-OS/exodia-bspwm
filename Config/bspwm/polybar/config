@@ -1,9 +1,7 @@
 #
-# Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-# Copyright (C) 29-April 2022 reconfigured by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 #
-
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -16,6 +14,7 @@ margin-top = 0
 include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/colors
 include-file = ~/.config/bspwm/polybar/modules
+include-file = ~/.config/bspwm/polybar/customizedModules
 
 
 [bar/main]
@@ -26,16 +25,26 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 100%
-height = 24
-offset-x = 0
-offset-y = 0
+width = 99%
+height = 27
+offset-x = 0.5%
+offset-y = 0.5%
+
+# width = 100%
+# height = 24
+# offset-x = 0
+# offset-y = 0
+
+
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 0.0
-radius-bottom = 0.0
+radius-top = 1.5
+radius-bottom = 1.5
+
+# radius-top = 0.0
+# radius-bottom = 0.0
 
 line-size = 2
 line-color = ${color.BLUE}
@@ -47,14 +56,17 @@ padding = 1
 module-margin-left = 0
 module-margin-right = 0
 
+
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:"size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
 
-modules-left = mod sep xkeyboard pip bspwm pip
+
+modules-left = LDmod mod RDmod pip xkeyboard pip bspwm pip
 modules-center = pip mpd pip  
-modules-right = cpu sep cpuTemp sep volume sep backlight sep network sep battery sep date
+modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery RDB space LDD date RDD
 
 separator =
 spacing = 0
@@ -94,4 +106,3 @@ compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
-
