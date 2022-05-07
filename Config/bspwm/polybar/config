@@ -35,9 +35,9 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 98%
+width = 99%
 height = 27
-offset-x = 1%
+offset-x = 0.5%
 offset-y = 0.5%
 
 # width = 100%
@@ -50,8 +50,8 @@ offset-y = 0.5%
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 1
-radius-bottom = 1
+radius-top = 5
+radius-bottom = 5
 
 # radius-top = 0.0
 # radius-bottom = 0.0
