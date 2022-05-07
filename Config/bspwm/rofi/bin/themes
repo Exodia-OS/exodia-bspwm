@@ -34,43 +34,43 @@ availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (12)" -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
-# the 4th var -> icons name, the 5th var -> the cursor name
+# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
 #
 case $chosen in
     $theme_1)
-        bash ${BSP}/set-theme  'blade.jpg' 'blade' 'Blade' 'Nordic-Folders' 'LyraS'
+        bash ${BSP}/set-theme  'blade.jpg' 'blade' 'Blade' 'Nordic-Folders' 'LyraS' 'Blade'
         ;;
     $theme_2)
-        bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark' 'Bouquet'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'cyberpunk2.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'LyraB'
+        bash ${BSP}/set-theme  'cyberpunk2.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'LyraB' 'Cyberpunk'
         ;;
     $theme_4)
-        bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet'
+        bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet' 'Dracula'
         ;;
     $theme_5)
-        bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Pear'
+        bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Pear' 'Groot'
         ;;
     $theme_6)
-        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark' 'Gruvbox'
         ;;
     $theme_7)
-        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB'
+        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'nord.jpg' 'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr'
+        bash ${BSP}/set-theme  'nord.jpg' 'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr' 'Nord'
         ;;
     $theme_9)
-        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark'
+        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick'
         ;;
     $theme_10)
-        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Green' 'Green-Color-Icons' 'Hack-C'
+        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Green' 'Green-Color-Icons' 'Hack-C' 'HackTheBox'
         ;;
     $theme_11)
-        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor'
+        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor' 'BlackArch'
         ;;
     $theme_12)
-        bash ${BSP}/set-theme  'neon2.jpg' 'neon' 'neon-themeNew' 'neon-icon' 'neon-cursor2'
+        bash ${BSP}/set-theme  'neon2.jpg' 'neon' 'neon-themeNew' 'neon-icon' 'neon-cursor2' 'Neon'
         ;;
 esac
