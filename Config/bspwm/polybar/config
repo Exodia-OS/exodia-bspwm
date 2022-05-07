@@ -15,16 +15,16 @@ include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/modules
+include-file = ~/.config/bspwm/polybar/modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/mediaModules
+include-file = ~/.config/bspwm/polybar/modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/monitoringModules
+include-file = ~/.config/bspwm/polybar/modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/separatorsModules
+include-file = ~/.config/bspwm/polybar/modules/separatorsModules
 
 
 [bar/main]
@@ -75,8 +75,8 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = LDmod mod RDmod pip xkeyboard pip bspwm pip
-modules-center = Lpip mpd Rpip  
+modules-left = LDmod mod RDmod sep xkeyboard pip bspwm 
+modules-center = LDmpd space mpd space RDmpd  
 modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery  date RDD
 
 separator =

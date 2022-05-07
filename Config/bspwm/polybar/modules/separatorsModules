@@ -2,6 +2,7 @@
 # Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 #
+
 ; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/dots]
@@ -89,6 +90,17 @@ content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/LDmpd]
+type = custom/text
+
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/LDmod]
 type = custom/text
@@ -133,6 +145,17 @@ content = "%{T5}%{T-}"
 
 content-background = ${color.background}
 content-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmpd]
+type = custom/text
+
+content = "%{T5})%{T-}"
+;content = "%{T5}|)%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.BLACK}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
