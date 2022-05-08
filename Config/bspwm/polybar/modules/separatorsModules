@@ -155,7 +155,7 @@ content = "%{T5})%{T-}"
 ;content = "%{T5}|)%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.BLACK}
+content-foreground = ${color.YELLOW}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
