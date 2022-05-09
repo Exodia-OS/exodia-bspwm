@@ -151,39 +151,9 @@ alias gc='git commit -m'
 alias gp='git push origin master'
 
 
-# ----------------------- Predator alias -----------------------
-
-alias RE-Pur="cd ~/Public/Acer/ && ./red-purple.sh"
-alias totem="cd ~/Public/Acer/ && ./totem.sh"
-alias Y="cd ~/Public/Acer/color/  && ./Y.sh"
-alias garuda="cd ~/Public/Acer/ && ./garuda.sh"
-alias wave="cd ~/Public/Acer/ && ./wave.sh"
-alias red="cd ~/Public/Acer/ && ./red.sh"
-alias purple="cd ~/Public/Acer/ && ./purple.sh"
-alias neon="cd ~/Public/Acer/ && ./neon.sh"
-alias predator="cd ~/Public/Acer/ && ./predator.sh"
-alias Redshift="cd ~/Public/Acer/ && Redshift.sh"
-alias updatePredator="cd ~/Public/Acer/acer-predator-turbo-and-rgb-keyboard-linux-module && git pull"
-alias installPredator="cd ~/Public/Acer/acer-predator-turbo-and-rgb-keyboard-linux-module && sudo ./install_service.sh"
-
-# ----------------------- Predator alias -----------------------
-
-
-
-
-alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
-
 alias M="ncmpcpp"
 
-alias inkdrop="cd ~/Public/packages/Inkdrop-demo-5.4.1-Linux && ./inkdrop"
 
-
-
-# echo
-# figlet -f /usr/share/figlet/fonts/figlet-fonts/3d.flf " #  O Z I L " #| lolcat -a -d 2
-# echo""
-# echo " \e[1mWelcome Back  \e[95;5;208m\e[1mMr : \e[95m\e[1mOzil"
-# echo""
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
