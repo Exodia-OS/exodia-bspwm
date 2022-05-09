@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,11 +16,9 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 # Set list of themes to pick from when loading at random
@@ -146,6 +151,42 @@ alias gc='git commit -m'
 alias gp='git push origin master'
 
 
+# ----------------------- Predator alias -----------------------
+
+alias RE-Pur="cd ~/Public/Acer/ && ./red-purple.sh"
+alias totem="cd ~/Public/Acer/ && ./totem.sh"
+alias Y="cd ~/Public/Acer/color/  && ./Y.sh"
+alias garuda="cd ~/Public/Acer/ && ./garuda.sh"
+alias wave="cd ~/Public/Acer/ && ./wave.sh"
+alias red="cd ~/Public/Acer/ && ./red.sh"
+alias purple="cd ~/Public/Acer/ && ./purple.sh"
+alias neon="cd ~/Public/Acer/ && ./neon.sh"
+alias predator="cd ~/Public/Acer/ && ./predator.sh"
+alias Redshift="cd ~/Public/Acer/ && Redshift.sh"
+alias updatePredator="cd ~/Public/Acer/acer-predator-turbo-and-rgb-keyboard-linux-module && git pull"
+alias installPredator="cd ~/Public/Acer/acer-predator-turbo-and-rgb-keyboard-linux-module && sudo ./install_service.sh"
+
+# ----------------------- Predator alias -----------------------
+
+
+
+
+alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
+
+alias M="ncmpcpp"
+
+alias inkdrop="cd ~/Public/packages/Inkdrop-demo-5.4.1-Linux && ./inkdrop"
+
+
+
+# echo
+# figlet -f /usr/share/figlet/fonts/figlet-fonts/3d.flf " #  O Z I L " #| lolcat -a -d 2
+# echo""
+# echo " \e[1mWelcome Back  \e[95;5;208m\e[1mMr : \e[95m\e[1mOzil"
+# echo""
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

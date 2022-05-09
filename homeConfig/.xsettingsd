@@ -3,9 +3,9 @@
 # GitHub : https://github.com/mmsaeed509
 ###########################################
 
-Net/ThemeName "neon-themeNew"
-Net/IconThemeName "neon-icon"
-Gtk/CursorThemeName "neon-cursor2"
+Net/ThemeName "Blade2"
+Net/IconThemeName "Red-Icons"
+Gtk/CursorThemeName "LyraS"
 Net/EnableEventSounds "0"
 Net/EnableInputFeedbackSounds "0"
 Xft/DPI "-1"
