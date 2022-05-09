@@ -44,7 +44,7 @@ case $chosen in
         bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'cyberpunk13.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'LyraB'
+        bash ${BSP}/set-theme  'cyberpunk16.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'LyraB'
         ;;
     $theme_4)
         bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet'
