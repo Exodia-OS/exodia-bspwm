@@ -10,7 +10,7 @@ scrDir=$(pwd)
 
 
 # ------ move all files to home directory ------ #
-mv "$scrDir"/homeConfig/* ~/
+mv "$scrDir"/misc/* ~/
 # ------ move all files to home directory ------ #
 
 
