@@ -5,7 +5,7 @@
 ! Blade color scheme
 ! -----------------------------------------------------------------------------
 
-*foreground:        #f53c2c
+*foreground:        #eda39d
 *background:        #0c1018
 
 ! Colors 0-15.
