@@ -7,7 +7,7 @@
 
                     #  ------   Step 0   ------  #
 
-# ------ get root ------ #
+# ------ get root access ------ #
 if [[ $EUID -ne 0 ]]; then
    echo "[*] This script must be run as root"
    exit 1
