@@ -14,12 +14,12 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 
-scrDir=$(pwd)
+workDir=$(pwd)
                     #  ------   Step 1   ------  #
 
 
 # ------ move all files to home directory ------ #
-cp -r "$scrDir"/misc/* ~/
+cp -r "$workDir"/misc/* ~/
 # ------ move all files to home directory ------ #
 
 
@@ -27,14 +27,14 @@ cp -r "$scrDir"/misc/* ~/
 
 
 # ------ copying all files to $HOME.config directory ------ #
-cp -r "$scrDir"/Config/* ~/.config/
+cp -r "$workDir"/Config/* ~/.config/
 # ------ copying all files to $HOME.config directory ------ #
 
 
                     #  ------   Step 3   ------  #
 
 # ------ copying all files to /bin directory ------ #                    
-sudo cp -r "$scrDir"/bin/* ~/Public/Temp/BIN/
+sudo cp -r "$workDir"/bin/* ~/Public/Temp/BIN/
 # ------ copying all files to /bin directory ------ #   
 
 
@@ -42,6 +42,6 @@ sudo cp -r "$scrDir"/bin/* ~/Public/Temp/BIN/
                     #  ------   Final Step   ------  #
 
 # ------ remove unneeded files ------ #
-cd "$scrDir" && cd ..
+cd "$workDir" && cd ..
 rm -rf exodia-bspwm
 # ------ remove unneeded files -----
