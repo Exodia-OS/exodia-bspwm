@@ -1,8 +1,0 @@
-! ------------------------------------------------------------------------------
-! @author ozil
-! GitHub : https://github.com/mmsaeed509
-! ------------------------------------------------------------------------------
-
-#include ".Xresources.d/colors"
-#include ".Xresources.d/fonts"
-#include ".Xresources.d/rxvt-unicode"
