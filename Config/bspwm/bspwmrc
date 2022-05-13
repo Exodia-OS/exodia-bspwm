@@ -33,7 +33,9 @@ setxkbmap -option 'grp:alt_shift_toggle'
 # -------------------- set En & Ar for keyboard --------------------
 
 export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
- 
+
+# launch conky #
+# conky -c ~/.config/conky/conky.conf
 
 # ------------ Dual monitor setup ------------
 
