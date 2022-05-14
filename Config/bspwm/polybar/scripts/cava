@@ -1,4 +1,10 @@
 #!/bin/env python3
+
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
 import argparse
 import os
 import signal
@@ -8,11 +14,7 @@ import tempfile
 
 if len(sys.argv) > 1 and sys.argv[1] == '--subproc':
     ramp_list = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
-    ramp_list.extend(
-        f'%{{F#{color.strip(" #")}}}█%{{F-}}'
-        for color in sys.argv[2].split(',')
-        if color
-    )
+
     while True:
         cava_input = input().strip().split()
         cava_input = [int(i) for i in cava_input]
@@ -73,3 +75,22 @@ signal.signal(signal.SIGTERM, cleanup)
 signal.signal(signal.SIGINT,  cleanup)
 
 self_proc.wait()
+
+
+"""
+
+if you exec play cava with profileColor 
+
+add these lines (in line No. 11)
+
+ ramp_list.extend(
+        f'%{{F#{color.strip(" #")}}}█%{{F-}}'
+        for color in sys.argv[2].split(',')
+        if color
+    )
+
+you can change ramp_list (in line No. 16)
+
+ramp_list = [' ', '▁', '▂', '▃', '▄', '▅', '▆', '▇', '█']
+
+"""

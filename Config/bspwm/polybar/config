@@ -75,9 +75,9 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = LDmod mod RDmod sep xkeyboard pip bspwm 
+modules-left = LDmod mod RDmod sep xkeyboard pip bspwm dots LDmod info-cava RDmod
 modules-center = LDmpd space mpd space RDmpd  
-modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery  date RDD
+modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery date RDD
 
 separator =
 spacing = 0
@@ -117,3 +117,5 @@ compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

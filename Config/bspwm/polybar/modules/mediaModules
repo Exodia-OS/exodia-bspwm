@@ -18,7 +18,7 @@ use-ui-max = false
 
 ; Interval for volume increase/decrease (in percent points)
 ; Default: 5
-interval = 5
+interval = 1
 
 format-volume = <ramp-volume> <label-volume>
 
@@ -71,8 +71,8 @@ format-offline-prefix = " "
 format-offline-prefix-foreground = ${color.RED}
 label-offline = "Offline"
 
-label-song =  "%title% | %artist%"
-;label-song =  "%title% "
+; label-song =  "%title% | %artist%"
+label-song =  "%title% "
 label-song-maxlen = 40
 label-song-ellipsis = true
 
@@ -96,16 +96,21 @@ icon-next-foreground = ${color.CYAN}
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/polybar/scripts/info-cava.py -f 24 -b 12 -e fffdfc,fffafe,ffeafa,ffc3d2 -c average
-tail = true
+exec =  ~/.config/bspwm/polybar/scripts/cava -f 24 -c average -e 000000
 
+format = <label>
+label = %output%
+format-foreground = ${color.BACKGROUND}
+format-background = ${color.YELLOW}
+tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/pipewire-microphone]
+; pipewire-microphone
+[module/pip-mic]
 type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh
 tail = true
 click-left = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh --toggle &
 
-
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

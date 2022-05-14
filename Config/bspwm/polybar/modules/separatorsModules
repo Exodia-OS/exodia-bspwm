@@ -182,9 +182,4 @@ content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.MAGENTA}
 
-
-
-
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
