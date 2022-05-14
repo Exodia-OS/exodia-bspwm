@@ -3,7 +3,7 @@
 #
 # Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-# added HackTheBox/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# added HackTheBox/HackTheBoxColored/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 #
 
 DIR="$HOME/.config/bspwm"
