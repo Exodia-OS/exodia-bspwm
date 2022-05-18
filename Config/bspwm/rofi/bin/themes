@@ -25,13 +25,14 @@ theme_10=" Hack The Box"
 theme_11=" Hack The Box Colored"
 theme_12=" BlackArch"
 theme_13=" Neon"
+theme_14=" Tigger In Atlantis"
 
 # pass available themes to rofi 
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\
-\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13"
+\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14"
 
-chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (13)" -dmenu -selected-row 0)"
+chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (14)" -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
 # the 4th var -> icons name, the 5th var -> the cursor name
@@ -75,5 +76,8 @@ case $chosen in
         ;;
     $theme_13)
         bash ${BSP}/set-theme  'neon.jpg' 'neon' 'Neon2' 'neon-icon' 'neon-cursor2'
+        ;;
+    $theme_14)
+        bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
         ;;
 esac
