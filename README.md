@@ -1,6 +1,24 @@
 # bspwm-Exodia 
 BSPWM Configurations for exodia
 
+<!-- shields -->
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/Exodia-OS/exodia-bspwm?style=for-the-badge">
+  </br>
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/Exodia-OS/exodia-bspwm?color=purple&style=for-the-badge">
+  </br>
+  <img src="https://img.shields.io/github/stars/Exodia-OS/exodia-bspwm?style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/Exodia-OS/exodia-bspwm?color=teal&style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/Exodia-OS/exodia-bspwm?color=blueviolet&style=for-the-badge">
+  </br>
+  <img src="https://img.shields.io/github/languages/count/Exodia-OS/exodia-bspwm?color=red&style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/code-size/Exodia-OS/exodia-bspwm?color=yellow&style=for-the-badge">
+  <img src="https://img.shields.io/github/last-commit/Exodia-OS/exodia-bspwm?color=deeppink&style=for-the-badge">
+</p>
+
+<!-- shields -->
 
 ![](GIFs/ALLTHEMES.gif)
 
