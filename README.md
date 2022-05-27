@@ -1,5 +1,5 @@
-# bspwm-Exodia 
-BSPWM Configurations for exodia
+<h1 align="center"> bspwm-Exodia </h1>
+<p align="center"> BSPWM Configurations for exodia </p>
 
 <!-- shields -->
 
