@@ -45,6 +45,10 @@
 |--|--|--|
 | ![](GIFs/Bouquet.gif) | ![](GIFs/Dracula.gif) | ![](GIFs/Nord.gif) |
 
+|AXYL_STYLE|Amarena|Everblush|
+|--|--|--|
+| ![](GIFs/AXYL_STYLE.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/Everblush.gif) |
+
 |Groot|Gruvbox|
 |--|--|
 | ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) |
