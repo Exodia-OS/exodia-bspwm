@@ -49,9 +49,9 @@
 |--|--|--|
 | ![](GIFs/AXYL_STYLE.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/Everblush.gif) |
 
-|Groot|Gruvbox|
-|--|--|
-| ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) |
+|Groot|Gruvbox|JapaneseCity|
+|--|--|--|
+| ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) | ![](GIFs/JapaneseCity.gif) |
 
 <!-- Available Themes Previews -->
 
