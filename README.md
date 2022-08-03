@@ -20,7 +20,7 @@
 
 <!-- shields -->
 
-![](GIFs/view.gif)
+![](GIFs/exodia_bspwm.gif)
 
 
 <!-- ###########################################  ########################################### -->
@@ -29,22 +29,25 @@
 
 <h2 align="center">Available Themes Previews</h2>
 
-|Red Jungles|Emilia|Gruvbox|
+|Red Jungles|Emilia|Chad WM|
 |--|--|--|
-| ![](GIFs/Red-Jungles.png) | ![](GIFs/Emilia.png) | ![](GIFs/Gruvbox.png) |
+| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/ChadWM.gif) |
 
 |Hack|Red and Black|Rick|
 |--|--|--|
-| ![](GIFs/Hack.png) | ![](GIFs/Red-And-Black.png) | ![](GIFs/Rick.png) |
+| ![](GIFs/Hack.gif) | ![](GIFs/RedandBlack.gif) | ![](GIFs/Rick.gif) |
 
 |Hack The Box|BlackArch|Neon|
 |--|--|--|
-| ![](GIFs/Hack-The-Box.png) | ![](GIFs/BlackArch.png) | ![](GIFs/Neon.png) |
+| ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
 
-|AXYL|Amarena|JapaneseCity|
-|--|--|--|
-| ![](GIFs/AXYL.png) | ![](GIFs/Amarena.png) | ![](GIFs/JapaneseCity.png) |
+|JS coffee|Amarena|
+|--|--|
+| ![](GIFs/JScoffee.gif) | ![](GIFs/Amarena.gif) |
 
+|JapaneseCity|VALORANT|
+|--|--|
+| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) |
 
 
 <!-- Available Themes Previews -->
