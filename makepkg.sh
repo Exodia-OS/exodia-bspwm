@@ -19,7 +19,7 @@ trap exit_on_signal_SIGINT SIGINT
 trap exit_on_signal_SIGTERM SIGTERM
 
 # Build packages (create a binary package -> pkg.pkg.tar.zst)
-build () {
+BUILDPKG () {
 
     echo -e "\nRemoving olda PKGs \n"
     rm ./*.pkg.tar.zst
@@ -30,4 +30,4 @@ build () {
 }
 
 # Execute
-build
+BUILDPKG
