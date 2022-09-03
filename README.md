@@ -41,13 +41,15 @@
 |--|--|--|
 | ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
 
+|JapaneseCity|VALORANT|TokyoCity|
+|--|--|--|
+| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) | ![](GIFs/TokyoCity.gif) |
+
 |JS coffee|Amarena|
 |--|--|
 | ![](GIFs/JScoffee.gif) | ![](GIFs/Amarena.gif) |
 
-|JapaneseCity|VALORANT|
-|--|--|
-| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) |
+
 
 
 <!-- Available Themes Previews -->
