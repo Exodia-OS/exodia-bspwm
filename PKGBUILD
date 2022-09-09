@@ -4,7 +4,7 @@
 
 pkgname=exodia-bspwm
 pkgver=1.0
-pkgrel=6
+pkgrel=7
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
@@ -13,7 +13,7 @@ depends=('bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany'
 		'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 
 		'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
 		'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
-		'wmname'
+		'wmname' 'xsensors' 'stacer'
 )
 
 prepare() {
