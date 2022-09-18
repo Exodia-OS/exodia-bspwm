@@ -44,10 +44,7 @@ getcolors
 # setxkbmap -option 'grp:alt_shift_toggle'
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
-export _JAVA_AWT_WM_NONREPARENTING=1 
-
-# Fix Rofi 
-export LC_ALL="en_US.UTF-8"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # ------------ Dual monitor setup ------------
 #
