@@ -99,6 +99,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -131,7 +132,7 @@ label-empty-background = ${color.BGL}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = " ◆ "
+label-separator = "  "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
 label-separator-background = ${color.BGL}

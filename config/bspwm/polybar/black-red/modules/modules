@@ -94,15 +94,16 @@ enable-scroll = true
 reverse-scroll = true
 fuzzy-match = true
 
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;碌
-ws-icon-3 = IV;
-ws-icon-4 = V;
-ws-icon-5 = VI;
-ws-icon-6 = VII;
-ws-icon-7 = VIII
-ws-icon-default = 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-default = 
 
 format = <label-state>
 format-font = 2
