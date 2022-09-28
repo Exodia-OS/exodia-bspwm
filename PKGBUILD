@@ -4,7 +4,7 @@
 
 pkgname=exodia-bspwm
 pkgver=2.0
-pkgrel=6
+pkgrel=7
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
@@ -15,8 +15,6 @@ depends=('bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany'
 		'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 		'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 )
-
-install="${pkgname}.install"
 
 prepare() {
 
