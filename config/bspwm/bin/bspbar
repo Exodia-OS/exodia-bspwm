@@ -70,7 +70,7 @@ launch_bar() {
 		fi
 
 		if [[ "$INTERFACE" == e* ]]; then
-			sed -i -e 's/network/ethernet/g' "$DIR"/config
+			sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
 		fi
 		touch "$MFILE"
 	fi

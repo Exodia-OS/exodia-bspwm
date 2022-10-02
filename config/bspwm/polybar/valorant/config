@@ -42,7 +42,7 @@ monitor =
 monitor-strict = false
 override-redirect = false
 
-bottom = true 
+bottom = true
 fixed-center = true
 
 width = 99%
