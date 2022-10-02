@@ -26,8 +26,6 @@ Bar=$(head ~/.config/bspwm/selectedThemeName)
 # Files and Directories #
 DIR="$HOME/.config/bspwm/polybar"
 SFILE="$DIR/system"
-RFILE="$DIR/.system"
-MFILE="$DIR/.module"
 
 # Get system variable values for various modules #
 get_values() {
@@ -59,22 +57,20 @@ set_values() {
 
 # Launch Polybar with selected style #
 launch_bar() {
+	
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
-	if [[ ! -f "$MFILE" ]]; then
-		if [[ -z "$CARD" ]]; then
-			sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
-		elif [[ "$CARD" != *"intel_"* ]]; then
-			sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
-		fi
-
-		if [[ "$INTERFACE" == e* ]]; then
-			sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
-		fi
-		touch "$MFILE"
+	if [[ -z "$CARD" ]]; then
+		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
+	elif [[ "$CARD" != *"intel_"* ]]; then
+		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
 	fi
-		
+
+	if [[ "$INTERFACE" == e* ]]; then
+		sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
+	fi
+	
 	if [[ ! `pidof polybar` ]]; then
 		
 			pkill polybar
@@ -87,11 +83,8 @@ launch_bar() {
 }
 
 # Execute functions #
-if [[ ! -f "$RFILE" ]]; then
-	get_values
-	set_values
-	touch ${RFILE}
-fi
+get_values
+set_values
 
 # launch polybar #
 launch_bar
