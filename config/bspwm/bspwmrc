@@ -229,6 +229,10 @@ fi
 # ----- Lauch keybindings daemon ----- #
 sxhkd &
 
+# ----- start compositor ----- #
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+picom -b --experimental-backends --config $HOME/.config/bspwm/picom.conf &
+
 # ----- Enable Super Keys For Menu ----- #
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
