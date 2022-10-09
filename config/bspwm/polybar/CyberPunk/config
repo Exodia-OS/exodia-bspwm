@@ -181,12 +181,11 @@ font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "Iosevka:style=bold:size=18;4"
+font-6 = "Material Design Icons:style=Bold:size18;4"
 
-
-
-modules-left   = cpu space cpuTemp 
-modules-center = updates-pacman space notification-github
-modules-right  = battery space volume
+modules-left   = cpu space cpuTemp space updates-pacman space notification-github space battery space volume
+modules-center = 
+modules-right  = 
 
 separator =
 dim-value = 1.0

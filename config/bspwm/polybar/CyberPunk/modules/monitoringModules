@@ -84,10 +84,10 @@ interval = 1
 
 format = <label>
 
-format-prefix = " "
+format-prefix = ""
 format-prefix-font = 5
 format-prefix-foreground = ${color.red}
-label = "%{A1:stacer &:}CPU %percentage%%%{A}"
+label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 10
 label-foreground = ${color.red}
 
