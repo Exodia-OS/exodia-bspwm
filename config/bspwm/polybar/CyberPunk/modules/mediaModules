@@ -85,7 +85,7 @@ bar-volume-foreground-2 = ${color.green}
 bar-volume-foreground-3 = ${color.green}
 bar-volume-foreground-4 = ${color.green}
 
-bar-volume-empty = ━
+bar-volume-empty = 
 bar-volume-empty-font = 7
 bar-volume-empty-foreground = ${color.green}
 
