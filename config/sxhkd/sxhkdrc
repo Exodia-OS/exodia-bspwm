@@ -1,3 +1,21 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
@@ -32,15 +50,6 @@ super + {w,m,x,r,s,i}
 
 ##---------- Applications ----------##
 
-# Open/close dashboard
-super + d
-	sh ~/.config/eww/dashboard/launch_dashboard
-
-
-# Inkdrop ( Markdown Editor)
-super + shift + alt + i
-	cd /bin/inkdrop/ && ./inkdrop
-
 # Launch Apps
 super + shift + {g,e}
 	{google-chrome-stable,geany}
@@ -60,10 +69,6 @@ ctrl + alt + l
 # music art
 super + shift + m
 	music --albumArtCover
-
-# udeler
-super + u
-	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 
