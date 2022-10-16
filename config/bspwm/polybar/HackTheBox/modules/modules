@@ -181,7 +181,7 @@ time = %I:%M %p
 time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = " "
+format-prefix = ""
 format-prefix-font = 3
 format-prefix-foreground = #9FEF00
 ; format-prefix-background = #111927
