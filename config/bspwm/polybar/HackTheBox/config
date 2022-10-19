@@ -77,7 +77,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 modules-left   = xdomenu space LD bspwm RD space  terminal space PowerShell
 modules-center = date mpd
-modules-right  = xkeyboard sep cpu cpuTemp network volume backlight battery space mod
+modules-right  = xkeyboard space cpu cpuTemp network volume backlight battery space mod
 
 separator =
 spacing = 0
