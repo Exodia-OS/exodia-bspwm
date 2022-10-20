@@ -60,8 +60,9 @@ launch_bar() {
 	
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+	EXTERNAL_MONITOR_IS_MAIN=$(xrandr | grep -sw 'HDMI-1-0 connected primary')
 
-	if [[ -z "$CARD" ]]; then
+	if [[ -z "$CARD" || "$EXTERNAL_MONITOR_IS_MAIN" ]]; then
 		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
 	elif [[ "$CARD" != *"intel_"* ]]; then
 		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
