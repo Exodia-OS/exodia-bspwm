@@ -84,7 +84,7 @@ font-9 = "Iosevka Nerd Font:size=20;4"
 
 modules-left   =
 modules-center =
-modules-right  = volume space battery RD RD2 network RD cpu RD2 cpuTemp RD date RD2 info-cava RD backlight RD2 sysmenu RD
+modules-right  = volume space RD RD2 info-cava RD netUpSpeed RD2 network RD cpu RD2 cpuTemp RD date RD2 battery RD backlight RD2 sysmenu RD
  
 separator =
 spacing = 0
