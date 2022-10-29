@@ -16,6 +16,12 @@
 #																										 
 ##########################################################################################################
 
+##---------- Toggle right click context menu. ----------##
+
+# Toggle right click context menu.
+~button3
+  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
+
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
@@ -49,6 +55,10 @@ super + {w,m,x,r,s,i}
 	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot,network}
 
 ##---------- Applications ----------##
+
+# Open/close dashboard
+super + d
+	sh ~/.config/eww/dashboard/launch_dashboard
 
 # Launch Apps
 super + shift + {g,e}

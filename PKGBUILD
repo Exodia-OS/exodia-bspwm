@@ -3,15 +3,15 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=4.0
+pkgver=4.1
 pkgrel=9
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
 depends=(
-	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany'
-	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 
+	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
+	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
 	'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'

@@ -55,7 +55,7 @@ set_style () {
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
-	fi	
+	fi
 
 	# ----- set background for i3look based on the selected theme ----- #
 	echo "$1">~/.config/bspwm/i3lockBackground

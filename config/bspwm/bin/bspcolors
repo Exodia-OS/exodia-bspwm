@@ -114,9 +114,9 @@ bsprofi () {
 		background:			${BACKGROUND};
 		foreground:			${FOREGROUND};
 		selected:			${BLUE};
-		highlight:			${YELLOW};
+		background-alt:		${MAGENTA};
 		urgent:				${RED};
-		on:					${GREEN};
+		active:				${GREEN};
 		off:				${RED};
 	}
 	EOF
