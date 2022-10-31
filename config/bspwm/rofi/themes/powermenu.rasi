@@ -98,7 +98,7 @@ message {
     margin:                      0px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @active;
+    background-color:            @background-alt;
     text-color:                  @background;
 }
 textbox {
