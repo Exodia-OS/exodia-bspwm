@@ -60,13 +60,18 @@ super + {w,m,x,r,s,i}
 super + d
 	sh ~/.config/eww/dashboard/launch_dashboard
 
+
+# Inkdrop ( Markdown Editor)
+super + shift + alt + i
+	cd /bin/inkdrop/ && ./inkdrop
+
 # Launch Apps
 super + shift + {g,e}
 	{google-chrome-stable,geany}
 
 # Terminal Apps
-ctrl + alt + {r,h,b,n}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim}
+ctrl + alt + {r,h,b,n,v}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim,vim}
 
 # Color Picker
 super + p
@@ -79,6 +84,10 @@ ctrl + alt + l
 # music art
 super + shift + m
 	music --albumArtCover
+
+# udeler
+super + u
+	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 

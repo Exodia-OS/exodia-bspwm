@@ -3,7 +3,7 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=4.3
+pkgver=4.4
 pkgrel=9
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
