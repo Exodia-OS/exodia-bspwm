@@ -14,7 +14,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -125,7 +125,7 @@ bsprofi () {
 bspdunst () {
 	cat > $DUNST_DIR/dunstrc <<- EOF	
 #########################################################################
-# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> #
+# Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509> #
 # LICENSE © GNU-GPL3                                                    #
 #########################################################################
 
@@ -204,7 +204,7 @@ bspjgmenu () {
 ;;																										 
 ;;																										 
 ;;																										 
-;;    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+;;    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 ;;    LICENSE © GNU-GPL3
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
