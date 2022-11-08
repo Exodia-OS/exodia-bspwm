@@ -19,8 +19,7 @@
 ##########################################################################################################
 
 # Environtment path #
-export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin"
-
+export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin"
 
 # Get colors from .Xresources #
 xrdb ~/.Xresources
