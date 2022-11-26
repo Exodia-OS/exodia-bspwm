@@ -71,7 +71,7 @@ userimage {
     border-radius:               10px;
     border-color:                @background-alt;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/imgs/user.jpg", height);
+    background-image:            url("~/.config/bspwm/rofi/imgs/user-2.jpg", height);
 }
 
 /*****----- Inputbar -----*****/

@@ -21,6 +21,7 @@
 # Environtment path #
 export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin"
 
+
 # Get colors from .Xresources #
 xrdb ~/.Xresources
 getcolors() {
@@ -64,8 +65,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # 		#   mainDownExternaMAINUp
 		  
 # fi
-
-
 
 # ----- workspaces config ----- #
 workspaces() {

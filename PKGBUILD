@@ -4,11 +4,12 @@
 
 pkgname=exodia-bspwm
 pkgver=5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
+install=${pkgname}.install
 depends=(
 	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
 	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
