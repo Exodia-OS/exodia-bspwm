@@ -20,8 +20,6 @@
 
 <!-- shields -->
 
-![](GIFs/themes.gif)
-
 
 <!-- ###########################################  ########################################### -->
 
@@ -29,26 +27,29 @@
 
 <h2 align="center">Available Themes Previews</h2>
 
-|Red Jungles|Emilia|Chad WM|
+| Red Jungles | Emilia | Chad WM |
 |--|--|--|
-| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/ChadWM.gif) |
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/RedJungles.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Emilia.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/ChadWM.gif) |
 
-|Hack|Red and Black|Rick|
+| Hack | Black And Red | Rick |
 |--|--|--|
-| ![](GIFs/Hack.gif) | ![](GIFs/RedandBlack.gif) | ![](GIFs/Rick.gif) |
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Hack.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/BlackRed.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Rick.gif) |
 
-|Hack The Box|BlackArch|Neon|
+| Hack The Box | BlackArch | Neon |
 |--|--|--|
-| ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/HackTheBox.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/BlackArch.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Neon.gif) |
 
-|JapaneseCity|VALORANT|TokyoCity|
+| JS Coffee | Amarena | Japanese City |
 |--|--|--|
-| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) | ![](GIFs/TokyoCity.gif) |
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/JSCoffee.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Amarena.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/JapaneseCity.gif) |
 
-|JS coffee|Amarena|
-|--|--|
-| ![](GIFs/JScoffee.gif) | ![](GIFs/Amarena.gif) |
+| Tokyo City | VALORANT | Melissa |
+|--|--|--|
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/TokyoCity.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/VALORANT.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Melissa.gif) |
 
+| Cristina | Pamela | CyberPunk |
+|--|--|--|
+| ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Cristina.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/Pamela.gif) | ![](https://github.com/Exodia-OS/.github/blob/4ee052ab62c253845deb7d9b5ff2d0618cf7d8e9/profile/GIFs/CyberPunk.gif) |
 
 
 
