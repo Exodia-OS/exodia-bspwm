@@ -6,7 +6,7 @@
 ## ------------ COLORS ------------ ##
 
 # Reset #
-Color_Off='\033[0m' # Text Reset
+RESET_COLOR='\033[0m' # Text Reset
 
 # Regular Colors #
 Black='\033[0;30m'  Red='\033[0;31m'     Green='\033[0;32m'  Yellow='\033[0;33m'
@@ -24,6 +24,7 @@ UBlue='\033[4;34m'  UPurple='\033[4;35m' UCyan='\033[4;36m'  UWhite='\033[4;37m'
 On_Black='\033[40m' On_Red='\033[41m'    On_Green='\033[42m' On_Yellow='\033[43m'
 On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
+BUILDING_DIR="Build"
 
 # Script Termination #
 exit_on_signal_SIGINT () {
@@ -42,22 +43,39 @@ trap exit_on_signal_SIGTERM SIGTERM
 # Build packages (create a binary package -> pkg.pkg.tar.zst) #
 BUILD_PKG () {
 
-    # Removing old PKGs #
-    echo -e "\n${BRed}[*] Removing old PKGs"
-    rm ./*.pkg.tar.zst
+    echo -e "\n${BCyan}[*] Build package script${RESET_COLOR}"
 
-    # Building #
-	echo -e "\n${BPurple}[+] Building Package...\n"
-	makepkg -s -f
-	echo -e "\n${BGreen}[+] Successful Build ✔"
+    # Creating Build directory #
+    echo -e "\n${BRed}[+] Creating Build directory${RESET_COLOR}"
+    mkdir -p ${BUILDING_DIR}
     sleep 0.5
 
+    echo -e "${BPurple}   ==> copying files to the building directory${RESET_COLOR}"
+    cp -r `ls | grep -v '^Build$'` ${BUILDING_DIR}
+    sleep 0.5
+
+    echo -e "${BPurple}   ==> go to building directory${RESET_COLOR}"
+    cd ${BUILDING_DIR}
+    sleep 0.5
+    
+    # Building #
+	echo -e "\n${BPurple}[+] Building Package...\n${RESET_COLOR}"
+	makepkg -s -f
+	echo -e "\n${BGreen}[+] Successful Build ✔${RESET_COLOR}"
+    sleep 0.5
+
+    echo -e "\n${BRed}[+] moving new package to parent directory before cleaning building files${RESET_COLOR}"
+    mv ./*.pkg.tar.zst ../
+    sleep 0.5
+    
     # cleaning building #
-    echo -e "\n${BRed}[+] cleaning building files..."
-    rm -rf src pkg
+    echo -e "\n${BRed}[+] cleaning building files...${RESET_COLOR}"
+    cd ..
+    rm -rf ${BUILDING_DIR}
+    sleep 0.5
 
     # D O N E! #
-    echo -e "\n${BGreen}[✔] D O N E \n"
+    echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
 
 }
 
