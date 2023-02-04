@@ -11,13 +11,14 @@ url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
 install=${pkgname}.install
 depends=(
+
 	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
 	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
 	'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
-	'exodia-skeleton'
+	
 )
 
 prepare() {
