@@ -83,7 +83,7 @@ INSTALL (){
 	cp -rf ${CONFIG_DIR_SKEL}/${NET_MANAGER} ${CONFIG_DIR}
 
 	echo -e ${BBlue}"   ==> ${BRed}disable ${BCyan}exodia-welcome ${BBlue} and ${BYellow}enable${BCyan}exodia-help${BBlue}." ${RESET_COLOR}
-	sed -i -e 's/exodia-welcome/exodia-help/g' ${CONFIG_DIR_SKEL}/${FILES_NAME}bspwmrc
+	sed -i -e 's/exodia-welcome/exodia-help/g' ${CONFIG_DIR_SKEL}/${FILES_NAME}/bspwmrc
 
 
     echo -e ${BBlue}"   ==> Granting permissions to the ${BPurple}${USER} ${BBlue}user." ${RESET_COLOR}
