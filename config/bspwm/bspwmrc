@@ -47,7 +47,6 @@ getcolors
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc). #
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
-
 ##  ----- Dual monitor setup -----  ##
 #
 # run xrandr -q | grep " connected" | cut -d ' ' -f1   to list monitors
@@ -56,20 +55,20 @@ export _JAVA_AWT_WM_NONREPARENTING=1
  
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-#  		# use arandr or xrandr to set monitors config
-#  		# in my case, i use laptop monitor (eDP1) as Primary display 
+#  		# use arandr or xrandr to set monitors config, in my case, i use laptop monitor (eDP1) as Primary display
 #  		# and the second monitor (HDMI-1-0) as external display (extended to right)
 # 		# add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
 # 		mainLeftExternalRight
-# 		# mainDownExternaUp
-# 		#   mainDownExternaMAINUp
+
 		  
 # fi
+
+
 
 # ----- workspaces config ----- #
 workspaces() {
 	name=1
-	for monitor in `bspc query -M --names`; do
+	for monitor in `bspc query -M`; do
 		
     bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''      
 		let name++
@@ -79,7 +78,7 @@ workspaces() {
 
 workspaces
 
-bspc config border_width 1
+bspc config border_width 2
 bspc config window_gap 10
 bspc config split_ratio 0.50
 

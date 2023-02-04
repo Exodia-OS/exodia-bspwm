@@ -74,15 +74,11 @@ super + p
 
 # Lockscreen
 ctrl + alt + l
-    bsplock
+    betterlockscreen --lock
 
 # music art
 super + shift + m
 	music --albumArtCover
-
-# udeler
-super + u
-	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 
