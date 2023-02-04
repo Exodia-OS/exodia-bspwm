@@ -1,7 +1,7 @@
 ## ------------ COLORS ------------ ##
 
 # Reset #
-Color_Off='\033[0m' # Text Reset
+RESET_COLOR='\033[0m' # Text Reset
 
 # Regular Colors #
 Black='\033[0;30m'  Red='\033[0;31m'     Green='\033[0;32m'  Yellow='\033[0;33m'
@@ -19,7 +19,6 @@ UBlue='\033[4;34m'  UPurple='\033[4;35m' UCyan='\033[4;36m'  UWhite='\033[4;37m'
 On_Black='\033[40m' On_Red='\033[41m'    On_Green='\033[42m' On_Yellow='\033[43m'
 On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
-
 ## ------------ GET USER INFO ------------ ##
 
 USER=`echo ${SUDO_USER:-$(whoami)}`
@@ -30,24 +29,125 @@ BACKUP_DIR="/home/${USER}/.config/exodia-backups"
 CONFIG_DIR_SKEL='/etc/skel/.config'
 PKG_NAME='exodia-bspwm'
 FILES_NAME='bspwm'
+DUNST='dunst'
+SXHKD='sxhkd'
+NET_MANAGER='networkmanager-dmenu'
 
-## ------------ INSTALL CONFIG FILES ------------ ##
+# BACKUP FUNCTION #
+BACKUP (){
+
+	echo -e ${Green}"\n[*] Creating a backup of your current ${BCyan}${PKG_NAME}${Green} files..." ${RESET_COLOR}
+	BACKUP_NAME=`date +%m-%d`
+	BACKUP_RANDOM="`echo $RANDOM`"
+	echo -e ${BBlue}"   ==> creating backup directory." ${RESET_COLOR}
+
+	mkdir -p ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+
+	echo -e ${BBlue}"   ==> moving ${BPurple}${FILES_NAME} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
+	mv ${CONFIG_DIR}/${FILES_NAME} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+    echo -e ${BBlue}"   ==> moving ${BPurple}${DUNST} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
+	mv ${CONFIG_DIR}/${DUNST} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+    echo -e ${BBlue}"   ==> moving ${BPurple}${SXHKD} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
+	mv ${CONFIG_DIR}/${SXHKD} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+    echo -e ${BBlue}"   ==> moving ${BPurple}${NET_MANAGER} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
+	mv ${CONFIG_DIR}/${NET_MANAGER} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+
+
+   
+    echo -e ${BBlue}"   ==> Granting permissions to the ${BPurple}${USER} ${BBlue}user." ${RESET_COLOR}
+
+	chown -R ${USER}:${GROUB} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+	
+    echo -e ${Green}"[✔] Your current config files are stored in : ${BCyan}${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM} ${Green}." ${RESET_COLOR}
+
+}
+
+# INSTALL FUNCTION #
+INSTALL (){
+
+	echo -e ${Green}"\n[*] Installing ${BCyan}${PKG_NAME}${Green} files." ${RESET_COLOR}
+
+	# install config files #
+	echo -e ${Green}"\n[+] Installing ${BCyan}${PKG_NAME}${Green} config files into ${BCyan}${CONFIG_DIR}" ${RESET_COLOR}
+
+	echo -e ${BBlue}"   ==> creating config directory." ${RESET_COLOR}
+	mkdir -p ${CONFIG_DIR}
+
+	echo -e ${BBlue}"   ==> copying ${BPurple}${FILES_NAME} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
+	cp -rf ${CONFIG_DIR_SKEL}/${FILES_NAME} ${CONFIG_DIR}
+	echo -e ${BBlue}"   ==> copying ${BPurple}${DUNST} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
+	cp -rf ${CONFIG_DIR_SKEL}/${DUNST} ${CONFIG_DIR}
+	echo -e ${BBlue}"   ==> copying ${BPurple}${SXHKD} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
+	cp -rf ${CONFIG_DIR_SKEL}/${SXHKD} ${CONFIG_DIR}
+	echo -e ${BBlue}"   ==> copying ${BPurple}${NET_MANAGER} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
+	cp -rf ${CONFIG_DIR_SKEL}/${NET_MANAGER} ${CONFIG_DIR}
+    
+    echo -e ${BBlue}"   ==> Granting permissions to the ${BPurple}${USER} ${BBlue}user." ${RESET_COLOR}
+	chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${FILES_NAME}
+    chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${DUNST}
+    chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${SXHKD}
+    chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${NET_MANAGER}
+    
+
+	
+	if [[ -d "${CONFIG_DIR}/${FILES_NAME}" && -d "${CONFIG_DIR}/${DUNST}" && -d "${CONFIG_DIR}/${SXHKD}" && -d "${CONFIG_DIR}/${NET_MANAGER}" ]]; then
+
+		echo -e ${BGreen}"[✔] Configuration files installed successfully!\n" ${RESET_COLOR}
+
+	else
+
+		echo -e ${BRed}"[✘] Failed to install configuration files!\n" ${RESET_COLOR}
+
+	fi
+
+}
+
+# MAIN FUNCTION #
+RUN_MAIN (){
+
+	if [[ "${GROUB}" == 'liveuser' ]]; 
+		then
+			exit
+
+	else
+
+		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" && ! -d "${CONFIG_DIR}/${DUNST}" && ! -d "${CONFIG_DIR}/${SXHKD}" && ! -d "${CONFIG_DIR}/${NET_MANAGER}" ]]
+			then
+				
+				INSTALL
+
+		else
+
+				BACKUP
+				INSTALL
+				
+		fi
+
+	fi
+
+}
+
 
 post_install() {
 	
-	echo -e ${BRed}"\n[*] The new config files for ${BYellow}${PKG_NAME}${BRed} are available in : ${BGreen}${CONFIG_DIR_SKEL}/${FILES_NAME}${BRed}." ${Color_Off}
-	echo -e ${BPurple}"\n[*] If you want to install them, do it manually by copying them to ${BGreen}${CONFIG_DIR}/${FILES_NAME}${BPurple}." ${Color_Off}
+	RUN_MAIN
 
 }
 
 post_upgrade() {
-	
-	post_install
 
+	RUN_MAIN
+		
 }
 
 
 post_remove() {
-	
-	
+		
+	echo -e ${BRed} "\n[*] Config files for ${BCyan}${PKG_NAME}${BRed} are still available in : " ${RESET_COLOR}
+	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${FILES_NAME} ${BRed} directory." ${RESET_COLOR}
+	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${DUNST} ${BRed} directory." ${RESET_COLOR}
+	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${SXHKD} ${BRed} directory." ${RESET_COLOR}
+	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${NET_MANAGER} ${BRed} directory." ${RESET_COLOR}
+	echo -e ${BRed} "[*] If you want to remove them, Do it manually.\n " ${RESET_COLOR}
+
 }
