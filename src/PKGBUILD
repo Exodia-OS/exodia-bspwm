@@ -4,7 +4,7 @@
 
 pkgname=exodia-bspwm
 pkgver=6.0
-pkgrel=2
+pkgrel=3
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
@@ -18,6 +18,7 @@ depends=(
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
+	'exodia-assistant'
 	
 )
 
@@ -29,21 +30,16 @@ prepare() {
 
 package() {
 
-	local config_dir=${pkgdir}/etc/skel/.config
-	local bspwm_dir=${config_dir}/bspwm
-	local dunst_dir=${config_dir}/dunst
-	local sxhkd_dir=${config_dir}/sxhkd
+	local CONFIG_DIR=${pkgdir}/etc/skel/.config
+	local BSPWM_DIR=${CONFIG_DIR}/bspwm
 
-	mkdir -p "$config_dir" "$bspwm_dir" "$dunst_dir" "$sxhkd_dir"
+	mkdir -p "${CONFIG_DIR}" "${BSPWM_DIR}"
 
-	cp -r ${srcdir}/*	"$config_dir"
+	cp -r ${srcdir}/*	"${CONFIG_DIR}"
 
-	chmod +x "$bspwm_dir"/bin/*
-	chmod +x "$bspwm_dir"/rofi/bin/*
+	chmod +x "${BSPWM_DIR}"/bin/*
+	chmod +x "${BSPWM_DIR}"/rofi/bin/*
 
-	install -Dm 755 ${srcdir}/bspwm/bspwmrc   			"$bspwm_dir"/bspwmrc
-	install -Dm 644 ${srcdir}/bspwm/picom.conf   		"$bspwm_dir"/picom.conf
-	install -Dm 644 ${srcdir}/dunst/dunstrc   			"$config_dir"/dunst/dunstrc
-	install -Dm 644 ${srcdir}/sxhkd/sxhkdrc        		"$config_dir"/sxhkd/sxhkdrc
+	install -Dm 755 ${srcdir}/bspwm/bspwmrc "${BSPWM_DIR}"/bspwmrc
 	
 }

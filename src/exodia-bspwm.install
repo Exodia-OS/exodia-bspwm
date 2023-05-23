@@ -1,3 +1,14 @@
+#!/bin/bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
 ## ------------ COLORS ------------ ##
 
 # Reset #
@@ -29,9 +40,8 @@ BACKUP_DIR="/home/${USER}/.config/exodia-backups"
 CONFIG_DIR_SKEL='/etc/skel/.config'
 PKG_NAME='exodia-bspwm'
 FILES_NAME='bspwm'
-DUNST='dunst'
-SXHKD='sxhkd'
 NET_MANAGER='networkmanager-dmenu'
+AUTO_UPDATE_STATUS=$(grep -Po 'auto-update\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
 
 # BACKUP FUNCTION #
 BACKUP (){
@@ -45,10 +55,7 @@ BACKUP (){
 
 	echo -e ${BBlue}"   ==> moving ${BPurple}${FILES_NAME} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
 	mv ${CONFIG_DIR}/${FILES_NAME} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
-    echo -e ${BBlue}"   ==> moving ${BPurple}${DUNST} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
-	mv ${CONFIG_DIR}/${DUNST} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
-    echo -e ${BBlue}"   ==> moving ${BPurple}${SXHKD} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
-	mv ${CONFIG_DIR}/${SXHKD} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
+    
     echo -e ${BBlue}"   ==> moving ${BPurple}${NET_MANAGER} ${BBlue}config to the ${BPurple}backup ${BBlue}directory." ${RESET_COLOR}
 	mv ${CONFIG_DIR}/${NET_MANAGER} ${BACKUP_DIR}/${FILES_NAME}-${BACKUP_NAME}-${BACKUP_RANDOM}
 
@@ -75,26 +82,19 @@ INSTALL (){
 
 	echo -e ${BBlue}"   ==> copying ${BPurple}${FILES_NAME} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
 	cp -rf ${CONFIG_DIR_SKEL}/${FILES_NAME} ${CONFIG_DIR}
-	echo -e ${BBlue}"   ==> copying ${BPurple}${DUNST} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
-	cp -rf ${CONFIG_DIR_SKEL}/${DUNST} ${CONFIG_DIR}
-	echo -e ${BBlue}"   ==> copying ${BPurple}${SXHKD} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
-	cp -rf ${CONFIG_DIR_SKEL}/${SXHKD} ${CONFIG_DIR}
+	
+	
 	echo -e ${BBlue}"   ==> copying ${BPurple}${NET_MANAGER} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
 	cp -rf ${CONFIG_DIR_SKEL}/${NET_MANAGER} ${CONFIG_DIR}
-
-	echo -e ${BBlue}"   ==> ${BRed}disable ${BCyan}exodia-welcome ${BBlue} and ${BYellow}enable${BCyan}exodia-help${BBlue}." ${RESET_COLOR}
-	sed -i -e 's/exodia-welcome/exodia-help/g' ${CONFIG_DIR_SKEL}/${FILES_NAME}/bspwmrc
 
 
     echo -e ${BBlue}"   ==> Granting permissions to the ${BPurple}${USER} ${BBlue}user." ${RESET_COLOR}
 	chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${FILES_NAME}
-    chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${DUNST}
-    chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${SXHKD}
     chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${NET_MANAGER}
     
 
 	
-	if [[ -d "${CONFIG_DIR}/${FILES_NAME}" && -d "${CONFIG_DIR}/${DUNST}" && -d "${CONFIG_DIR}/${SXHKD}" && -d "${CONFIG_DIR}/${NET_MANAGER}" ]]; then
+	if [[ -d "${CONFIG_DIR}/${FILES_NAME}" && -d "${CONFIG_DIR}/${NET_MANAGER}" ]]; then
 
 		echo -e ${BGreen}"[✔] Configuration files installed successfully!\n" ${RESET_COLOR}
 
@@ -115,13 +115,14 @@ RUN_MAIN (){
 
 	else
 
-		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" && ! -d "${CONFIG_DIR}/${DUNST}" && ! -d "${CONFIG_DIR}/${SXHKD}" && ! -d "${CONFIG_DIR}/${NET_MANAGER}" ]]
+		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" && ! -d "${CONFIG_DIR}/${NET_MANAGER}" ]]
 			then
 				
 				INSTALL
-
-		else
-
+		
+		if [[ ${AUTO_UPDATE_STATUS} == "true" ]]
+			then
+				
 				BACKUP
 				INSTALL
 				
@@ -149,8 +150,6 @@ post_remove() {
 		
 	echo -e ${BRed} "\n[*] Config files for ${BCyan}${PKG_NAME}${BRed} are still available in : " ${RESET_COLOR}
 	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${FILES_NAME} ${BRed} directory." ${RESET_COLOR}
-	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${DUNST} ${BRed} directory." ${RESET_COLOR}
-	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${SXHKD} ${BRed} directory." ${RESET_COLOR}
 	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${NET_MANAGER} ${BRed} directory." ${RESET_COLOR}
 	echo -e ${BRed} "[*] If you want to remove them, Do it manually.\n " ${RESET_COLOR}
 

@@ -75,7 +75,7 @@ case $chosen in
         bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch' 'default.conf'
         ;;
     $theme_9)
-        bash apply-theme  'Islamic_warrior_9.jpg' 'IslamicWarrior' 'Tokyonight-Dark-BL' 'neon-icon' 'ArchTrix' 'IslamicWarrior' 'IslamicWarrior' 'shadow-animation.conf'
+        bash apply-theme  'Islamic_warrior_9.jpg' 'IslamicWarrior' 'Tokyonight-Dark-BL' 'Hack' 'ArchTrix' 'IslamicWarrior' 'IslamicWarrior' 'shadow-animation.conf'
         ;;
     $theme_10)
         bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'Zafiro' 'ManjaTrix' 'ChadWM' 'JScoffee' 'default.conf'
