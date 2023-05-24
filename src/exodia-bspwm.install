@@ -119,6 +119,12 @@ RUN_MAIN (){
 			then
 				
 				INSTALL
+
+		if [[ ! -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" ]]
+			then
+				
+				BACKUP
+				INSTALL
 		
 		if [[ ${AUTO_UPDATE_STATUS} == "true" ]]
 			then
