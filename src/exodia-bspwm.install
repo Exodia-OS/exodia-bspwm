@@ -104,18 +104,18 @@ RUN_MAIN (){
 
 	else
 
-		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" ]]
+		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" ]];
 			then
 				
 				INSTALL
 
-		if [[ ! -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" ]]
+		elif [[ ! -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" ]];
 			then
 				
 				BACKUP
 				INSTALL
 		
-		if [[ ${AUTO_UPDATE_STATUS} == "true" ]]
+		elif [[ -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" && ${AUTO_UPDATE_STATUS} == "true" ]]
 			then
 				
 				BACKUP

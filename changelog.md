@@ -1,7 +1,7 @@
 <h2 align="center"> Changelogs</h2>
 
 
-## what is the new in the new release v `6.0.3`
+## what is the new in the new release v `6.3.3`
 
 - update `rofi` menus
 - update `polybar` themes
