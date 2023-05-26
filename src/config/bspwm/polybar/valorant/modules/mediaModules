@@ -62,7 +62,7 @@ format-online-background = #F06576
 format-online-foreground = ${color.BACKGROUND}
 
 format-playing = ${self.format-online}
-format-paused = <label-song> <toggle>
+format-paused = <label-song> <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = " "

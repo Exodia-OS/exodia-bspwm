@@ -88,7 +88,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space song-icon space song space mpd space volume sep backlight
 modules-center = network_ext checknet
-modules-right  = xkeyboard sep notification-github space battery space info-cava space date space sysmenu space
+modules-right  = xkeyboard sep notification-github space battery space date space sysmenu space
 
 separator =
 spacing = 0

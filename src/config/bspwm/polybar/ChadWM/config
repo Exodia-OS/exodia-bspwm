@@ -73,7 +73,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left   = xdomenu space LDD bspwm LDD space ethernet space mod space LDD xkeyboard LDD space notification-github space space info-cava
+modules-left   = xdomenu space LDD bspwm LDD space ethernet space mod space LDD xkeyboard LDD space notification-github space
 modules-center = LDD mpd LDD
 modules-right  = updates-pacman space LDD volume spaceD backlight LDD space RDD battery space cpu space cpuTemp space network space PLDD date PLD
 

@@ -59,10 +59,6 @@ ramp-headphones-1 = 
 [module/mpd]
 type = internal/mpd
 
-;;host = 127.0.0.1
-;;port = 6600
-;;password = mysecretpassword
-
 interval = 2
 
 format-online = <label-song> <icon-prev> <toggle> <icon-next>
@@ -70,7 +66,7 @@ format-online-prefix = " "
 format-online-prefix-foreground = ${color.GREEN}
 
 format-playing = ${self.format-online}
-format-paused = <label-song> <toggle>
+format-paused = <label-song> <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = " "

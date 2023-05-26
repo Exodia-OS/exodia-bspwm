@@ -201,7 +201,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = ethernet
 modules-center = 
-modules-right  = empty info-cava empty space cpu cpuTemp space volume backlight space network
+modules-right  = space cpu cpuTemp space volume backlight space network
  
 separator =
 spacing = 0

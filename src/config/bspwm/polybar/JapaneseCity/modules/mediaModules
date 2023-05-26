@@ -85,7 +85,7 @@ format-online-prefix = " "
 format-online-prefix-foreground = ${color.GREEN}
 
 format-playing = ${self.format-online}
-format-paused = <label-song> <toggle>
+format-paused = <label-song> <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = " "

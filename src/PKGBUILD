@@ -3,7 +3,7 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=6.4
+pkgver=6.5
 pkgrel=3
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
@@ -18,7 +18,6 @@ depends=(
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
-	'exodia-assistant'
 	
 )
 

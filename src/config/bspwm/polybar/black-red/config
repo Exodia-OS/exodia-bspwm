@@ -79,7 +79,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space song-icon space song space mpd space 
 modules-center = network_ext checknet
-modules-right  = volume sep backlight sep info-cava space
+modules-right  = volume sep backlight space
 
 separator =
 spacing = 0
