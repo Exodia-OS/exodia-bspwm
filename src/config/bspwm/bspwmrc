@@ -114,5 +114,5 @@ STATUS=$(grep -Po 'exoida-assistant-auto-start\s*=\s*\K.*' ${BSPWM_DIR}/exodia.c
 
 if [[ ${STATUS} == "true" ]]; 
 	then
-    	exodia-assistant
+    	exodia-welcome
 fi
