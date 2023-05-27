@@ -78,7 +78,7 @@ INSTALL (){
 	echo -e ${BBlue}"   ==> copying ${BPurple}${FILES_NAME} ${BBlue}config files to the ${BPurple}config ${BBlue}directory." ${RESET_COLOR}
 	cp -rf ${CONFIG_DIR_SKEL}/${FILES_NAME} ${CONFIG_DIR}
 
-	echo -e ${BBlue}"   ==> ${BRed}disable ${BCyan}exodia-welcome ${BBlue} and ${BYellow}enable${BCyan}exodia-assistant${BBlue}." ${RESET_COLOR}
+	echo -e ${BBlue}"   ==> ${BRed}disable ${BCyan}exodia-welcome ${BBlue} and ${BYellow}enable ${BCyan}exodia-assistant${BBlue}." ${RESET_COLOR}
 	sed -i 's/exodia-welcome/exodia-assistant/g' ${CONFIG_DIR}/${FILES_NAME}/bspwmrc
 
     echo -e ${BBlue}"   ==> Granting permissions to the ${BPurple}${USER} ${BBlue}user." ${RESET_COLOR}
