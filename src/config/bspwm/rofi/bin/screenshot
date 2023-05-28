@@ -13,26 +13,28 @@
 #                                   						               #
 ################################################################
 
-# Import Current Theme
+# Import Current Theme #
 DIR="$HOME/.config/bspwm"
 ROFI_THEME="$DIR/rofi/themes/screenshot.rasi"
 
-# Theme Elements
+# Theme Elements #
 prompt='Screenshot Tool'
 mesg="Screenshots are saved in the : 
 \``xdg-user-dir PICTURES`/Screenshots\` Directory"
 
-# Options
+# Options #
 layout=$(cat "${ROFI_THEME}" | grep 'USE_ICON' | cut -d'=' -f2)
 if [[ "$layout" == 'NO' ]];
-	then
-		option_1="  Capture an Area"
-		option_2="  Capture a Window"
-		option_3="  Capture a Desktop"
-		option_4="     Capture a Monitor"	
-		option_5="  Capture in 5s"	
-		option_6="  Capture in 10s"	
-			
+  
+  then
+
+		  option_1="  Capture an Area"
+		  option_2="  Capture a Window"
+		  option_3="  Capture a Desktop"
+		  option_4="     Capture a Monitor"	
+		  option_5="  Capture in 5s"	
+		  option_6="  Capture a Monitor in 5s"	
+
 else
 
 	option_1=""
@@ -44,7 +46,7 @@ else
 	
 fi
 
-# Rofi CMD
+# Rofi CMD #
 rofi_cmd() {
   rofi -dmenu \
     -p "$prompt" \
@@ -53,23 +55,25 @@ rofi_cmd() {
     -theme "${ROFI_THEME}"
 }
 
-# Pass variables to rofi dmenu
+# Pass variables to rofi dmenu #
 run_rofi() {
+
   echo -e "$option_1\n$option_3\n$option_5\n$option_2\n$option_4\n$option_6" | rofi_cmd
+
 }
 
-# Screenshot
+# Screenshot #
 time=$(date +%Y-%m-%d-%H-%M-%S)
 geometry=$(xrandr | grep 'connected' | awk '{print $3}' | tr 'x' '\n' | sort -nr | awk 'NR==1')
 dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
-# Directory
+# Directory #
 if [[ ! -d "$dir" ]]; then
   mkdir -p "$dir"
 fi
 
-# notify and view screenshot
+# notify and view screenshot #
 notify_view() {
   notify_cmd_shot='dunstify -u low -h string:x-dunst-stack-tag:obscreenshot -i /usr/share/icons/dunst/picture.png'
   ${notify_cmd_shot} "Copied to clipboard."
@@ -82,12 +86,12 @@ notify_view() {
   fi
 }
 
-# Copy screenshot to clipboard
+# Copy screenshot to clipboard #
 copy_shot () {
   tee "$file" | xclip -selection clipboard -t image/png
 }
 
-# countdown
+# countdown #
 countdown () {
   for sec in $(seq "$1" -1 1); do
     dunstify -t 1000 -h string:x-dunst-stack-tag:screenshottimer -i /usr/share/icons/dunst/timer.png "Taking shot in : $sec"
@@ -95,7 +99,7 @@ countdown () {
   done
 }
 
-# take shots
+# take shots #
 shotnow () {
   cd "${dir}" && sleep 0.5 && maim -u -f png | copy_shot
   notify_view
@@ -107,10 +111,41 @@ shot5 () {
   notify_view
 }
 
-shot10 () {
-  countdown '10'
-  sleep 1 && cd "${dir}" && maim -u -f png | copy_shot
+shotMon5 () {
+
+  MONITORS=$(xrandr | grep -o '[0-9]*x[0-9]*[+-][0-9]*[+-][0-9]*')
+  # Get the location of the mouse #
+  XMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $2}')
+  YMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $4}')
+
+  for mon in ${MONITORS}; do
+    # Parse the geometry of the monitor #
+    MONW=$(echo ${mon} | awk -F "[x+]" '{print $1}')
+    MONH=$(echo ${mon} | awk -F "[x+]" '{print $2}')
+    MONX=$(echo ${mon} | awk -F "[x+]" '{print $3}')
+    MONY=$(echo ${mon} | awk -F "[x+]" '{print $4}')
+    # Use a simple collision check #
+    if (( ${XMOUSE} >= ${MONX} )); then
+      if (( ${XMOUSE} <= ${MONX}+${MONW} )); then
+        if (( ${YMOUSE} >= ${MONY} )); then
+          if (( ${YMOUSE} <= ${MONY}+${MONH} )); then
+            # We have found our monitor! #
+            GEOMETRY=${MONW}x${MONH}+${MONX}+${MONY}
+        
+          fi
+        fi
+      fi
+    fi
+  done
+
+  countdown '5'
+
+  sleep 1
+  
+  cd ${dir} && maim -u -f png -g ${GEOMETRY} | copy_shot
+
   notify_view
+
 }
 
 shotwin () {
@@ -128,22 +163,22 @@ shotarea () {
 shotmonitor () {
 
   MONITORS=$(xrandr | grep -o '[0-9]*x[0-9]*[+-][0-9]*[+-][0-9]*')
-  # Get the location of the mouse
+  # Get the location of the mouse #
   XMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $2}')
   YMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $4}')
 
   for mon in ${MONITORS}; do
-    # Parse the geometry of the monitor
+    # Parse the geometry of the monitor #
     MONW=$(echo ${mon} | awk -F "[x+]" '{print $1}')
     MONH=$(echo ${mon} | awk -F "[x+]" '{print $2}')
     MONX=$(echo ${mon} | awk -F "[x+]" '{print $3}')
     MONY=$(echo ${mon} | awk -F "[x+]" '{print $4}')
-    # Use a simple collision check
+    # Use a simple collision check #
     if (( ${XMOUSE} >= ${MONX} )); then
       if (( ${XMOUSE} <= ${MONX}+${MONW} )); then
         if (( ${YMOUSE} >= ${MONY} )); then
           if (( ${YMOUSE} <= ${MONY}+${MONH} )); then
-            # We have found our monitor!
+            # We have found our monitor! #
             GEOMETRY=${MONW}x${MONH}+${MONX}+${MONY}
         
           fi
@@ -160,37 +195,49 @@ shotmonitor () {
 }
 
 
-# Execute Command
+# Execute Command #
 run_cmd() {
   if [[ "$1" == '--opt1' ]];
-  	then
+  	
+    then
+
     	shotarea
 
   elif [[ "$1" == '--opt2' ]];
+
   	then
+
     	shotwin
 
   elif [[ "$1" == '--opt3' ]];
+
   	then
+
     	shotnow
 		
   elif [[ "$1" == '--opt4' ]];
+
   	then
+
     	shotmonitor
 
   elif [[ "$1" == '--opt5' ]];
+
   	then
+
     	shot5
 
   elif [[ "$1" == '--opt6' ]];
+
   	then
-    	shot10
+
+    	shotMon5
 		
   fi
   
 }
 
-# Actions
+# Actions #
 chosen="$(run_rofi)"
 case ${chosen} in
   $option_1)
