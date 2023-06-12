@@ -30,86 +30,135 @@ GET_VALUES() {
 # Write values to `system` file #
 SET_VALUES() {
 
-	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
+	if [[ "$ADAPTER" ]];
+		
+		then
+			
+			sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" "${SFILE}"
+
 	fi
-	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
+
+	if [[ "$BATTERY" ]];
+		
+		then
+			
+			sed -i -e "s/battery = .*/battery = $BATTERY/g" "${SFILE}"
+
 	fi
-	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
+
+	if [[ "$CARD" ]];
+		
+		then
+			
+			sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" "${SFILE}"
+
 	fi
-	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
+
+	if [[ "$INTERFACE" ]];
+		
+		then
+			
+			sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" "${SFILE}"
+
 	fi
 
 }
 
 # Launch Polybar with the selected style ONLY in the primary display #
 LAUNCH_SINGLE_BAR() {
-	
+
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/config
+	if [[ -z "$CARD" ]];
+		
+		then
+			
+			sed -i -e 's/backlight/bna/g' "$DIR"/config
+
+	elif [[ "$CARD" != *"intel_"* ]];
+		
+		then
+			
+			sed -i -e 's/backlight/brightness/g' "$DIR"/config
+
 	fi
 
-    # close polybar #
+	# Close polybar #
 	killall -q polybar
 
-    # Wait until closing polybar # 
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+	# Wait until closing polybar #
+	while pgrep -u $UID -x polybar >/dev/null;
+		
+		do
+			
+			sleep 1
 
-    # launch polybar #
-    polybar -q main -c "$DIR"/config &
-	polybar -q sec -c "$DIR"/config &
-	
+	done
+
+	# Launch polybar #
+	polybar -q main -c   "$DIR"/config &
+	polybar -q sec -c    "$DIR"/config &
+
 }
 
 # Launch Polybar with the selected style in all displays #
 LAUNCH_MULTI_BAR() {
-	
+
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/config
+	if [[ -z "$CARD" ]];
+		
+		then
+			
+			sed -i -e 's/backlight/bna/g' "$DIR"/config
+
+	elif [[ "$CARD" != *"intel_"* ]];
+		
+		then
+			
+			sed -i -e 's/backlight/brightness/g' "$DIR"/config
+
 	fi
-	
-    # close polybar #
+
+	# Close polybar #
 	killall -q polybar
 
-    # Wait until closing polybar # 
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-    # launch polybar #
-	for mon in $(polybar --list-monitors | cut -d":" -f1); 
+	# Wait until closing polybar #
+	while pgrep -u $UID -x polybar >/dev/null;
+		
 		do
-
-			MONITOR=$mon polybar -q main -c "$DIR"/config &
-			MONITOR=$mon polybar -q sec -c "$DIR"/config &
+			
+			sleep 1
 
 	done
+
+	# Launch polybar #
+	for MON in $(polybar --list-monitors | cut -d":" -f1);
+		
+		do
+
+			MONITOR=$MON polybar -q main -c   "$DIR"/config &
+			MONITOR=$MON polybar -q sec -c    "$DIR"/config &
 	
+	done
+
 }
 
 # Execute functions #
 GET_VALUES
 SET_VALUES
 
-# launch polybar #
-if [[ $MONITORS == "true" ]]; 
+# Launch polybar #
+if [[ $MONITORS == "true" ]];
+	
 	then
-
-    	LAUNCH_MULTI_BAR
+		
+		LAUNCH_MULTI_BAR
 
 else
 
-    	LAUNCH_SINGLE_BAR
+	LAUNCH_SINGLE_BAR
 
 fi

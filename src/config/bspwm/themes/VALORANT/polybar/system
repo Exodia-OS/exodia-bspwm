@@ -24,6 +24,8 @@
 ;; battery = BAT0
 ;; adapter = AC
 ;; interface = ${system.network_interface}
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [system]
 adapter = AC

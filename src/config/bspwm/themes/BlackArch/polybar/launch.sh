@@ -34,7 +34,7 @@ SET_VALUES() {
 		
 		then
 			
-			sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" ${SFILE}
+			sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" "${SFILE}"
 
 	fi
 
@@ -42,7 +42,7 @@ SET_VALUES() {
 		
 		then
 			
-			sed -i -e "s/battery = .*/battery = $BATTERY/g" ${SFILE}
+			sed -i -e "s/battery = .*/battery = $BATTERY/g" "${SFILE}"
 
 	fi
 
@@ -50,15 +50,15 @@ SET_VALUES() {
 		
 		then
 			
-			sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" ${SFILE}
+			sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" "${SFILE}"
 
 	fi
-	
+
 	if [[ "$INTERFACE" ]];
 		
 		then
 			
-			sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" ${SFILE}
+			sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" "${SFILE}"
 
 	fi
 
@@ -66,7 +66,7 @@ SET_VALUES() {
 
 # Launch Polybar with the selected style ONLY in the primary display #
 LAUNCH_SINGLE_BAR() {
-	
+
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
@@ -84,28 +84,26 @@ LAUNCH_SINGLE_BAR() {
 
 	fi
 
-	if [[ "$INTERFACE" == e* ]];
-		
-		then
-			
-			sed -i -e 's/network/ethernet/g' "$DIR"/config
-
-	fi
-	
-    # close polybar #
+	# Close polybar #
 	killall -q polybar
 
-    # Wait until closing polybar # 
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+	# Wait until closing polybar #
+	while pgrep -u $UID -x polybar >/dev/null;
+		
+		do
+			
+			sleep 1
 
-    # launch polybar #
-    polybar -q main -c "$DIR"/config &
-	
+	done
+
+	# Launch polybar #
+	polybar -q main -c   "$DIR"/config &
+
 }
 
 # Launch Polybar with the selected style in all displays #
 LAUNCH_MULTI_BAR() {
-	
+
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
@@ -123,43 +121,42 @@ LAUNCH_MULTI_BAR() {
 
 	fi
 
-	if [[ "$INTERFACE" == e* ]];
-		
-		then
-			
-			sed -i -e 's/network/ethernet/g' "$DIR"/config
-			
-	fi
-	
-    # close polybar #
+	# Close polybar #
 	killall -q polybar
 
-    # Wait until closing polybar # 
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-    # launch polybar #
-	for MON in $(polybar --list-monitors | cut -d":" -f1);
+	# Wait until closing polybar #
+	while pgrep -u $UID -x polybar >/dev/null;
 		
 		do
 			
-			MONITOR=$MON polybar -q main -c "$DIR"/config &
+			sleep 1
 
 	done
-	
+
+	# Launch polybar #
+	for MON in $(polybar --list-monitors | cut -d":" -f1);
+		
+		do
+
+			MONITOR=$MON polybar -q main -c   "$DIR"/config &
+
+	done
+
 }
 
 # Execute functions #
 GET_VALUES
 SET_VALUES
 
-# launch polybar #
-if [[ $MONITORS == "true" ]]; 
+# Launch polybar #
+if [[ $MONITORS == "true" ]];
+	
 	then
-
-    	LAUNCH_MULTI_BAR
+		
+		LAUNCH_MULTI_BAR
 
 else
 
-    	LAUNCH_SINGLE_BAR
+	LAUNCH_SINGLE_BAR
 
 fi
