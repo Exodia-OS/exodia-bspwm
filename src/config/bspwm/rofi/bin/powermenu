@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
-###################################################
-#                                                 #
-#  @author      : 00xWolf                         #
-#    GitHub    : @mmsaeed509                     #
-#    Developer : Mahmoud Mohamed                 #
-#  﫥  Copyright : Exodia OS                       #
-#  Credits : Aditya Shakya (Github : @adi1090x)   #
-#                                                 #
-###################################################
+################################################################
+#                                                              #
+#  Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>  #
+#                                   						   #
+#  Reconfigured For Exodia OS                                  #
+#                                   						   #
+#  @author      : 00xWolf           						   #
+#    GitHub    : @mmsaeed509       						   #
+#    Developer : Mahmoud Mohamed   						   #
+#  﫥  Copyright : Exodia OS        						    #
+#                                   						   #
+################################################################
 
 # Current Theme #
 dir="$HOME/.config/bspwm/rofi/themes"
@@ -16,7 +19,8 @@ theme='powermenu'
 
 # CMDs #
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime -p | sed -e 's/up //g'`"
+uptime=" Uptime: you took about:
+fuck@*#g  -> `uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options #
@@ -33,7 +37,7 @@ no=''
 rofi_cmd() {
 	rofi -dmenu \
 		-p "Goodbye  Mr.$USER" \
-		-mesg " Uptime: $uptime" \
+		-mesg " $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
 

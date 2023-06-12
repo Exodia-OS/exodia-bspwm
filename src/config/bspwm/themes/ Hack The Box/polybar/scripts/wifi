@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+SSID=$(iwgetid -r)
+
+if [[ "$SSID" == "" ]];
+  
+    then
+        echo "睊 disconnected"
+
+else
+
+    echo "直 $SSID"
+
+fi

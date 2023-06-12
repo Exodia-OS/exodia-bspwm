@@ -1,0 +1,161 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = ${system.battery}
+adapter = ${system.adapter}
+
+poll-interval = 2
+time-format = %H:%M
+
+format-charging = <animation-charging><label-charging>
+format-charging-prefix = 
+
+format-discharging = <ramp-capacity><label-discharging>
+
+format-full = <label-full>
+format-full-prefix = ""
+format-full-prefix-font = 3
+format-full-prefix-foreground = #F5040D
+format-full-prefix-background = ${color.BACKGROUND}
+
+label-charging = "%percentage%%"
+label-discharging = "%percentage%%"
+label-full = "%percentage%%"
+
+label-charging-background = ${color.BACKGROUND}
+label-discharging-background = ${color.BACKGROUND}
+label-full-background = ${color.BACKGROUND}
+
+label-charging-foreground = #F5040D
+label-discharging-foreground = #F5040D
+label-full-foreground = #F5040D
+
+label-charging-font = 3
+label-discharging-font = 3
+label-full-font = 3
+
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+
+
+ramp-capacity-font = 3
+
+ramp-capacity-foreground = #F5040D
+ramp-capacity-background = ${color.BACKGROUND}
+
+animation-charging-font = 3
+
+animation-charging-foreground = #F5040D
+animation-charging-background = ${color.BACKGROUND}
+animation-charging-framerate = 750
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+
+format = <label>
+
+format-prefix = ""
+format-prefix-font = 3
+format-prefix-foreground = #F5040D
+format-prefix-background = ${color.BACKGROUND}
+label = "%{A1:stacer &:} %percentage%%%{A}"
+label-font = 3
+label-background = ${color.BACKGROUND}
+label-foreground = #F5040D
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+interval = 30
+fixed-values = true
+
+format-mounted = <label-mounted>
+format-mounted-prefix = ""
+format-mounted-prefix-font = 3
+format-mounted-prefix-foreground = #F5040D
+format-mounted-prefix-background = ${color.BACKGROUND}
+
+format-unmounted = <label-unmounted>
+format-unmounted-prefix = ""
+format-unmounted-prefix-font = 3
+format-unmounted-prefix-foreground = #F5040D
+format-unmounted-prefix-background = ${color.BACKGROUND}
+
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
+; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
+label-unmounted = " %mountpoint%: NA"
+label-mounted-foreground = #F5040D
+
+label-mounted-background = ${color.BACKGROUND}
+label-unmounted-background = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpuTemp]
+type = custom/script
+exec = ~/.config/bspwm/themes/\ Black\ And\ Red/polybar/scripts/heatSensors
+interval = 1
+click-left = xsensors
+format-foreground = #00eb15
+format-background = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/memory]
+
+type = internal/memory
+interval = 2
+
+format = <label>
+format-prefix = ""
+format-prefix-foreground = #F5040D
+
+
+; label = "%mb_used%"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:} %gb_used%%{A}"
+label-foreground = #F5040D
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/bspwm/themes/\ Black\ And\ Red/polybar/scripts/updates-pacman.sh
+interval = 180
+format = <label>
+
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
+
+format-font = 3
+label-foreground = #F5040D
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -1,0 +1,33 @@
+/* 
+
+  @author      : 00xWolf
+    GitHub    : @mmsaeed509
+    Developer : Mahmoud Mohamed
+  﫥  Copyright : Exodia OS
+
+ */
+
+@import "colors.rasi"
+
+* {
+    background-color:       @background;
+    text-color:             @foreground;
+	font:				 	"JetBrainsMono Nerd Font 15";
+}
+
+window {
+    width:      			350px;
+    padding:    			20px;
+    border:					2px;
+    border-radius:          10px;
+    border-color:           @selected;
+    location:               center;
+    x-offset:               0;
+    y-offset:               -4%;
+}
+
+entry {
+    expand: 				true;
+    width: 					200px;
+    text-color:				@selected;
+}

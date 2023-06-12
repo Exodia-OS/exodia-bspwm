@@ -25,7 +25,8 @@ setxkbmap -layout $(grep -oP 'keyboard-layouts = \K.*' "${BSPWM_DIR}/exodia.conf
 setxkbmap -option 'grp:alt_shift_toggle'
 
 # Updating Color Schemes #
-cat ${BSPWM_DIR}/colorSchemes/$(grep -oP 'color-scheme = \K.*' "${BSPWM_DIR}/exodia.conf")> "${XRES}"/colors
+COLOR_SCHEME=$(grep -oP 'color-scheme = \K.*' "${BSPWM_DIR}/exodia.conf")
+cat "${BSPWM_DIR}/themes/${COLOR_SCHEME}/colorScheme" > "${XRES}"/colors
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc). #
 export _JAVA_AWT_WM_NONREPARENTING=1 
@@ -35,9 +36,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # No. monitors #
 NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")
 
-if [[ ${NUM_OF_MONITORS} -ge 1 ]]; 
+if [[ ${NUM_OF_MONITORS} -ge 1 ]];
+
 	then
-    	bspmonitors
+		
+		bspmonitors
+		
 fi
 
 # Workspaces Configurations #
@@ -93,7 +97,7 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # restore wallpaper #
-feh --no-fehbg --bg-fill /usr/share/backgrounds/$(grep -oP 'background = \K.*' "${BSPWM_DIR}/exodia.conf")
+feh --no-fehbg --bg-fill $(grep -oP 'background = \K.*' "${BSPWM_DIR}/exodia.conf")
 
 # enable num lock #
 numlockx &
@@ -110,9 +114,12 @@ bspfloat &
 
 # Lauch Exodia OS Assistant #
 
-STATUS=$(grep -Po 'exoida-assistant-auto-start\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
+STATUS=$(grep -Po 'exodia-assistant-auto-start\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
 
-if [[ ${STATUS} == "true" ]]; 
+if [[ ${STATUS} == "true" ]];
+	
 	then
+
     	exodia-welcome
+		
 fi

@@ -56,6 +56,7 @@ case $NUM_OF_MONITORS in
         xrandr --output ${MONITORS[0]} --primary --mode ${MAIN_RESOLUTION} --pos 0x0 --auto --rate ${PRIMARY_HIGHEST_REFRESH_RATE}
         
         for (( i=1; i<NUM_OF_MONITORS; i++ ))
+            
             do
 
                 # get position and resolutions #
@@ -68,6 +69,7 @@ case $NUM_OF_MONITORS in
 
         done
         ;;
+        
 esac
 
 
@@ -75,6 +77,7 @@ esac
 echo -e "${BCyan}\n[*] Connected Monitors and Their Resolutions and Refresh Rate:- \n" ${RESET_COLOR}
 
 for monitor in "${MONITORS[@]}"
+    
     do
 
         RESOLUTION=$(echo "$XRANDR" | grep -w "$monitor" -A1 | tail -n 1 | awk '{print $1}')

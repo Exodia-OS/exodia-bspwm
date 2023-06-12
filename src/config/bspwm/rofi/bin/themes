@@ -9,103 +9,40 @@
 #                                   #
 #####################################
 
-# directories #
+# Directories #
 DIR="$HOME/.config/bspwm"
 BSP="$HOME/.config/bspwm/themes"
 ROFI_THEME="rofi -theme $DIR/rofi/themes/themes.rasi"
+EXODIA_CONFIG_FILE="${DIR}/exodia.conf"
 
-# Available Themes #
-theme_1=" Red Jungles"
-theme_2=" Emilia"
-theme_3=" Chad WM"
-theme_4=" Hack"
-theme_5=" Black And Red"
-theme_6=" Rick"
-theme_7=" Hack The Box"
-theme_8=" BlackArch"
-theme_9=" Islamic Knights"
-theme_10=" JS Coffee"
-theme_11=" Exodia"
-theme_12=" Japanese City"
-theme_13=" Tokyo City"
-theme_14=" VALORANT"
-theme_15=" Melissa"
-theme_16=" Cristina"
-theme_17=" CyberPunk"
-theme_18=" A Hacker Den"
-theme_19=" Amarena"
+# get No. themes #
+NUM_OF_THEMES=$(cd ${DIR}/themes && ls -d */ | cut -d '/' -f1 | wc -l)
+sed -i "s/str:.*/str: \" [${NUM_OF_THEMES}] Bspwm Themes Are Available In Exodia OS \\\n   Have fun with your favorite theme \";/" ${DIR}/rofi/themes/themes.rasi
 
+# Get available themes #
+AVAILABLE_THEMES=$(ls "$BSP")
 
-# pass available themes to rofi #
-AVAILABLE_THEMES="$theme_1\n$theme_2\n$theme_3\n$theme_4\
-\n$theme_5\n$theme_6\n$theme_7\n$theme_8\n$theme_9\
-\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\
-\n$theme_15\n$theme_16\n$theme_17\n$theme_18\n$theme_19\
-"
+# Pass available themes to rofi #
+SELECTED_THEME=$(echo -e "${AVAILABLE_THEMES}" | ${ROFI_THEME} -dmenu -selected-row 0)
 
-chosen="$(echo -e "${AVAILABLE_THEMES}" | ${ROFI_THEME} -dmenu -selected-row 0)"
-#
-# the 1st arg -> background , the 2th arg -> color scheme name , the 3th arg -> the theme name
-# the 4th arg -> icons name , the 5th arg -> the cursor name , the 6th arg -> RGB mood for keyboard
-# the 7th arg -> polybar , the 8th arg -> picom
-#
-case $chosen in
-    $theme_1)
-        bash apply-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles' 'default.conf'
-        ;;
-    $theme_2)
-        bash apply-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia' 'default.conf'
-        ;;
-    $theme_3)
-        bash apply-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM' 'default.conf'
-        ;;
-    $theme_4)
-        bash apply-theme  'hack.jpg' 'hack' 'Hack-Dark' 'Hack' 'ArchTrix' 'Hack' 'hack' 'default.conf'
-        ;;
-    $theme_5)
-        bash apply-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red' 'default.conf'
-        ;;
-    $theme_6)
-        bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick' 'default.conf'
-        ;;
-    $theme_7)
-        bash apply-theme  'hackthebox4.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox' 'default.conf'
-        ;;
-    $theme_8)
-        bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch' 'default.conf'
-        ;;
-    $theme_9)
-        bash apply-theme  'Islamic_warrior_9.jpg' 'IslamicWarrior' 'Tokyonight-Dark-BL' 'Hack' 'ArchTrix' 'IslamicWarrior' 'IslamicWarrior' 'default.conf'
-        ;;
-    $theme_10)
-        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'Zafiro' 'ManjaTrix' 'ChadWM' 'JScoffee' 'default.conf'
-        ;;
-    $theme_11)
-        bash apply-theme  'wolf.jpeg' 'exodia' 'Tokyonight-Dark-B' 'Green-Icons' 'Rage-Purple-Cursor' 'Emilia' 'exodia' 'default.conf'
-        ;;
-    $theme_12)
-        bash apply-theme  'dark.jpg' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity' 'default.conf'
-        ;;
-    $theme_13)
-        bash apply-theme  'tokyo-night29.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo' 'default.conf'
-        ;;
-    $theme_14)
-        bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant' 'default.conf'
-        ;;
-    $theme_15)
-        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'ArchTrix' 'Melissa' 'Melissa' 'default.conf'
-        ;;
-    $theme_16)
-        bash apply-theme  'Cristina.png' 'Cristina' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Cristina' 'default.conf'
-        ;;
-    $theme_17)
-        bash apply-theme  'KakashiCyberpunk.jpg' 'CyberPunk' 'Tokyonight-Dark-B' 'candy-icons' 'Rage-Purple-Cursor' 'CyberPunk' 'CyberPunk' 'default.conf'
-        ;;
-    $theme_18)
-        bash apply-theme  'hacker.jpeg' 'Hacker' 'Tokyonight-Dark-B' 'Green-Icons' 'ManjaTrix' 'HackTheBox' 'Hacker' 'default.conf'
-        ;;
-    $theme_19)
-        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena' 'default.conf'
-        ;;
+# Apply the chosen theme #
+if [[ -n $SELECTED_THEME ]];
 
-esac
+	then
+
+    	THEME_PATH="$BSP/$SELECTED_THEME"
+
+    	if [[ -d "$THEME_PATH" ]];
+		
+			then
+
+				sed -i "s/exodiaTheme = .*/exodiaTheme = ${SELECTED_THEME}/" ${EXODIA_CONFIG_FILE}
+				bash "${THEME_PATH}/apply-theme"
+
+    	else
+
+    	    bash "${DIR}/rofi/bin/error"
+
+    	fi
+
+fi

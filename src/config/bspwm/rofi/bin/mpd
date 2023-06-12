@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 
-###################################################
-#                                                 #
-#  @author      : 00xWolf                         #
-#    GitHub    : @mmsaeed509                     #
-#    Developer : Mahmoud Mohamed                 #
-#  﫥  Copyright : Exodia OS                       #
-#  Credits : Aditya Shakya (Github : @adi1090x)   #
-#                                                 #
-###################################################
+################################################################
+#                                                              #
+#  Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>  #
+#                                   						   #
+#  Reconfigured For Exodia OS                                  #
+#                                   						   #
+#  @author      : 00xWolf           						   #
+#    GitHub    : @mmsaeed509       						   #
+#    Developer : Mahmoud Mohamed   						   #
+#  﫥  Copyright : Exodia OS        						    #
+#                                   						   #
+################################################################
+
 
 DIR="$HOME/.config/bspwm"
 

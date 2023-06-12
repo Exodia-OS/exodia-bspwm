@@ -18,11 +18,7 @@ JGMENU_DIR="$HOME/.config/jgmenu"
 ICONS=$(grep -oP 'icons = \K.*' "${DIR}/exodia.conf")
 
 # get the theme name to launch its bar #
-IMG=$(grep -oP 'polybar = \K.*' "${DIR}/exodia.conf")
-
-# get No. themes #
-NUM_OF_THEMES=$(cd ${DIR}/notify && ls -l | grep -v "^d" | wc -l)
-NUM_OF_THEMES=$((NUM_OF_THEMES-2)) # subtracted by 2, as we don't calculate `notify` script #
+THEME_NAME=$(grep -oP 'exodiaTheme = \K.*' "${DIR}/exodia.conf")
 
 GET_COLORS () {
 
@@ -48,32 +44,6 @@ GET_COLORS () {
 	
 }
 
-BSP_BAR () {
-
-	cat > $DIR/polybar/colors <<- EOF	
-	[color]
-
-	FOREGROUND = ${FOREGROUND}
-	BACKGROUND = ${BACKGROUND}
-	BLACK = ${BLACK}
-	RED = ${RED}
-	GREEN = ${GREEN}
-	YELLOW = ${YELLOW}
-	BLUE = ${BLUE}
-	MAGENTA = ${MAGENTA}
-	CYAN = ${CYAN}
-	WHITE = ${WHITE}
-	ALTBLACK = ${ALTBLACK}
-	ALTRED = ${ALTRED}
-	ALTGREEN = ${ALTGREEN}
-	ALTYELLOW = ${ALTYELLOW}
-	ALTBLUE = ${ALTBLUE}
-	ALTMAGENTA = ${ALTMAGENTA}
-	ALTCYAN = ${ALTCYAN}
-	ALTWHITE = ${ALTWHITE}
-	EOF
-
-}
 
 BSP_TERM () {
 
@@ -178,8 +148,7 @@ BSP_JGMENU () {
 
 BSP_ROFI_THEMES_MENU () {
 
-    sed -i "s/background-image: .*/background-image:            url(\"~\/.config\/bspwm\/notify\/${IMG}.png\", width);/" ${DIR}/rofi/themes/themes.rasi
-    sed -i "s/str:.*/str: \" [${NUM_OF_THEMES}] Bspwm Themes Are Available In Exodia OS \\\n   Have fun with your favorite theme \";/" ${DIR}/rofi/themes/themes.rasi
+    sed -i "s/background-image: .*/background-image:            url(\"~\/.config\/bspwm\/themes\/${THEME_NAME}\/preview.png\", width);/" ${DIR}/rofi/themes/themes.rasi
 
     sed -i '/element selected.normal/Q' ${DIR}/rofi/themes/themes.rasi
 	cat >> ${DIR}/rofi/themes/themes.rasi <<- _EOF_
@@ -219,7 +188,6 @@ error-message {
 main () {
 
 	GET_COLORS
-	BSP_BAR
 	BSP_TERM
 	BSP_ROFI
 	BSP_DUNST

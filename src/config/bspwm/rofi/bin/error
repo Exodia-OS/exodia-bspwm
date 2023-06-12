@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# rofi command #
+ROFI_COMMAND="rofi -theme ~/.config/bspwm/rofi/themes/error.rasi"
+
+# Prompt message #
+PROMPT="[Error] Theme not found ✘"
+
+# Displaying the error message #
+${ROFI_COMMAND} -e "${PROMPT}"

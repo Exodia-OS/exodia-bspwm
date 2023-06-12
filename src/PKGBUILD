@@ -3,8 +3,8 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=6.8
-pkgrel=3
+pkgver=7.0
+pkgrel=1
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
