@@ -85,9 +85,11 @@ INSTALL (){
 	chown -R ${USER}:${GROUB} ${CONFIG_DIR}/${FILES_NAME}    
 
 	
-	if [[ -d "${CONFIG_DIR}/${FILES_NAME}" ]]; then
+	if [[ -d "${CONFIG_DIR}/${FILES_NAME}" ]];
+		
+		then
 
-		echo -e ${BGreen}"[✔] Configuration files installed successfully!\n" ${RESET_COLOR}
+			echo -e ${BGreen}"[✔] Configuration files installed successfully!\n" ${RESET_COLOR}
 
 	else
 
@@ -101,23 +103,28 @@ INSTALL (){
 RUN_MAIN (){
 
 	if [[ "${GROUB}" == 'liveuser' ]]; 
+		
 		then
+
 			exit
 
 	else
 
 		if [[ ! -d "${CONFIG_DIR}/${FILES_NAME}" ]];
+			
 			then
 				
 				INSTALL
 
 		elif [[ ! -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" ]];
+			
 			then
 				
 				BACKUP
 				INSTALL
 		
 		elif [[ -f "${CONFIG_DIR}/${FILES_NAME}/exodia.conf" && ${AUTO_UPDATE_STATUS} == "true" ]]
+			
 			then
 				
 				BACKUP
@@ -145,9 +152,9 @@ post_upgrade() {
 
 post_remove() {
 		
-	echo -e ${BRed} "\n[*] Config files for ${BCyan}${PKG_NAME}${BRed} are still available in : " ${RESET_COLOR}
+	echo -e ${BRed} "\n[*] Removing config files for ${BCyan}${PKG_NAME}${BRed}... " ${RESET_COLOR}
 	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${FILES_NAME} ${BRed} directory." ${RESET_COLOR}
-	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${NET_MANAGER} ${BRed} directory." ${RESET_COLOR}
+	rm -rf  ${CONFIG_DIR}/${FILES_NAME}
 	echo -e ${BRed} "[*] If you want to remove them, Do it manually.\n " ${RESET_COLOR}
 
 }
