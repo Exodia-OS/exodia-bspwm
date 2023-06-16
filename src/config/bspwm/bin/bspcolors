@@ -14,11 +14,10 @@
 DIR="$HOME/.config/bspwm"
 JGMENU_DIR="$HOME/.config/jgmenu"
 
-# get icons for jgmenus #
+# get values #
 ICONS=$(grep -oP 'icons = \K.*' "${DIR}/exodia.conf")
-
-# get the theme name to launch its bar #
 THEME_NAME=$(grep -oP 'exodiaTheme = \K.*' "${DIR}/exodia.conf")
+BACKGROUND_THEME=$(grep -oP 'background = \K.*' "${DIR}/exodia.conf")
 
 GET_COLORS () {
 
@@ -147,6 +146,10 @@ BSP_JGMENU () {
 }
 
 BSP_ROFI_THEMES_MENU () {
+
+	sed -i "s#background-image: .*#background-image:            url(\"${BACKGROUND_THEME}\", width);#" ${DIR}/rofi/themes/launcher.rasi
+
+	sed -i "s#background-image: .*#background-image:            url(\"${BACKGROUND_THEME}\", width);#" ${DIR}/rofi/themes/mpd.rasi
 
     sed -i "s/background-image: .*/background-image:            url(\"~\/.config\/bspwm\/themes\/${THEME_NAME}\/preview.png\", width);/" ${DIR}/rofi/themes/themes.rasi
 

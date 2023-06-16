@@ -29,19 +29,24 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       800px;
+    height:                      430px;
     x-offset:                    0px;
     y-offset:                    0px;
-
+    margin:                      0px;
     padding:                     0px;
-    border:                      5px solid;
-    border-radius:               15px;
-    border-color:                @background-alt;
+    border:                      0px solid;
+    border-radius:               30px;
+    border-color:                @selected;
     cursor:                      "default";
     background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     30px;
     background-color:            transparent;
     orientation:                 horizontal;
     children:                    [ "imagebox", "listview" ];
@@ -49,72 +54,75 @@ mainbox {
 
 /*****----- Imagebox -----*****/
 imagebox {
-    spacing:                     30px;
-    padding:                     30px;
+    border:                      5px solid;
+    border-radius:               100%;
+    border-color:                @selected;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/imgs/power.png", height);
-    children:                    [ "inputbar", "dummy", "message" ];
-}
-
-/*****----- User -----*****/
-userimage {
-    margin:                      0px 0px;
-    border:                      10px;
-    border-radius:               10px;
-    border-color:                @background-alt;
-    background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/imgs/user.jpg", height);
+    background-image:            url("~/.face", height);
+    children:                    [ "dummy", "inputbar", "dummy" ];
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
-    padding:                     15px;
-    border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @background;
-    children:                    [ "dummy", "prompt", "dummy"];
+    enabled:                     true;
+    spacing:                     15px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [ "dummy", "textbox-prompt-colon", "prompt", "dummy"];
 }
 
-dummy {
+dummy{
     background-color:            transparent;
 }
-
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     10px 13px;
+    border:                      5px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
 prompt {
-    background-color:            inherit;
-    text-color:                  inherit;
+    enabled:                     true;
+    padding:                     10px;
+    border:                      5px solid;
+    border-radius:               100%;
+    border-color:                @foreground;
+    background-color:            @foreground;
+    text-color:                  @background;
 }
 
 /*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      0px;
-    padding:                     15px;
-    border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @background;
+    padding:                     10px;
+    border:                      5px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
 }
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     2;
-    lines:                       3;
+    columns:                     6;
+    lines:                       1;
     cycle:                       true;
-    dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
     
-    spacing:                     30px;
-    margin:                      30px;
+    spacing:                     5px;
     background-color:            transparent;
     cursor:                      "default";
 }
@@ -122,21 +130,43 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     40px 10px;
-    border-radius:               10px;
-    background-color:            @background-alt;
+    padding:                     11px;
+    border:                      0px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 32";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            var(background);
+    text-color:                  var(foreground);
+}
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color:            var(urgent);
+    text-color:                  var(background);
+}
+element normal.active,
+element alternate.active,
+element selected.urgent {
+    background-color:            var(active);
+    text-color:                  var(background);
 }
 element selected.normal {
-    background-color:            var(selected);
-    text-color:                  var(background);
+    border:                      5px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  var(foreground);
 }

@@ -65,7 +65,7 @@ inputbar {
     spacing:                     5px;
     padding:                     100px;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/themes/ Islamic Knights/preview.png", width);
+    background-image:            url("~/.config/bspwm/themes/Islamic Knights/preview.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
