@@ -12,6 +12,7 @@
 - add `exodia.conf` config file for `bspwm` to load background, theme, icons, etc...
 
 <details>
+
    <summary><h2> How to configure exodia.conf </h2></summary>
 
   > **_`exodia.conf`:_** 
@@ -110,6 +111,16 @@ auto-update = true
 </details>
 
 <details>
+   
+   <summary><h2> Install new theme </h2></summary>
+
+- you can find here [**`official themes`**](https://github.com/Exodia-OS/bspwm-themes/tree/master/official-themes) and [**`community themes`**](https://github.com/Exodia-OS/bspwm-themes/tree/master/community-themes)
+- download the theme and save it in the `~/.config/bspwm/themes` directory
+  
+</details>
+
+<details>
+   
    <summary><h2> How to create your theme </h2></summary>
 
 - go to the theme directory `~/.config/bspwm/themes/`
