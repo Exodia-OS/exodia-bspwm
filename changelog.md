@@ -167,7 +167,7 @@ FINALLY, you have created your theme
 
 do you want to share your theme?
 
-- Fork 
+- Fork [**`bspwm-themes`**](https://github.com/Exodia-OS/bspwm-themes) Repo
 - add your theme to the [**`community`**](https://github.com/Exodia-OS/bspwm-themes/tree/master/community-themes) directory
 - Commit/Push your changes with [**`push.sh`**](https://github.com/Exodia-OS/bspwm-themes/blob/master/push.sh) script
     - `push.sh -m "added new theme"`
