@@ -1,8 +1,9 @@
 <h2 align="center"> Changelogs</h2>
 
 
-## what is the new in the new release v `6.3.3`
+## what is the new in the new release v `7.1.3`
 
+- new structure for `exodia-bspwm`, that allows you to create your own theme easily
 - update `rofi` menus
 - update `polybar` themes
 - update `bspwm` themes
@@ -10,8 +11,10 @@
 - add `bspmonitors` script to setup all connected external monitors
 - add `exodia.conf` config file for `bspwm` to load background, theme, icons, etc...
 
-## how to configure `exodia.conf`
-> **_`exodia.conf`:_** 
+<details>
+   <summary><h2> How to configure exodia.conf </h2></summary>
+
+  > **_`exodia.conf`:_** 
 > 
 > ** this config file contains the configuration of `bspwm` to load on startup 
 > allow users to change `backgrounds`, `polybar` themes, `icons`, etc... easily.**
@@ -103,3 +106,27 @@ RGB-keyboard = IslamicWarrior
 exoida-assistant-auto-start = true
 auto-update = true
 ```
+
+</details>
+
+<details>
+   <summary><h2> How to create your theme </h2></summary>
+
+- go to the theme directory `~/.config/bspwm/themes/`
+- choice one of the available themes, then Copy Paste and change the theme name (e.g `my Theme`)
+- edit the configuration of the new theme
+- take a screenshot of the new theme and save it in `~/.config/bspwm/themes/my Theme/preview.png`
+
+FINALLY, you have created your theme
+
+  ### Contributing
+
+do you want to share your theme?
+
+- Fork 
+- add your theme to the [**`community`**](https://github.com/Exodia-OS/bspwm-themes/tree/master/community-themes) directory
+- Commit/Push your changes with [**`push.sh`**](https://github.com/Exodia-OS/bspwm-themes/blob/master/push.sh) script
+    - `push.sh -m "added new theme"`
+- Submit a pull request
+  
+</details>
