@@ -21,8 +21,7 @@
 > allow users to change `backgrounds`, `polybar` themes, `icons`, etc... easily.**
 
 - Themes Setting: 
-  - change the background by changing the value of the background (eg `background = img.png` ), same as for the rest of the setting 
-  - Backgrounds must be located in `/usr/share/backgrounds`
+  - change the background by changing the value of the background (eg `background = path/to/img.png` ), same as for the rest of the setting 
   - Themes must be located in `/usr/share/themes`
   - Icons/Cursors must be located in `/usr/share/icons`
   - color-scheme/polybar `~/.config/bspwm`
@@ -30,7 +29,7 @@
 
 ```conf
 # Themes Setting #
-background = Islamic_warrior_9.jpg
+background = /usr/share/backgrounds/Islamic_warrior_9.jpg
 color-scheme = IslamicWarrior
 theme = Tokyonight-Dark-BL
 icons = neon-icon
@@ -63,7 +62,12 @@ exoida-assistant-auto-start = true
 auto-update = true
 ```
 
-FINALLY, here's the default config file
+  > **_`If you want to change a specific theme config`:_** 
+> 
+- go to `~/.config/bspwm/themes/<Target Theme>` 
+- edit `theme.conf` file
+
+### e.g `~/.config/bspwm/themes/VALORANT/theme.conf`
 
 ```conf
 #####################################
@@ -75,20 +79,52 @@ FINALLY, here's the default config file
 #                                   #
 #####################################
 
+background = full-path/to/the/background.png
+theme = Tokyonight-Dark-B
+icons = Red-Black
+cursor = Rage-Gothic
+RGB-keyboard = RedJungles
+picom = animation.conf
+keybinding = sxhkdrc
+
+bsp-border-width = 2
+bsp-window-gap = 10
+bsp-split-ratio = 0.50
+bsp-borderless-monocle = true
+bsp-gapless-monocle = true
+bsp-paddingless-monocle = true
+bsp-single-monocle = false
+bsp-focus-follows-pointer = true
+bsp-presel-feedback = true
+```
+
+FINALLY, here's the default config file
+
+```conf
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS        #
+#                                   #
+#####################################
+
 # Themes Setting #
-background = Islamic_warrior_9.jpg
-color-scheme = IslamicWarrior
+exodiaTheme =  Islamic Knights
+background = /usr/share/backgrounds/IslamicKnights.jpg
+color-scheme =  Islamic Knights
 theme = Tokyonight-Dark-BL
-icons = neon-icon
+icons = Hack
 cursor = ArchTrix
-polybar = IslamicWarrior
+polybar =  Islamic Knights
 change-betterlockscreen = false
 
 # BSPWM Configurations, Appearance and Other Setting #
-picom = shadow-animation.conf
+picom = default.conf
 keybinding = sxhkdrc
-multi-bar-monitors = true
-keyboard-layouts = us,ar
+multi-bar-monitors = false
+keyboard-layouts = us
 
 bsp-border-width = 2
 bsp-window-gap = 10
@@ -100,11 +136,8 @@ bsp-single-monocle = false
 bsp-focus-follows-pointer = true
 bsp-presel-feedback = true
 
-# Predator Edition Setting #
-RGB-keyboard = IslamicWarrior
-
-# Exoida OS Setting #
-exoida-assistant-auto-start = true
+# Exodia OS Setting #
+exodia-assistant-auto-start = true
 auto-update = true
 ```
 
