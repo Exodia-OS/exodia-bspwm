@@ -12,15 +12,17 @@
 /*****----- Configuration -----*****/
 
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+
+	modi:                       "run,drun,ssh,filebrowser,window";
     show-icons:                 true;
-    display-drun:               "APPS ";
+    display-drun:               "Apps ";
     display-run:                "RUN ";
-    display-filebrowser:        "FILES ";
+    display-filebrowser:        "File ";
     display-ssh: 				"SSH  ";
-    display-window:             "WINDOW ";
+    display-window:             "win ";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+
 }
 
 
