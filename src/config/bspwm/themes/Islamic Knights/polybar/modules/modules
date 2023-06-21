@@ -13,7 +13,7 @@
 type = custom/text
 
 content = "[SysTray] : "
-content-background = #00
+content-background = ${color.background-bar}
 content-foreground = #bf00ff
 content-padding = 0
 content-font = 4
@@ -24,12 +24,12 @@ content-font = 4
 type = custom/text
 
 content = " NON"
-content-background = #00
+content-background = ${color.background-bar}
 content-foreground = #80E6FE
 content-prefix = ""
 content-prefix-font = 2
 content-prefix-foreground = #80E6FE
-content-prefix-background = #00
+content-prefix-background = ${color.background-bar}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -43,7 +43,7 @@ format = <ramp><label>
 
 
 label-foreground = #80E6FE
-label-background = #00
+label-background = ${color.background-bar}
 
 label = " %percentage%%"
 
@@ -59,7 +59,7 @@ ramp-8 = ""
 ramp-9 = ""
 ramp-font = 3
 ramp-foreground = #80E6FE
-ramp-background = #00
+ramp-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -73,7 +73,7 @@ format = <ramp><label>
 
 
 label-foreground = #80E6FE
-label-background = #00
+label-background = ${color.background-bar}
 
 label = " %percentage%%"
 
@@ -89,7 +89,7 @@ ramp-8 = ""
 ramp-9 = ""
 ramp-font = 3
 ramp-foreground = #80E6FE
-ramp-background = #00
+ramp-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -122,32 +122,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = #80E6FE
-label-focused-background = #00
+label-focused-background = ${color.background-bar}
 label-focused-underline = #80E6FE
 label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = #bf00ff
-label-occupied-background = #00
-label-occupied-underline = #00
+label-occupied-background = ${color.background-bar}
+label-occupied-underline = ${color.background-bar}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = #4c00ff
-label-urgent-background = #00
+label-urgent-background = ${color.background-bar}
 label-urgent-underline = #4c00ff
 label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = #0a7a76
-label-empty-background = #00
+label-empty-background = ${color.background-bar}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = "◆"
 label-separator-padding = 1
 label-separator-foreground = #80E6FE
-label-separator-background = #00
+label-separator-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -155,7 +155,7 @@ label-separator-background = #00
 type = internal/bspwm
 
 format = <label-mode>
-format-background = #00
+format-background = ${color.background-bar}
 format-foreground = #0ABDC6
 format-padding = 1
 format-font = 4
@@ -198,13 +198,13 @@ blacklist-0 = num lock
 
 label-layout = "%layout%"
 label-layout-foreground = #80E6FE
-label-layout-background = #00
+label-layout-background = ${color.background-bar}
 label-layout-font = 3
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-foreground = #80E6FE
-label-indicator-background = #00
+label-indicator-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -265,7 +265,7 @@ content-font = 3
 content-prefix = ""
 content-prefix-font= 5
 content-foreground = #80E6FE
-content-background = #00
+content-background = ${color.background-bar}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
@@ -278,6 +278,6 @@ exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/weather
 interval = 1
 click-left = google-chrome-stable http://api.openweathermap.org
 format-foreground = #80E6FE
-format-background = #00
+format-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

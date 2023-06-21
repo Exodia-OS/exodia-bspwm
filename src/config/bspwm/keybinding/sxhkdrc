@@ -176,19 +176,33 @@ super + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}'
 
 # Expanding windows #
+ctrl + super + alt + Up
+	bspc node -z right 20 0; \
+	bspc node -z top 0 -20; \
+	bspc node -z bottom 0 20; \
+	bspc node -z left -20 0
+
+# Expanding windows by one #
 super + control + {Left,Right,Up,Down}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
-	
-## Shrinking windows #
+
+# Shrinking windows #
+ctrl + super + alt + Down
+	bspc node -z right -20 0; \
+	bspc node -z top 0 20; \
+	bspc node -z bottom 0 -20; \
+	bspc node -z left 20 0
+
+# Shrinking windows by one  #
 super + alt + {Left,Right,Up,Down}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 	
-## Move floating windows #
+# Move floating windows #
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# Hide/Unhide Window #
+#  Hide/Unhide Window #
 super + shift + i
 	winmask		
 
-# ---------- END ---------- #
+## ---------- END ---------- ##

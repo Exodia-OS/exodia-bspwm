@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# bspwm config directory #
+BSPWM_DIR="$HOME/.config/bspwm"
+
+API_KEY=$(grep -oP 'weather-API = \K.*' "${BSPWM_DIR}/exodia.conf")
+CITY_ID=$(grep -oP 'weather-city-ID = \K.*' "${BSPWM_DIR}/exodia.conf")
+
 # Weather data #
-KEY=58099776aa171cc5fb36696c5536a685
-ID=360995
+KEY=$API_KEY
+ID=$CITY_ID
 UNIT="metric"	# Available options : 'metric' or 'imperial'
 
 # Get data #
@@ -187,11 +193,11 @@ GET_WEATHER_INFO() {
 
 			fi
 
-			echo -e "%{T3}%{F$WEATHER_HEX}$WEATHER_ICON$WEATHER_TEMP °C"
+			echo -e "%{T3}%{F#101419}%{B#8B60E5} $WEATHER_ICON$WEATHER_TEMP °C "
 	
 		else
 
-				echo -e "%{T3}%{F#80E6FE} Weather Unavailable"
+				echo -e "%{T3}%{F#101419}%{B#8B60E5}  Weather Unavailable "
 
 		fi
 

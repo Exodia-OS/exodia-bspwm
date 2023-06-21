@@ -351,6 +351,7 @@ content-padding = 0
 click-left = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/themes]
 type = custom/text
 
@@ -360,5 +361,13 @@ content-foreground = #8B60E5
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/weather]
+type = custom/script
+exec = ~/.config/bspwm/themes/Exodia/polybar/scripts/weather
+interval = 1
+click-left = google-chrome-stable http://api.openweathermap.org
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -35,7 +35,7 @@ content-font = 5
 type = custom/text
 content = "|"
 
-content-background = #00
+content-background = ${color.background-bar}
 content-foreground = #80E6FE
 content-padding = 0
 content-font = 5
@@ -90,7 +90,7 @@ type = custom/text
 ;content = ◆
 content = 
 
-content-background = #00
+content-background = ${color.background-bar}
 content-foreground = #66FFFF
 content-padding = 1
 

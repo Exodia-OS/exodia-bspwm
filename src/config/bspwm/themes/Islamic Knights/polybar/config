@@ -49,7 +49,7 @@ height = 31
 offset-x = 5%
 offset-y = 0
 
-background = #00
+background = ${color.background-bar}
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -86,7 +86,7 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = space song-icon space song space mpd space volume sep pulse-mic sep backlight
+modules-left   = space song-icon space song space mpd sep volume2 sep pulse-mic sep backlight
 modules-center = network_ext checknet
 modules-right  = xkeyboard sep notification-github space battery space info-cava space date space sysmenu space
 
@@ -122,7 +122,7 @@ height = 30
 offset-x = 0%
 offset-y = 0
 
-background = #00
+background = ${color.background-bar}
 foreground = ${color.FOREGROUND}
 
 radius-top    = 0
@@ -187,7 +187,7 @@ height = 28
 offset-x = 90%
 offset-y = 0
 
-background = #00
+background = ${color.background-bar}
 foreground = ${color.FOREGROUND}
 
 radius-top    = 0
@@ -240,7 +240,7 @@ tray-position = right
 tray-detached = false
 tray-maxsize = 16
 tray-transparent = false
-tray-background = #00
+tray-background = ${color.background-bar}
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 0

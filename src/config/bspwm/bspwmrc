@@ -5,7 +5,7 @@
 #  @author      : 00xWolf           #
 #    GitHub    : @mmsaeed509       #
 #    Developer : Mahmoud Mohamed   #
-#  﫥  Copyright : Exodia OS         #
+#  﫥  Copyright : Exodia OS        #
 #                                   #
 #####################################
 
@@ -79,8 +79,12 @@ killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc picom
 xsettingsd --config="${BSPWM_DIR}"/xsettingsd &
 
 # polkit agent #
-if [[ ! `pidof xfce-polkit` ]]; then
-	/usr/lib/xfce-polkit/xfce-polkit &
+if [[ ! `pidof xfce-polkit` ]];
+	
+	then
+		
+		/usr/lib/xfce-polkit/xfce-polkit &
+
 fi
 
 # Lauch keybindings daemon #

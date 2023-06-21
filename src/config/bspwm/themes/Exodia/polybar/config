@@ -76,7 +76,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space xdomenu  pip space bspwm space pip space chrome space whatsapp space VirtualBox space discord space music space nvim space PowerShell space MS_VisualStudioCode space notification-github
 modules-center = pipL mod pipR
-modules-right  = xkeyboard space battery space date space sysmenu space
+modules-right  = xkeyboard space weather space battery space date space sysmenu space
  
 separator =
 spacing = 0

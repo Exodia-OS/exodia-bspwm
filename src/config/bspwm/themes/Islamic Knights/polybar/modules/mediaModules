@@ -74,6 +74,43 @@ bar-volume-empty-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/volume2]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = " 婢"
+format-muted-prefix-font = 3
+format-muted-prefix-foreground = #FD0000
+
+label-volume = %percentage%%
+label-volume-foreground = #80E6FE
+
+label-muted = " Muted"
+label-muted-foreground = #FD0000
+
+ramp-volume-0 = "奄"
+ramp-volume-1 = "奄"
+ramp-volume-2 = "奄"
+ramp-volume-3 = "奔"
+ramp-volume-4 = "奔"
+ramp-volume-5 = "奔"
+ramp-volume-6 = "墳"
+ramp-volume-7 = "墳"
+ramp-volume-8 = "墳"
+ramp-volume-9 = "墳"
+ramp-volume-font = 3
+ramp-volume-foreground = #80E6FE
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/mpd]
 type = internal/mpd
 interval = 2

@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# bspwm config directory #
+BSPWM_DIR="$HOME/.config/bspwm"
+
+API_KEY=$(grep -oP 'weather-API = \K.*' "${BSPWM_DIR}/exodia.conf")
+CITY_ID=$(grep -oP 'weather-city-ID = \K.*' "${BSPWM_DIR}/exodia.conf")
+
 # Weather data #
-KEY=58099776aa171cc5fb36696c5536a685
-ID=360995
+KEY=$API_KEY
+ID=$CITY_ID
 UNIT="metric"	# Available options : 'metric' or 'imperial'
 
 # Get data #

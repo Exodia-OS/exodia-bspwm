@@ -165,10 +165,10 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 40%
+width = 45%
 height = 30
 
-offset-x = 45.5%
+offset-x = 42%
 offset-y = 5
 
 background = ${color.BACKGROUND}
@@ -201,7 +201,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = ethernet
 modules-center = 
-modules-right  = empty info-cava empty space cpu cpuTemp space pulse-mic volume backlight space network
+modules-right  = weather space space empty info-cava empty space cpu cpuTemp space pulse-mic volume backlight space network
  
 separator =
 spacing = 0

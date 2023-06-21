@@ -29,15 +29,15 @@ format-full = <label-full>
 format-full-prefix = ""
 format-full-prefix-font = 3
 format-full-prefix-foreground = #80E6FE
-format-full-prefix-background = #00
+format-full-prefix-background = ${color.background-bar}
 
 label-charging = "%percentage%%"
 label-discharging = "%percentage%%"
 label-full = "%percentage%%"
 
-label-charging-background = #00
-label-discharging-background = #00
-label-full-background = #00
+label-charging-background = ${color.background-bar}
+label-discharging-background = ${color.background-bar}
+label-full-background = ${color.background-bar}
 
 label-charging-foreground = #80E6FE
 label-discharging-foreground = #80E6FE
@@ -64,12 +64,12 @@ animation-charging-4 = ""
 ramp-capacity-font = 3
 
 ramp-capacity-foreground = #80E6FE
-ramp-capacity-background = #00
+ramp-capacity-background = ${color.background-bar}
 
 animation-charging-font = 3
 
 animation-charging-foreground = #80E6FE
-animation-charging-background = #00
+animation-charging-background = ${color.background-bar}
 animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -84,10 +84,10 @@ format = <label>
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-foreground = #80E6FE
-format-prefix-background = #00
+format-prefix-background = ${color.background-bar}
 label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 3
-label-background = #00
+label-background = ${color.background-bar}
 label-foreground = #80E6FE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -103,21 +103,21 @@ format-mounted = <label-mounted>
 format-mounted-prefix = ""
 format-mounted-prefix-font = 3
 format-mounted-prefix-foreground = #80E6FE
-format-mounted-prefix-background = #00
+format-mounted-prefix-background = ${color.background-bar}
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = ""
 format-unmounted-prefix-font = 3
 format-unmounted-prefix-foreground = #80E6FE
-format-unmounted-prefix-background = #00
+format-unmounted-prefix-background = ${color.background-bar}
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
 ; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
 label-mounted-foreground = #80E6FE
 
-label-mounted-background = #00
-label-unmounted-background = #00
+label-mounted-background = ${color.background-bar}
+label-unmounted-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -127,7 +127,7 @@ exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = #80E6FE
-format-background = #00
+format-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
