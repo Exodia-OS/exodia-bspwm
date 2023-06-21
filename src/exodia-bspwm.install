@@ -160,6 +160,9 @@ INSTALL (){
 
 	fi
 
+	echo -e ${Green}"\n[+] Reloading ${BCyan}bspwm${Green} Configurations." ${RESET_COLOR}
+	bspc wm --restart
+
 }
 
 # MAIN FUNCTION #
