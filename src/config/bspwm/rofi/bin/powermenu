@@ -39,7 +39,6 @@ rofi_cmd() {
 
     echo -e "${option_1}\n${option_2}\n${option_3}\n${option_4}\n${option_5}\n${option_6}\n${mesg}" |
         rofi -theme-str "listview {columns: $list_col; lines: $list_row;}" \
-             -theme-str 'textbox-prompt-colon {str: "";}' \
              -dmenu \
              -p "$prompt" \
              -markup-rows \
