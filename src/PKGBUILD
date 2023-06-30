@@ -10,6 +10,7 @@ arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
 install=${pkgname}.install
+conflicts=('exodia-bspwm-predator')
 depends=(
 
 	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
