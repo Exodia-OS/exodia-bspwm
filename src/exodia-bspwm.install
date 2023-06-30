@@ -221,6 +221,7 @@ post_remove() {
 	echo -e ${BRed} "\n[*] Removing config files for ${BCyan}${PKG_NAME}${BRed}... " ${RESET_COLOR}
 	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${FILES_NAME} ${BRed} directory." ${RESET_COLOR}
 	rm -rf  ${CONFIG_DIR}/${FILES_NAME}
-	echo -e ${BRed} "[*] If you want to remove them, Do it manually.\n " ${RESET_COLOR}
+	# D O N E! #
+    echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
 
 }
