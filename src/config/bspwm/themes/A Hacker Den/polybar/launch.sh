@@ -102,6 +102,7 @@ LAUNCH_SINGLE_BAR() {
 	polybar -q third -c  "$DIR"/config &
 	polybar -q fourth -c "$DIR"/config &
 	polybar -q fifth -c  "$DIR"/config &
+	polybar -q sixth -c  "$DIR"/config &
 
 }
 
@@ -147,6 +148,7 @@ LAUNCH_MULTI_BAR() {
 			MONITOR=$MON polybar -q third -c  "$DIR"/config &
 			MONITOR=$MON polybar -q fourth -c "$DIR"/config &
 			MONITOR=$MON polybar -q fifth -c  "$DIR"/config &
+			MONITOR=$MON polybar -q sixth -c  "$DIR"/config &
 	
 	done
 

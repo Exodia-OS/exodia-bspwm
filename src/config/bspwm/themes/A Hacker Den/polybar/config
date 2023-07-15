@@ -26,6 +26,9 @@ include-file = ./modules/mediaModules
 # contains CPU, Temperature, etc.... #
 include-file = ./modules/monitoringModules
 
+# network #
+include-file = ./modules/networkModules
+
 # contains the separators (e.g  , | , <| ,  ,etc..) #
 include-file = ./modules/separatorsModules
 
@@ -104,7 +107,7 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 12%
+width = 10%
 height = 30
 
 offset-x = 0.5%
@@ -165,10 +168,10 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 45%
+width = 32%
 height = 30
 
-offset-x = 42%
+offset-x = 28.5%
 offset-y = 5
 
 background = ${color.BACKGROUND}
@@ -199,9 +202,9 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = ethernet
-modules-center = 
-modules-right  = weather space space empty info-cava empty space cpu cpuTemp space pulse-mic volume backlight space network
+modules-left   = 
+modules-center = network_ext checknet
+modules-right  = 
  
 separator =
 spacing = 0
@@ -216,7 +219,6 @@ enable-ipc = true
 wm-name = bspwm
 locale = 
 
-
 ## ----------------------------------  [bar/fourth] ---------------------------------- ##
 
 [bar/fourth]
@@ -227,10 +229,71 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 20%
+width = 28%
 height = 30
 
-offset-x = 17.5%
+offset-x = 61%
+offset-y = 5
+
+background = ${color.BACKGROUND}
+foreground = ${color.FOREGROUND}
+
+radius-top    = 2
+radius-bottom = 2
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 5
+border-color = ${color.BACKGROUND}
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = space weather
+modules-center = 
+modules-right  = empty info-cava empty space cpu cpuTemp space pulse-mic volume backlight
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+## ----------------------------------  [bar/fifth] ---------------------------------- ##
+
+[bar/fifth]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 17%
+height = 30
+
+offset-x = 11%
 offset-y = 5
 
 background = ${color.BACKGROUND}
@@ -278,24 +341,9 @@ enable-ipc = true
 wm-name = bspwm
 locale = 
 
-[settings]
-throttle-output = 5
-throttle-output-for = 10
-throttle-input-for = 30
+## ----------------------------------  [bar/sixth] ---------------------------------- ##
 
-screenchange-reload = false
-
-compositing-background = source
-compositing-foreground = over
-compositing-overline = over
-compositing-underline = over
-compositing-border = over
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-## ----------------------------------  [bar/fifth] ---------------------------------- ##
-
-[bar/fifth]
+[bar/sixth]
 monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
@@ -364,17 +412,19 @@ tray-scale = 1.0
 wm-name = bspwm
 locale = 
 
-; [settings]
-; throttle-output = 5
-; throttle-output-for = 10
-; throttle-input-for = 30
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-; screenchange-reload = false
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
 
-; compositing-background = source
-; compositing-foreground = over
-; compositing-overline = over
-; compositing-underline = over
-; compositing-border = over
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

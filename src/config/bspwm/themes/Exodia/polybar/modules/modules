@@ -122,32 +122,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = #CC02F5
-label-focused-background = ${color.BGL}
+label-focused-background = #00
 label-focused-underline = #CC02F5
 label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = #32FF00
-label-occupied-background = ${color.BGL}
+label-occupied-background = #00
 label-occupied-underline = #32FF00
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
-label-urgent-background = ${color.BGL}
+label-urgent-background = #00
 label-urgent-underline = ${color.BLUEs}
 label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = #F9E5FE
-label-empty-background = ${color.BGL}
+label-empty-background = #00
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = " ◆ "
 label-separator-padding = 0
 label-separator-foreground = #67C976
-label-separator-background = ${color.BGL}
+label-separator-background = #00
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
