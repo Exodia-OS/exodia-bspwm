@@ -385,7 +385,7 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = opening-bracket song closing-bracket
+modules-left   = opening-bracket song closing-bracket space song-icon
 modules-center = 
 modules-right  = mpd
 

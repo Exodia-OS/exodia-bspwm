@@ -106,7 +106,7 @@ label-song =  "%title%"
 ; label-song =  "%title% | %artist%"
 
 label-song-foreground = ${color.HTB_BLUE}
-label-song-maxlen = 12
+label-song-maxlen = 10
 label-song-ellipsis = true
 
 icon-repeat = ""
