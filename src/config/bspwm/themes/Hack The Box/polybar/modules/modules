@@ -271,7 +271,7 @@ label-indicator-background = ${color.FOREGROUND}
 
 [module/weather]
 type = custom/script
-exec = ~/.config/bspwm/themes/Hack\ The\ Box/polybar/scripts/weather
+exec = ~/.config/bspwm/themes/Hack\\ The\\ Box/polybar/scripts/weather
 interval = 600
 format-foreground = ${color.BACKGROUND}
 format-background = ${color.YELLOW}
@@ -280,7 +280,7 @@ format-background = ${color.YELLOW}
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Hack\ The\ Box/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Hack\\ The\\ Box/polybar/scripts/notification-github.sh
 interval = 60
 click-left = google-chrome-stable --newtab https://github.com/notifications
 

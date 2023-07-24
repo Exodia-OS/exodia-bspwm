@@ -26,11 +26,11 @@ configuration {
     normal-foreground:           var(foreground);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
-    active-background:           var(active);
+    active-background:           var(on);
     active-foreground:           var(background);
     selected-normal-background:  var(selected);
     selected-normal-foreground:  var(background);
-    selected-urgent-background:  var(active);
+    selected-urgent-background:  var(on);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
     selected-active-foreground:  var(background);
@@ -38,7 +38,7 @@ configuration {
     alternate-normal-foreground: var(foreground);
     alternate-urgent-background: var(urgent);
     alternate-urgent-foreground: var(background);
-    alternate-active-background: var(active);
+    alternate-active-background: var(on);
     alternate-active-foreground: var(background);
 }
 

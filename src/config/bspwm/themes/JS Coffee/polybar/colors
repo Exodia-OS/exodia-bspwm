@@ -18,3 +18,5 @@ ALTBLUE = #8cc1ff
 ALTMAGENTA = #e2a6ff
 ALTCYAN = #90daff
 ALTWHITE = #fafdff
+
+background = #101419

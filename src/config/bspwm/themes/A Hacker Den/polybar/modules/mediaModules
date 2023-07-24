@@ -20,7 +20,7 @@ format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 format-muted-prefix = " 婢"
 format-muted-prefix-font = 3
-format-muted-prefix-foreground = #ff0000
+format-muted-prefix-foreground = ${color.red-color}
 format-muted-prefix-background = ${color.GREEN}
 
 label-volume = %percentage%%
@@ -28,7 +28,7 @@ label-volume-foreground = ${color.BACKGROUND}
 label-volume-background = ${color.GREEN}
 
 label-muted = " Mute"
-label-muted-foreground = #ff0000
+label-muted-foreground = ${color.red-color}
 label-muted-background = ${color.GREEN}
 
 ramp-volume-0 = " 奄 "
@@ -102,15 +102,15 @@ format-playing = ${self.format-online}
 format-paused = ${self.format-online}
 format-stopped = ${self.format-online}
 
-label-song =  "[ %title% ]"
+label-song =  "%title%"
 ; label-song =  "%title% | %artist%"
 
 label-song-foreground = ${color.GREEN}
-label-song-maxlen = 60
+label-song-maxlen = 10
 label-song-ellipsis = true
 
 icon-repeat = ""
-icon-repeat-foreground = #FF0677
+icon-repeat-foreground = ${color.pink-color}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -120,7 +120,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = #00FA5C
+content-foreground = ${color.apps-color}
 content-padding = 0
 click-left = music --albumArtCover
 
@@ -128,7 +128,7 @@ click-left = music --albumArtCover
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/cava
 
 format = <label>
 label = %output%
@@ -141,10 +141,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

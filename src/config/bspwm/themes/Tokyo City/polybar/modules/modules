@@ -314,7 +314,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Tokyo\ City/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Tokyo\\ City/polybar/scripts/notification-github.sh
 interval = 60
 
 label-foreground = #56B6C2 

@@ -193,13 +193,13 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = "  "
 format-connected-prefix-font = 3
 format-connected-prefix-foreground = #3B414D
 format-connected-prefix-background = #7AA2F7
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " ﲁ "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = #3B414D
 format-disconnected-prefix-background = #7AA2F7
@@ -228,7 +228,7 @@ unknown-as-up = true
 format-connected = <ramp-signal><label-connected>
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " 睊 "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = #3B414D
 format-disconnected-prefix-background = #7AA2F7
@@ -241,11 +241,11 @@ label-disconnected = "%{A1:nmd &:} Disconnected %{A}"
 label-disconnected-foreground = #7AA2F7
 label-disconnected-background = #353B45
 
-ramp-signal-0 = "  "
-ramp-signal-1 = "  "
-ramp-signal-2 = "  "
-ramp-signal-3 = "  "
-ramp-signal-4 = "  "
+ramp-signal-0 = "  "
+ramp-signal-1 = "  "
+ramp-signal-2 = "  "
+ramp-signal-3 = "  "
+ramp-signal-4 = "  "
 ramp-signal-font = 3
 ramp-signal-foreground = #3B414D
 ramp-signal-background = #7AA2F7
@@ -261,8 +261,9 @@ label-layout-foreground = #61AFEF
 label-layout-background = #353B45
 label-layout-font = 4
 
-label-indicator-padding = 
-label-indicator-margin =
+; label-indicator-padding = 
+; label-indicator-margin =
+
 label-indicator-font = 4
 label-indicator-foreground = #61AFEF
 label-indicator-background = #353B45
@@ -271,7 +272,7 @@ label-indicator-background = #353B45
 
 [module/weather]
 type = custom/script
-exec = ~/.config/bspwm/themes/Chad\ WM/polybar/scripts/weather
+exec = ~/.config/bspwm/themes/Chad\\ WM/polybar/scripts/weather
 interval = 600
 format-foreground = ${color.BACKGROUND}
 format-background = ${color.YELLOW}
@@ -280,7 +281,7 @@ format-background = ${color.YELLOW}
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Chad\ WM/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Chad\\ WM/polybar/scripts/notification-github.sh
 interval = 60
 click-left = google-chrome-stable --newtab https://github.com/notifications
 format-foreground = #7DC5A0

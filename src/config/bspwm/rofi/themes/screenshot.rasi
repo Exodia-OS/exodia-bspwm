@@ -68,7 +68,7 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     10px 12px;
     border-radius:               4px;
-    background-color:            @active;
+    background-color:            @on;
     text-color:                  @background;
 }
 prompt {
@@ -148,7 +148,7 @@ element selected.active {
 element normal.active,
 element alternate.active,
 element selected.urgent {
-    background-color:            var(active);
+    background-color:            var(on);
     text-color:                  var(background);
 }
 element selected.normal {

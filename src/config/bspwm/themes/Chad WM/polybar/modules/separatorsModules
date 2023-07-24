@@ -57,7 +57,7 @@ content-font = 5
 [module/space]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -88,7 +88,7 @@ content-padding = 2
 [module/LDB]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -97,7 +97,7 @@ content-foreground = ${color.MAGENTA}
 [module/LDD]
 type = custom/text
 content = "%{T5}█%{T-}"
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = #353B45
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -132,7 +132,7 @@ content-foreground =  ${color.MAGENTA}
 [module/RD]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -141,7 +141,7 @@ content-foreground = ${color.MAGENTA}
 [module/RDB]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = ${color.ALTGREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -152,7 +152,7 @@ type = custom/text
 content = "%{T5}█%{T-}"
 ; content = "%{T5}%{T-}"
 
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = #56B6C2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -188,7 +188,7 @@ content = "%{T5}█%{T-}"
 ;content = "%{T5}%{T-}"
 
 content-font = 3
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = #7AA2F7
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -200,7 +200,7 @@ content = "%{T5}█%{T-}"
 ;content = "%{T5}%{T-}"
 
 content-font = 3
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = #4b70bd
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

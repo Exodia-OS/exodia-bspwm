@@ -91,17 +91,17 @@ unknown-as-up = true
 
 format-connected = <label-connected>
 format-connected-prefix = 直
-format-connected-foreground = #00eb15
+format-connected-foreground = ${color.green}
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = 睊
-format-disconnected-foreground = #FF0008
+format-disconnected-foreground = ${color.red}
 
 label-connected = "%{A1:nmd &:} %ifname% ∙  %signal% ∙ 歷 %local_ip% ∙ ﬉ %essid% ∙  %downspeed% ∙ 祝 %upspeed%%{A}"
-label-connected-foreground = #00eb15
+label-connected-foreground = ${color.green}
 
 label-disconnected = "%{A1:nmd &:} Disconnected%{A}"
-label-disconnected-foreground = #FF0008
+label-disconnected-foreground = ${color.red}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -113,14 +113,14 @@ ramp-signal-4 =
 
 [module/checknet]
 type = custom/script
-exec = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/check-network
+exec = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/check-network
 tail = true
 interval = 1
 
 label = %output%
 
 format = <label>
-format-foreground = #80E6FE
+format-foreground = ${color.cyan2}
 click-left = sh ~/.config/bspwm/rofi/bin/network
 click-right = nmd &
 

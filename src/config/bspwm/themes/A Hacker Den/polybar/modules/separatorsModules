@@ -46,8 +46,7 @@ content-font = 5
 type = custom/text
 content = "["
 
-; content-background = ${color.BACKGROUND}
-content-foreground = #00FA5C
+content-foreground = ${color.apps-color}
 content-padding = 0
 content-font = 5
 
@@ -57,8 +56,7 @@ content-font = 5
 type = custom/text
 content = "]"
 
-; content-background = ${color.BACKGROUND}
-content-foreground = #00FA5C
+content-foreground = ${color.apps-color}
 content-padding = 0
 content-font = 5
 
@@ -67,14 +65,21 @@ content-font = 5
 [module/space]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.bar-background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space2]
+type = custom/text
+content = " "
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/Dspace]
 type = custom/text
 content = "  "
-content-background = ${color.background}
+content-background = ${color.bar-background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -104,8 +109,8 @@ content-padding = 1
 [module/LD]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
-content-foreground = ${color.BGL}
+content-background = ${color.bar-background}
+content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -116,7 +121,7 @@ type = custom/text
 content = "%{T5}(%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground = #989cff
+content-foreground = ${color.color-2}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -130,8 +135,8 @@ type = custom/text
 ;content = "%{T5}█%{T-}"
 content = "%{T5}%{T-}"
 
-content-background = ${color.background}
-content-foreground = ${color.BGL}
+content-background = ${color.bar-background}
+content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -142,5 +147,24 @@ content = "%{T5})%{T-}"
 ;content = "%{T5}|)%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground = #989cff
+content-foreground = ${color.color-2}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/opening-bracket]
+type = custom/text
+content = "["
+content-foreground = ${color.GREEN}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/closing-bracket]
+type = custom/text
+content = "]"
+content-foreground = ${color.GREEN}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

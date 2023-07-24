@@ -102,7 +102,7 @@ icon-next-foreground = ${color.BACKGROUND}
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/cava
 
 format = <label>
 label = %output%
@@ -115,10 +115,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

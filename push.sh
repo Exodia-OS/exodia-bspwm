@@ -54,7 +54,8 @@ echo -e "${BCyan}#      Git Push Script      #${RESET_COLOR}"
 echo -e "${BCyan}#############################${RESET_COLOR}"
 
 # get branch name (e.g master, main, etc... ) #
-Branch=$(git branch --show-current) 
+Branch=$(git branch --show-current)
+DEFAULT_COMMIT_MSG=$(git status -s)
 
 echo -e "\n${BRed}[*] Your Current Branch : ${BYellow}${Branch}${RESET_COLOR}"
 
@@ -69,20 +70,19 @@ echo -e "\n${BPurple}[+] Adding new changes to the repo... \n${RESET_COLOR}"
 git add --all .
 
 if [ "$1" == "-m" ];
-then
-    # commit changes#
-    echo ""
-    git commit -m "$2"
-else
-    # read commit comment from user #
-    echo ""
-    echo -e "${BPurple}##################################${RESET_COLOR}"
-    echo -e "${BPurple}# Write your commit comment! :-  #${RESET_COLOR}"
-    read yourCommit
+    
+    then
+        
+        # commit changes#
+        echo ""
+        git commit -m "$2"
 
-    # commit changes#
+else
+
+    # use the default commit msg #
     echo ""
-    git commit -m "$yourCommit"
+    git commit -m "updated/added ${DEFAULT_COMMIT_MSG}"
+
 fi
 
 # push to repo #

@@ -18,7 +18,7 @@ content-padding = 0
 content-font = 4
 
 content-foreground = ${color.BLUE}
-content-background = ${color.BGL}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -125,32 +125,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = ${color.BLUE}
-label-focused-background = ${color.BGL}
+label-focused-background = ${color.BACKGROUND}
 label-focused-underline = ${color.BLUE}
 label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = ${color.GREEN}
-label-occupied-background = ${color.BGL}
+label-occupied-background = ${color.BACKGROUND}
 label-occupied-underline = ${color.GREEN}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.RED}
-label-urgent-background = ${color.BGL}
+label-urgent-background = ${color.BACKGROUND}
 label-urgent-underline = ${color.RED}
 label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = ${color.FOREGROUND}
-label-empty-background = ${color.BGL}
+label-empty-background = ${color.BACKGROUND}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = "  "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
-label-separator-background = ${color.BGL}
+label-separator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -266,7 +266,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-font = 3
-ramp-signal-foreground = ${color.CYAN}
+ramp-signal-foreground = #D8DEE9
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

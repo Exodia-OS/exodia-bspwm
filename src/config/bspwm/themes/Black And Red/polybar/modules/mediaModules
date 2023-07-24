@@ -19,20 +19,20 @@ interval = 5
 ; format-volume = <ramp-volume> <label-volume>
 format-volume = <bar-volume><label-volume>
 format-volume-font = 8
-format-volume-foreground = #F5040D
+format-volume-foreground = ${color.MAGENTA}
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
 format-muted-prefix-font = 4
-format-muted-prefix-foreground = #FD0000
+format-muted-prefix-foreground = ${color.red}
 
 label-muted = " Mute"
 muted-label-font = 4
-label-muted-foreground = #FD0000
+label-muted-foreground = ${color.red}
 
 
 label-volume = %percentage%%
-label-volume-foreground = #F5040D
+label-volume-foreground = ${color.MAGENTA}
 label-volume-font = 4
 
 
@@ -47,7 +47,7 @@ ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
 ramp-volume-font = 4
-ramp-volume-foreground = #F5040D
+ramp-volume-foreground = ${color.MAGENTA}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -58,19 +58,19 @@ bar-volume-gradient = false
 
 bar-volume-indicator = 󰮯
 bar-volume-indicator-font = 8
-bar-volume-indicator-foreground = #F5040D
+bar-volume-indicator-foreground = ${color.MAGENTA}
 
 bar-volume-fill = ━
 bar-volume-fill-font = 8
-bar-volume-foreground-0 = #F5040D
-bar-volume-foreground-1 = #F5040D
-bar-volume-foreground-2 = #F5040D
-bar-volume-foreground-3 = #F5040D
-bar-volume-foreground-4 = #F5040D
+bar-volume-foreground-0 = ${color.MAGENTA}
+bar-volume-foreground-1 = ${color.MAGENTA}
+bar-volume-foreground-2 = ${color.MAGENTA}
+bar-volume-foreground-3 = ${color.MAGENTA}
+bar-volume-foreground-4 = ${color.MAGENTA}
 
 bar-volume-empty = 
 bar-volume-empty-font = 8
-bar-volume-empty-foreground = ${color.BGL}
+bar-volume-empty-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -81,16 +81,16 @@ interval = 2
 ; format-online = <label-song> <icon-prev> <toggle> <icon-next>
 format-online = <icon-prev> <toggle> <icon-next>
 ; format-online-prefix = "  "
-format-online-foreground = #F5040D
+format-online-foreground = ${color.MAGENTA}
 format-playing = ${self.format-online}
 format-paused = <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = "  "
-format-offline-prefix-foreground = #F5040D
+format-offline-prefix-foreground = ${color.MAGENTA}
 
 label-offline = "Offline "
-format-offline-foreground = #F5040D
+format-offline-foreground = ${color.MAGENTA}
 
 label-song =  "%title% | %artist%"
 ; label-song =  "%title% "
@@ -99,18 +99,18 @@ label-song-ellipsis = true
 
 icon-play = ""
 icon-play-font = 2
-icon-play-foreground = #F5040D
+icon-play-foreground = ${color.MAGENTA}
 icon-pause = ""
 icon-pause-font = 2
-icon-pause-foreground = #F5040D
+icon-pause-foreground = ${color.MAGENTA}
 icon-stop = " "
-icon-stop-foreground = #F5040D
+icon-stop-foreground = ${color.MAGENTA}
 icon-prev = "玲"
 icon-prev-font = 2
-icon-prev-foreground = #F5040D
+icon-prev-foreground = ${color.MAGENTA}
 icon-next = "怜 "
 icon-next-font = 2
-icon-next-foreground = #F5040D
+icon-next-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -120,7 +120,7 @@ type = internal/mpd
 interval = 2
 
 format-online = <label-song>
-format-online-foreground = #F5040D
+format-online-foreground = ${color.MAGENTA}
 
 format-playing = ${self.format-online}
 format-paused = ${self.format-online}
@@ -129,12 +129,12 @@ format-stopped = ${self.format-online}
 ; label-song =  "[ %title% ]"
 label-song =  "%title% - %artist%"
 
-label-song-foreground = #F5040D
+label-song-foreground = ${color.MAGENTA}
 label-song-maxlen = 50
 label-song-ellipsis = true
 
 icon-repeat = ""
-icon-repeat-foreground = #F5040D
+icon-repeat-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -144,7 +144,7 @@ type = custom/text
 
 content = ""
 content-font = 3
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 click-left = music --albumArtCover
 
@@ -152,12 +152,11 @@ click-left = music --albumArtCover
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/cava
 
 format = <label>
 label = " %output% "
-format-foreground = #F5040D
-; format-background = #F5040D
+format-foreground = ${color.MAGENTA}
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -165,10 +164,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

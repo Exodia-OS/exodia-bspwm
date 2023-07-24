@@ -14,7 +14,7 @@ type = custom/text
 content = " "
 
 content-background = ${color.GREEN}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 content-font = 5
 
@@ -25,7 +25,7 @@ type = custom/text
 content = ""
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 1
 content-font = 5
 
@@ -36,7 +36,7 @@ type = custom/text
 content = "|"
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 content-font = 5
 
@@ -47,7 +47,7 @@ type = custom/text
 content = "["
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 content-font = 5
 
@@ -57,8 +57,7 @@ content-font = 5
 type = custom/text
 content = "]"
 
-; content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 content-font = 5
 
@@ -67,14 +66,14 @@ content-font = 5
 [module/space]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/Dspace]
 type = custom/text
 content = " "
-content-background = #CB42EF
+content-background = ${color.purple}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -91,7 +90,7 @@ type = custom/text
 content = 
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -104,8 +103,8 @@ content-padding = 1
 [module/LD]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
-content-foreground = #F5040D
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -116,7 +115,7 @@ type = custom/text
 content = "%{T5}(%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -130,8 +129,8 @@ type = custom/text
 ;content = "%{T5}█%{T-}"
 content = "%{T5}%{T-}"
 
-content-background = ${color.background}
-content-foreground = #F5040D
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -142,6 +141,6 @@ content = "%{T5})%{T-}"
 ;content = "%{T5}|)%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

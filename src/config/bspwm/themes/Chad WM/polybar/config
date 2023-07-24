@@ -43,11 +43,6 @@ height = 30
 offset-x = 0.5%
 offset-y = 0.5%
 
-; width = 100%
-; height = 27
-; offset-x = 0 %
-; offset-y = 0 %
-
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
@@ -67,10 +62,11 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:"size=12;3"
+font-2 = "google\\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
 
 
 modules-left   = xdomenu space LDD bspwm LDD space ethernet space mod space LDD xkeyboard LDD space notification-github space space info-cava
@@ -89,7 +85,7 @@ tray-position = right
 tray-detached = false
 tray-maxsize = 16
 tray-transparent = false
-tray-background = #353B45
+tray-background = ${color.tray-background}
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 0

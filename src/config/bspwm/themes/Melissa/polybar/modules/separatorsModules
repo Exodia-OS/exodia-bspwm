@@ -12,14 +12,14 @@
 [module/space]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/Dspace]
 type = custom/text
 content = "  "
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

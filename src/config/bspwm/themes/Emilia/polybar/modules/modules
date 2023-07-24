@@ -18,7 +18,7 @@ content-background = ${color.mb}
 
 content-prefix = 
 content-prefix-font = 7
-content-prefix-foreground = ${color.MAGENTA}
+content-prefix-foreground = ${color.blue-arch}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -33,7 +33,7 @@ format-background = ${color.mb}
 format-foreground = ${color.blue-arch}
 
 label = %percentage%%
-; label-font = 4
+label-font-foreground = ${color.blue-arch}
 
 ramp-0 = 
 ramp-1 = 
@@ -46,7 +46,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.blue-arch}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -61,7 +61,7 @@ format-background = ${color.mb}
 format-foreground = ${color.blue-arch}
 
 label = %percentage%%
-; label-font = 4
+label-font-foreground = ${color.blue-arch}
 
 ramp-0 = 
 ramp-1 = 
@@ -74,7 +74,8 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground =${color.blue-arch}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bspwm]

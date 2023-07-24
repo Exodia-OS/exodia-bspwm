@@ -13,7 +13,6 @@
 type = custom/text
 content = "  "
 
-content-background = ${color.BACKGROUND}
 content-foreground = #E92EF0
 content-padding = 0
 content-font = 5
@@ -33,7 +32,6 @@ type = custom/text
 ;content = ◆
 content = 
 content-font = 6
-content-background = ${color.BACKGROUND}
 content-foreground = ${color.blue-gray}
 content-padding = 2
 

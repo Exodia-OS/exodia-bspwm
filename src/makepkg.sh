@@ -44,6 +44,17 @@ exit_on_signal_SIGTERM () {
 trap exit_on_signal_SIGINT SIGINT
 trap exit_on_signal_SIGTERM SIGTERM
 
+CLEANINH_BUILDING_DIR (){
+
+    # cleaning building #
+    echo -e "\n${BRed}[+] cleaning building files...${RESET_COLOR}"
+    cd ..
+    rm -rf ${BUILDING_DIR}
+    sleep 0.5
+
+}
+
+
 # Build packages (create a binary package -> pkg.pkg.tar.zst) #
 BUILD_PKG () {
 
@@ -68,18 +79,26 @@ BUILD_PKG () {
 	echo -e "\n${BGreen}[+] Successful Build ✔${RESET_COLOR}"
     sleep 0.5
 
-    echo -e "\n${BRed}[+] moving new package to parent directory before cleaning building files${RESET_COLOR}"
-    mv ./*.pkg.tar.zst ../
-    sleep 0.5
+    if ls *.pkg.tar.zst 1> /dev/null 2>&1;
+        
+        then
+            
+            echo -e "\n${BRed}[+] moving new package to parent directory before cleaning building files${RESET_COLOR}"
+            mv ./*.pkg.tar.zst ../
+            sleep 0.5
+            CLEANINH_BUILDING_DIR
+            
+            # D O N E! #
+            echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
     
-    # cleaning building #
-    echo -e "\n${BRed}[+] cleaning building files...${RESET_COLOR}"
-    cd ..
-    rm -rf ${BUILDING_DIR}
-    sleep 0.5
+    else
+    
+        echo -e "\n${BRed}[✘] build failed \n${RESET_COLOR}"
+        
+    fi
 
-    # D O N E! #
-    echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
+
+    
 
 }
 

@@ -56,7 +56,7 @@ animation-charging-framerate = 700
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\ Street/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.BLUE}
@@ -65,7 +65,7 @@ format-foreground = ${color.BLUE}
 
 [module/memory]
 type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
 format-prefix = "" 
 format-prefix-font = 3
@@ -78,7 +78,7 @@ format-prefix-foreground = #d19a66
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\ Street/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

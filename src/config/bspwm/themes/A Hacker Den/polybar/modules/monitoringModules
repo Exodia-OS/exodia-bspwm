@@ -43,9 +43,9 @@ label-charging-foreground = ${color.BACKGROUND}
 label-discharging-foreground = ${color.BACKGROUND}
 label-full-foreground = ${color.BACKGROUND}
 
-label-charging-font = 3
-label-discharging-font = 3
-label-full-font = 3
+label-charging-font = 2
+label-discharging-font = 2
+label-full-font = 2
 
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
@@ -89,6 +89,7 @@ label = "%{A1:stacer &:} %percentage%% |%{A}"
 label-font = 3
 label-background = ${color.GREEN}
 label-foreground = ${color.BACKGROUND}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/filesystem]
@@ -100,17 +101,17 @@ fixed-values = true
 
 format-mounted = <label-mounted>
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${color.background}
+format-mounted-prefix-foreground = ${color.BACKGROUND}
 format-mounted-prefix-background = ${color.cyan}
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${color.background}
+format-unmounted-prefix-foreground = ${color.BACKGROUND}
 format-unmounted-prefix-background = ${color.cyan}
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
-label-mounted-foreground = ${color.background}
+label-mounted-foreground = ${color.BACKGROUND}
 
 label-mounted-background = ${color.cyan}
 label-unmounted-background = ${color.cyan}
@@ -119,7 +120,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BACKGROUND}
@@ -129,7 +130,7 @@ format-background = ${color.GREEN}
 
 [module/memory]
 type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
 format-prefix = "" 
 format-prefix-font = 3
@@ -137,19 +138,17 @@ format-prefix-font = 3
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
 label-padding = 1
 label-font = 4
-format-prefix-foreground = #d19a66
+format-prefix-foreground = ${color.color-1}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
-
-;label = %output% Updates
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:}  %output% %{A}"
-
-format-font = 3
+format-font = 2
 label-foreground = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

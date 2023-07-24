@@ -193,11 +193,11 @@ GET_WEATHER_INFO() {
 
 			fi
 
-			echo -e "%{T3}%{F#00FA5C}$WEATHER_ICON$WEATHER_TEMP °C"
+			echo -e "%{T4}%{F#00FA5C}$WEATHER_ICON$WEATHER_TEMP °C"
 	
 		else
 
-				echo -e "%{T3}%{F#00FA5C} No Data"
+				echo -e "%{T4}%{F#00FA5C} No Data"
 
 		fi
 

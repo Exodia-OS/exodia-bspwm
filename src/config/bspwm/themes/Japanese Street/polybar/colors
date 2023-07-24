@@ -12,3 +12,7 @@ YELLOW = #e5c07b
 BLUE = #61afef
 PURPLE = #c678dd
 CYAN = #56b6c2
+
+background = 
+FOREGROUND = 
+BACKGROUND = 

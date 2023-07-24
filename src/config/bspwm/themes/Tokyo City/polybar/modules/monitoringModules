@@ -19,29 +19,26 @@ adapter = ${system.adapter}
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
-format-charging-foreground = ${colors.color4}
-format-charging-background = ${colors.background}
+format-charging-foreground = ${color.YELLOW}
 format-charging-font = 4
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging = %percentage%%
-format-discharging-foreground = ${colors.foreground}
-format-discharging-background = ${colors.background}
+format-discharging-foreground = ${color.RED}
 format-discharging-font = 4
 
 format-full-prefix = ""
 format-full-prefix-foreground = #A0E8A2
-format-foreground = ${colors.color4}
-format-background = ${colors.background}
+format-foreground = ${color.color4}
 format-full-prefix-font = 5 
 label-full = "%percentage%% "
 label-full-font = 4
 
-label-discharging-foreground = ${colors.foreground}
+label-discharging-foreground = ${color.RED}
 label-discharging-font = 4
 
 ramp-capacity-foreground =  #A0E8A2  
-label-charging-foreground = ${colors.foreground}
+label-charging-foreground = ${color.YELLOW}
 label-charging-font = 4
 ramp-capacity-font = 5
 
@@ -116,7 +113,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Tokyo\ City/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Tokyo\\ City/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BLUE}
@@ -125,7 +122,7 @@ format-background = ${color.BGL}
 
 [module/memory]
 type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
 format-prefix = "" 
 format-prefix-font = 3
@@ -138,7 +135,7 @@ format-prefix-foreground = #d19a66
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Tokyo\ City/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Tokyo\\ City/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

@@ -135,7 +135,7 @@ label-occupied-padding = 0
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
 label-urgent-background = #00
-label-urgent-underline = ${color.BLUEs}
+label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 0
 
 label-empty = %name%

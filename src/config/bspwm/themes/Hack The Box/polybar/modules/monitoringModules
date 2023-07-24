@@ -119,7 +119,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Hack\ The\ Box/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Hack\\ The\\ Box/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BLUE}

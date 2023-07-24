@@ -67,7 +67,7 @@ content-font = 5
 [module/space]
 type = custom/text
 content = " "
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -104,7 +104,7 @@ content-padding = 1
 [module/LD]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -130,7 +130,7 @@ type = custom/text
 ;content = "%{T5}█%{T-}"
 content = "%{T5}%{T-}"
 
-content-background = ${color.background}
+content-background = ${color.BACKGROUND}
 content-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

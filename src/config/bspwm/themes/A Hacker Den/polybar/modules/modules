@@ -13,8 +13,7 @@
 type = custom/text
 
 content = " SysTray : "
-; content-background = #8B60E5
-content-foreground = #00FA5C
+content-foreground = ${color.apps-color}
 content-padding = 0
 content-font = 4
 
@@ -122,32 +121,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = ${color.GREEN}
-label-focused-background = ${color.BGL}
+label-focused-background = ${color.bar-background}
 label-focused-underline = ${color.GREEN}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #FF0064
-label-occupied-background = ${color.BGL}
-label-occupied-underline = #FF0064
+label-occupied-foreground = ${color.ALTYELLOW}
+label-occupied-background = ${color.bar-background}
+label-occupied-underline = ${color.ALTYELLOW}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
-label-urgent-background = ${color.BGL}
-label-urgent-underline = ${color.BLUEs}
+label-urgent-background = ${color.bar-background}
+label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = #2e5c03
-label-empty-background = ${color.BGL}
+label-empty-foreground = ${color.deep-green}
+label-empty-background = ${color.bar-background}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = " ◆ "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
-label-separator-background = ${color.BGL}
+label-separator-background = ${color.bar-background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -155,8 +154,7 @@ label-separator-background = ${color.BGL}
 type = internal/bspwm
 
 format = <label-mode>
-; format-background = ${color.FOREGROUND}
-format-foreground = #00FA5C
+format-foreground = ${color.apps-color}
 format-padding = 1
 format-font = 4
 
@@ -182,7 +180,7 @@ time = %I:%M %p
 time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = "  "
+format-prefix = " ﲁ "
 format-prefix-font = 3
 format-prefix-foreground = ${color.BACKGROUND}
 format-prefix-background = ${color.GREEN}
@@ -200,13 +198,11 @@ blacklist-0 = num lock
 
 label-layout = " %layout% "
 label-layout-foreground = ${color.GREEN}
-; label-layout-background = ${color.GREEN}
 label-layout-font = 3
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-foreground = ${color.GREEN}
-; label-indicator-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -216,7 +212,7 @@ type = custom/text
 ; content = ""
 content = ""
 content-font = 5
-content-foreground = #00FA5C
+content-foreground = ${color.apps-color}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
@@ -224,7 +220,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = ${color.GREEN}
 click-left = google-chrome-stable --newtab https://github.com/notifications
@@ -262,7 +258,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = #7936FF
+content-foreground = ${color.purple}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
@@ -271,7 +267,7 @@ click-left = ~/.config/bspwm/rofi/bin/themes
 
 [module/weather]
 type = custom/script
-exec = ~/.config/bspwm/themes/A\ Hacker\ Den/polybar/scripts/weather
+exec = ~/.config/bspwm/themes/A\\ Hacker\\ Den/polybar/scripts/weather
 interval = 1
 click-left = google-chrome-stable http://api.openweathermap.org
 

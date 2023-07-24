@@ -1,0 +1,152 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/chrome]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #0A84DF
+content-padding = 0
+
+click-left = google-chrome-stable
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/file-manager]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #FED45C
+content-padding = 0
+
+click-left = thunar
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mail]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #1CA1DD
+content-padding = 0
+
+click-left = google-chrome-stable https://mail.google.com/
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/whatsapp]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = google-chrome-stable https://web.whatsapp.com/
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/VirtualBox]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = VirtualBox %U
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/discord]
+
+type = custom/text
+
+content = "ﭮ"
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = discord
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/music]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = music --albumArtCover
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/nvim]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = alacritty -e nvim
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/PowerShell]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = bsp-powershell
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/MS_VSCode]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = code
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/terminal]
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #9FEF00
+content-padding = 0
+
+click-left = alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -257,13 +257,12 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = %layout%
-label-layout-foreground = ${colors.primary}
+label-layout-foreground = #A9B1D6
 label-layout-font = 4
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = ${colors.background}
-label-indicator-background = ${colors.secondary}
+label-indicator-foreground = #A9B1D6
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -278,11 +277,12 @@ content-foreground = #AD8EE6
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\ City/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Japanese\\ City/polybar/scripts/notification-github.sh
 interval = 60
 label-background = ${color.BGL}
 click-left = google-chrome-stable --newtab https://github.com/notifications

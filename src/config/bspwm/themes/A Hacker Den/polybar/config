@@ -49,7 +49,7 @@ height = 31
 offset-x = 20%
 offset-y = 5
 
-background = #272d36
+background = ${color.bar-background}
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -68,7 +68,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
@@ -132,7 +132,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
@@ -141,9 +141,9 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = space menu
+modules-left   = space2 menu
 modules-center = updates-pacman
-modules-right  = themes space
+modules-right  = themes space2
  
 separator =
 spacing = 0
@@ -193,7 +193,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
@@ -254,7 +254,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
@@ -263,7 +263,7 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = space weather
+modules-left   = space2 weather
 modules-center = 
 modules-right  = empty info-cava empty space cpu cpuTemp space pulse-mic volume backlight
  
@@ -315,7 +315,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
@@ -325,7 +325,7 @@ font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = song-icon
-modules-center = song
+modules-center = opening-bracket song closing-bracket
 modules-right  = mpd
 
 separator =
@@ -357,7 +357,7 @@ height = 30
 offset-x = 89.5%
 offset-y = 5
 
-background = #101419
+background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -367,7 +367,6 @@ line-size = 2
 line-color = ${color.BLUE}
 
 border-size = 3
-; border-color = #67C976
 border-color = ${color.BACKGROUND}
 
 padding = 0
@@ -377,7 +376,7 @@ module-margin-right = 0
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"

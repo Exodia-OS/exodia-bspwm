@@ -163,7 +163,7 @@ element normal.urgent {
     text-color:                  @foreground;
 }
 element normal.active {
-    background-color:            @active;
+    background-color:            @highlight;
     text-color:                  @foreground;
 }
 element selected.normal {

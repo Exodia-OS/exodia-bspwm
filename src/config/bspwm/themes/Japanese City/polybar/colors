@@ -51,3 +51,5 @@ color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
 dark-light = #272A2B 
 active-light = #313435
+
+background = 

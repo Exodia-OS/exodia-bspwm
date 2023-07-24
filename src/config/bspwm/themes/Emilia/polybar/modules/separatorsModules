@@ -13,7 +13,7 @@
 type = custom/text
 content = "  "
 
-content-background = ${color.BACKGROUND}
+content-background = ${color.background}
 content-foreground = ${color.RED}
 content-padding = 0
 content-font = 5
@@ -24,7 +24,7 @@ content-font = 5
 type = custom/text
 content = |
 
-content-background = ${color.BACKGROUND}
+content-background = ${color.background}
 content-foreground = ${color.RED}
 content-padding = 1
 content-font = 5
@@ -35,7 +35,7 @@ content-font = 5
 type = custom/text
 content = "<|"
 
-content-background = ${color.BACKGROUND}
+content-background = ${color.background}
 content-foreground = ${color.RED}
 content-padding = 1
 content-font = 5
@@ -46,7 +46,7 @@ content-font = 5
 type = custom/text
 content = "|>"
 
-content-background = ${color.BACKGROUND}
+content-background = ${color.background}
 content-foreground = ${color.RED}
 content-padding = 1
 content-font = 5
@@ -73,7 +73,7 @@ type = custom/text
 ;content = ◆
 content = 
 content-font = 6
-content-background = ${color.BACKGROUND}
+content-background = ${color.background}
 content-foreground = ${color.blue-gray}
 content-padding = 2
 

@@ -14,7 +14,7 @@ type = custom/text
 
 content = "[SysTray] : "
 content-background = ${color.BACKGROUND}
-content-foreground = #00eb15
+content-foreground = ${color.green}
 content-padding = 0
 content-font = 4
 
@@ -25,10 +25,10 @@ type = custom/text
 
 content = " NON"
 content-background = ${color.BACKGROUND}
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-prefix = ""
 content-prefix-font = 2
-content-prefix-foreground = #F5040D
+content-prefix-foreground = ${color.MAGENTA}
 content-prefix-background = ${color.BACKGROUND}
 content-padding = 0
 
@@ -42,7 +42,7 @@ card = intel_backlight
 format = <ramp><label>
 
 
-label-foreground = #F5040D
+label-foreground = ${color.MAGENTA}
 label-background = ${color.BACKGROUND}
 
 label = " %percentage%%"
@@ -58,7 +58,7 @@ ramp-7 = ""
 ramp-8 = ""
 ramp-9 = ""
 ramp-font = 3
-ramp-foreground = #F5040D
+ramp-foreground = ${color.MAGENTA}
 ramp-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -72,7 +72,7 @@ enable-scroll = true
 format = <ramp><label>
 
 
-label-foreground = #F5040D
+label-foreground = ${color.MAGENTA}
 label-background = ${color.BACKGROUND}
 
 label = " %percentage%%"
@@ -88,7 +88,7 @@ ramp-7 = ""
 ramp-8 = ""
 ramp-9 = ""
 ramp-font = 3
-ramp-foreground = #F5040D
+ramp-foreground = ${color.MAGENTA}
 ramp-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -121,32 +121,32 @@ label-monitor = %name%
 
 
 label-focused = [%name%]
-label-focused-foreground = #ff0000
+label-focused-foreground = ${color.MAGENTA}
 label-focused-background = ${color.BACKGROUND}
-label-focused-underline = #ff0000
+label-focused-underline = ${color.MAGENTA}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #FFFF00
+label-occupied-foreground = ${color.green}
 label-occupied-background = ${color.BACKGROUND}
 label-occupied-underline = ${color.BACKGROUND}
 label-occupied-padding = 0
 
 label-urgent = %name%
-label-urgent-foreground = #80E6FE
+label-urgent-foreground = ${color.cyan2}
 label-urgent-background = ${color.BACKGROUND}
-label-urgent-underline = #80E6FE
+label-urgent-underline = ${color.cyan2}
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = #8c0308
+label-empty-foreground = ${color.WHITE}
 label-empty-background = ${color.BACKGROUND}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = "◆"
 label-separator-padding = 1
-label-separator-foreground = #80E6FE
+label-separator-foreground = ${color.cyan2}
 label-separator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -156,7 +156,7 @@ type = internal/bspwm
 
 format = <label-mode>
 format-background = ${color.BACKGROUND}
-format-foreground = #00eb15
+format-foreground = ${color.green}
 format-padding = 1
 format-font = 4
 
@@ -182,13 +182,11 @@ time-alt = %A, %d %B %Y
 format = <label>
 format-prefix = ""
 format-prefix-font = 3
-format-prefix-foreground = #F5040D
-; format-prefix-background = #F5040D
+format-prefix-foreground = ${color.MAGENTA}
 
 label = " %time% "
-label-font = 3
-label-foreground = #F5040D
-; label-background = #F5040D
+label-font = 2
+label-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -197,13 +195,13 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = "%layout%"
-label-layout-foreground = #F5040D
+label-layout-foreground = ${color.MAGENTA}
 label-layout-background = ${color.BACKGROUND}
 label-layout-font = 3
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = #F5040D
+label-indicator-foreground = ${color.MAGENTA}
 label-indicator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -214,7 +212,7 @@ type = custom/text
 ; content = ""
 content = ""
 content-font = 5
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
@@ -223,9 +221,9 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Black\ And\ Red/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/notification-github.sh
 interval = 60
-label-foreground = #F5040D
+label-foreground = ${color.MAGENTA}
 label-font = 3
 click-left = google-chrome-stable --newtab https://github.com/notifications
 
@@ -238,7 +236,7 @@ content = " Apps"
 content-font = 3
 content-prefix = ""
 content-prefix-font= 5
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 
 click-left  = ~/.config/bspwm/rofi/bin/launcher
@@ -252,7 +250,7 @@ interval = 1
 
 content = ""
 content-font = 5
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-padding = 0
 click-left = jgmenu_run
 
@@ -264,7 +262,7 @@ content = " Themes"
 content-font = 3
 content-prefix = ""
 content-prefix-font= 5
-content-foreground = #F5040D
+content-foreground = ${color.MAGENTA}
 content-background = ${color.BACKGROUND}
 content-padding = 0
 

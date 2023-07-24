@@ -37,7 +37,7 @@ color0 = ${xrdb:color0}
 color1 = ${xrdb:color1}
 color2 = ${xrdb:color2}
 color3 = ${xrdb:color3}
-color4 = ${xrdb:color4}
+color4 =
 color5 = ${xrdb:color5}
 color6 = ${xrdb:color6}
 color7 = ${xrdb:color7}
@@ -51,3 +51,5 @@ color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
 dark-light = #272A2B 
 active-light = #313435
+
+background = 

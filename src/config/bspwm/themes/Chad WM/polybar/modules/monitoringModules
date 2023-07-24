@@ -87,7 +87,7 @@ format-prefix-background = #7EC7A2
 ; label = "%{A1:alacritty -e stacer &:} %percentage%%%{A}"
 label = "%{A1:stacer &:} %percentage%% %{A}"
 label-background = #353B45
-label-font = 3
+label-font = 2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -100,17 +100,17 @@ fixed-values = true
 
 format-mounted = <label-mounted>
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${color.background}
+format-mounted-prefix-foreground = ${color.BACKGROUND}
 format-mounted-prefix-background = ${color.cyan}
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${color.background}
+format-unmounted-prefix-foreground = ${color.BACKGROUND}
 format-unmounted-prefix-background = ${color.cyan}
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
-label-mounted-foreground = ${color.background}
+label-mounted-foreground = ${color.BACKGROUND}
 
 label-mounted-background = ${color.cyan}
 label-unmounted-background = ${color.cyan}
@@ -119,7 +119,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Chad\ WM/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Chad\\ WM/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BLUE}
@@ -128,7 +128,7 @@ format-foreground = ${color.BLUE}
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Chad\ WM/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Chad\\ WM/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

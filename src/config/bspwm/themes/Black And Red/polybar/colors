@@ -18,3 +18,10 @@ ALTBLUE = #BC1F1A
 ALTMAGENTA = #DC251F
 ALTCYAN = #ED3037
 ALTWHITE = #3D0A07
+
+purple = #CB42EF
+red = #FD0000
+dark-red = #8c0308
+
+green = #00eb15
+cyan2 = #80e6fe

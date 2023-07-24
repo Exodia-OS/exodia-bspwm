@@ -18,7 +18,7 @@ use-ui-max = false
 interval = 5
 
 ; format-volume = <ramp-volume> <label-volume>
-format-volume = <bar-volume> <label-volume>
+format-volume = <bar-volume>󰮯 <label-volume>
 format-volume-font = 4
 format-volume-foreground = ${color.BLUE}
 
@@ -29,6 +29,8 @@ format-muted-prefix-foreground = ${color.RED}
 
 label-volume = %percentage%%
 label-volume-font = 4
+label-volume-prefix-foreground = ${color.BLUE}
+
 label-muted = " Mute"
 muted-label-font = 4
 label-muted-foreground = ${color.RED}
@@ -67,7 +69,7 @@ bar-volume-foreground-4 = ${color.BLUE}
 
 bar-volume-empty = ━
 bar-volume-empty-font = 8
-bar-volume-empty-foreground = ${color.BGL}
+bar-volume-empty-foreground = #2E3440
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -129,7 +131,7 @@ exec =  ~/.config/bspwm/themes/Melissa/polybar/scripts/cava
 
 format = <label>
 label = "%output%"
-format-foreground = #56B6C2
+format-foreground = #D8DEE9
 format-background = ${color.BACKGROUND}
 
 tail = true

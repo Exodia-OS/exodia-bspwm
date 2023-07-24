@@ -117,7 +117,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BACKGROUND}
@@ -127,7 +127,7 @@ format-background = ${color.GREEN}
 
 [module/memory]
 type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
 format-prefix = "" 
 format-prefix-font = 3
@@ -140,7 +140,7 @@ format-prefix-foreground = #d19a66
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

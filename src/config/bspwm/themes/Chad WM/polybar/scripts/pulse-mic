@@ -21,11 +21,11 @@ status() {
       
       then
           
-          echo -e "%{T3}%{F#FF0008}%{B#353B45} muted"
+          echo -e "%{T4}%{F#FF0008}%{B#353B45} %{T2}muted"
 
   else
       
-      echo -e "%{T3}%{F#80E6FE}%{B#353B45} $(pacmd list-sources | grep "\* index:" -A 7 | grep volume | awk -F/ '{print $2}' | tr -d ' ')"
+      echo -e "%{T4}%{F#80E6FE}%{B#353B45} %{T2}$(pacmd list-sources | grep "\* index:" -A 7 | grep volume | awk -F/ '{print $2}' | tr -d ' ')"
 
   fi
 

@@ -18,7 +18,7 @@ content-background = ${color.bg}
 
 content-prefix = 
 content-prefix-font = 7
-content-prefix-foreground = ${color.MAGENTA}
+content-prefix-foreground = ${color.blue-arch}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -29,11 +29,10 @@ type = internal/xbacklight
 card = intel_backlight
 
 format = <ramp> <label>
-format-background = ${color.bg}
-format-foreground = ${color.blue-arch}
+
 
 label = %percentage%%
-; label-font = 4
+label-foreground = ${color.blue-arch}
 
 ramp-0 = 
 ramp-1 = 
@@ -46,7 +45,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.blue-arch}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -57,11 +56,10 @@ card = ${system.graphics_card}
 
 enable-scroll = true
 format = <ramp> <label>
-format-background = ${color.bg}
-format-foreground = ${color.blue-arch}
+
 
 label = %percentage%%
-; label-font = 4
+label-foreground = ${color.blue-arch}
 
 ramp-0 = 
 ramp-1 = 
@@ -74,7 +72,8 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.blue-arch}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bspwm]
@@ -280,7 +279,6 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 type = custom/script
 exec = ~/.config/bspwm/themes/Cristina/polybar/scripts/notification-github.sh
 interval = 60
-label-background = ${color.BGL}
 click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

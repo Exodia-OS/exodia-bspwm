@@ -123,7 +123,7 @@ label-unmounted-background = ${color.background-bar}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = #80E6FE
@@ -149,7 +149,7 @@ label-foreground = #80E6FE
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

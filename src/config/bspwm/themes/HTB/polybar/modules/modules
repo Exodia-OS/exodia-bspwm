@@ -127,15 +127,15 @@ label-focused-underline = ${color.HTB_BLUE}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #0000ff
+label-occupied-foreground = ${color.GREEN}
 label-occupied-background = ${color.BGL}
-label-occupied-underline = #0000ff
+label-occupied-underline = ${color.GREEN}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
 label-urgent-background = ${color.BGL}
-label-urgent-underline = ${color.BLUEs}
+label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 0
 
 label-empty = %name%

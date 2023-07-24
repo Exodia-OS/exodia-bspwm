@@ -223,7 +223,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = #80E6FE
 label-font = 3
@@ -274,7 +274,7 @@ click-left = ~/.config/bspwm/rofi/bin/themes
 
 [module/weather]
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/weather
+exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/weather
 interval = 1
 click-left = google-chrome-stable http://api.openweathermap.org
 format-foreground = #80E6FE

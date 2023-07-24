@@ -19,13 +19,13 @@ adapter = ${system.adapter}
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
-format-charging-foreground = ${colors.color4}
+format-charging-foreground = ${color.color4}
 format-charging-background =  #282A36
 ; format-charging-font = 4
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging = %percentage%%
-format-discharging-foreground = ${colors.red}
+format-discharging-foreground = ${color.red}
 format-discharging-background =  #282A36
 ; format-discharging-font = 4
 
@@ -118,7 +118,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/memory]
 type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
 format-prefix = "" 
 ; format-prefix-font = 2

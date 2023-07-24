@@ -161,12 +161,12 @@ format = <label>
 format-prefix = " "
 format-prefix-font = 3
 format-prefix-foreground = ${color.BACKGROUND}
-format-prefix-background = #6FA4F0
+format-prefix-background = ${color.color-cayn}
 
 label = %time%
 label-font = 4
 label-foreground = ${color.BACKGROUND}
-label-background = #6FA4F0
+label-background = ${color.color-cayn}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -180,12 +180,12 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = "  "
 format-connected-prefix-font = 3
 format-connected-prefix-foreground = ${color.CYAN}
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = "ﲁ "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${color.RED}
 
@@ -212,18 +212,18 @@ unknown-as-up = true
 format-connected = <ramp-signal> <label-connected>
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = "睊  "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${color.RED}
 
 label-connected = "%{A1:nmd &:}%essid%%{A}"
 label-disconnected = "%{A1:nmd &:}Disconnected%{A}"
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-font = 3
 ramp-signal-foreground = ${color.CYAN}
 
@@ -235,14 +235,14 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = "%layout%"
-label-layout-foreground = #000000
+label-layout-foreground = ${color.BACKGROUND}
 label-layout-font = 4
-label-layout-background = #0000FF
+label-layout-background = ${color.YELLOW}
 
 ; label-indicator-padding = 0
 ; label-indicator-margin = 1
-label-indicator-foreground = #000000
-label-indicator-background = #0000FF
+label-indicator-foreground = ${color.BACKGROUND}
+label-indicator-background = ${color.YELLOW}
 label-indicator-font = 4
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

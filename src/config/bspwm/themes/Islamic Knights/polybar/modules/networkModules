@@ -112,7 +112,7 @@ ramp-signal-4 =
 
 [module/checknet]
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\ Knights/polybar/scripts/check-network
+exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/check-network
 tail = true
 interval = 5
 

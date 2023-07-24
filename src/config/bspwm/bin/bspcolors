@@ -94,11 +94,12 @@ BSP_ROFI () {
 	* {
 
 		background:			${BACKGROUND};
+		background-alt:		${ALTBLACK};
 		foreground:			${FOREGROUND};
 		selected:			${BLUE};
-		background-alt:		${MAGENTA};
+		highlight:			${CYAN};
 		urgent:				${RED};
-		active:				${GREEN};
+		on:					${GREEN};
 		off:				${RED};
 
 	}

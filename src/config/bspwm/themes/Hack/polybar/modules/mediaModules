@@ -70,7 +70,7 @@ bar-volume-foreground-4 = #80E6FE
 
 bar-volume-empty = 
 bar-volume-empty-font = 8
-bar-volume-empty-foreground = ${color.BGL}
+bar-volume-empty-foreground = #01161B
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

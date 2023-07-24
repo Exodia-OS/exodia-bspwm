@@ -111,32 +111,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = ${color.GREEN}
-label-focused-background = ${color.BGL}
+label-focused-background = ${color.BACKGROUND}
 label-focused-underline = ${color.GREEN}
 label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = ${color.RED}
-label-occupied-background = ${color.BGL}
+label-occupied-background = ${color.BACKGROUND}
 label-occupied-underline = ${color.RED}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
-label-urgent-background = ${color.BGL}
-label-urgent-underline = ${color.BLUEs}
+label-urgent-background = ${color.BACKGROUND}
+label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = ${color.YELLOW}
-label-empty-background = ${color.BGL}
+label-empty-background = ${color.BACKGROUND}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = " ◆ "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
-label-separator-background = ${color.BGL}
+label-separator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -283,7 +283,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/JS\ Coffee/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/JS\\ Coffee/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = ${color.GREEN}
 click-left = google-chrome-stable --newtab https://github.com/notifications

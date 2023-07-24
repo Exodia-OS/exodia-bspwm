@@ -18,3 +18,14 @@ ALTBLUE = #0254C1
 ALTMAGENTA = #00FE66
 ALTCYAN = #32FF00
 ALTWHITE = #A1271A
+
+bar-background = #272d36
+
+apps-color = #00FA5C
+red-color = #ff0000
+pink-color = #FF0677
+purple = #7936ff
+deep-green = #2e5c03
+color-1 = #d19a66
+color-2 = #989cff
+color-3 = #80e6fe

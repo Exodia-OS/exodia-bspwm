@@ -81,7 +81,7 @@ prompt {
     enabled:                     true;
     padding:                     10px;
     border-radius:               10px;
-    background-color:            @active;
+    background-color:            @on;
     text-color:                  @background;
 }
 
@@ -151,7 +151,7 @@ element selected.active {
 element normal.active,
 element alternate.active,
 element selected.urgent {
-    background-color:            var(active);
+    background-color:            var(on);
     text-color:                  var(background);
 }
 element selected.normal {
