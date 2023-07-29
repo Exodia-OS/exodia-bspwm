@@ -76,12 +76,13 @@ BUILD_PKG () {
     # Building #
 	echo -e "\n${BPurple}[+] Building Package...\n${RESET_COLOR}"
 	makepkg -s -f
-	echo -e "\n${BGreen}[+] Successful Build ✔${RESET_COLOR}"
     sleep 0.5
 
     if ls *.pkg.tar.zst 1> /dev/null 2>&1;
         
         then
+            
+            echo -e "\n${BGreen}[+] Successful Build ✔${RESET_COLOR}"
             
             echo -e "\n${BRed}[+] moving new package to parent directory before cleaning building files${RESET_COLOR}"
             mv ./*.pkg.tar.zst ../
