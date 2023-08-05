@@ -1,0 +1,34 @@
+! ------------------------------------
+! 
+!  The Warriors color scheme
+!
+!  @author      : 00xWolf
+!    GitHub    : @mmsaeed509
+!    Developer : Mahmoud Mohamed
+!  﫥  Copyright : Exodia OS
+!
+! ------------------------------------
+
+
+*background: #26122C
+*foreground: #D78FFE
+
+! Colors 0-15.
+*color0:  #0C1832
+*color1:  #AC0000
+*color2:  #9c0598
+*color3:  #949204
+*color4:  #9f51c9
+*color5:  #6f02a3
+*color6:  #BE00CD
+*color7:  #a9a9ab
+
+*color8:   #F72D93
+*color9:   #e80707
+*color10:  #ff00f8
+*color11:  #FFFC04
+*color12:  #1151F9
+*color13:  #a005eb
+*color14:  #D78FFE
+*color15:  #DCDBE0
+

@@ -19,7 +19,7 @@ interval = 5
 ; format-volume = <ramp-volume> <label-volume>
 format-volume = <bar-volume><label-volume>
 format-volume-font = 8
-format-volume-foreground = #80E6FE
+format-volume-foreground = #D78FFE
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
@@ -32,7 +32,7 @@ label-muted-foreground = #FD0000
 
 
 label-volume = %percentage%%
-label-volume-foreground = #80E6FE
+label-volume-foreground = #D78FFE
 label-volume-font = 4
 
 
@@ -47,7 +47,7 @@ ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
 ramp-volume-font = 4
-ramp-volume-foreground = #80E6FE
+ramp-volume-foreground = #D78FFE
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -58,15 +58,15 @@ bar-volume-gradient = false
 
 bar-volume-indicator = 󰮯
 bar-volume-indicator-font = 8
-bar-volume-indicator-foreground = #80E6FE
+bar-volume-indicator-foreground = #D78FFE
 
 bar-volume-fill = ━
 bar-volume-fill-font = 8
-bar-volume-foreground-0 = #80E6FE
-bar-volume-foreground-1 = #80E6FE
-bar-volume-foreground-2 = #80E6FE
-bar-volume-foreground-3 = #80E6FE
-bar-volume-foreground-4 = #80E6FE
+bar-volume-foreground-0 = #D78FFE
+bar-volume-foreground-1 = #D78FFE
+bar-volume-foreground-2 = #D78FFE
+bar-volume-foreground-3 = #D78FFE
+bar-volume-foreground-4 = #D78FFE
 
 bar-volume-empty = 
 bar-volume-empty-font = 8
@@ -88,7 +88,7 @@ format-muted-prefix-font = 3
 format-muted-prefix-foreground = #FD0000
 
 label-volume = %percentage%%
-label-volume-foreground = #80E6FE
+label-volume-foreground = #D78FFE
 
 label-muted = " Muted"
 label-muted-foreground = #FD0000
@@ -104,7 +104,7 @@ ramp-volume-7 = "墳"
 ramp-volume-8 = "墳"
 ramp-volume-9 = "墳"
 ramp-volume-font = 3
-ramp-volume-foreground = #80E6FE
+ramp-volume-foreground = #D78FFE
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -118,16 +118,16 @@ interval = 2
 ; format-online = <label-song> <icon-prev> <toggle> <icon-next>
 format-online = <icon-prev> <toggle> <icon-next>
 ; format-online-prefix = "  "
-format-online-foreground = #80E6FE
+format-online-foreground = #D78FFE
 format-playing = ${self.format-online}
 format-paused = <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = "  "
-format-offline-prefix-foreground = #80E6FE
+format-offline-prefix-foreground = #D78FFE
 
 label-offline = "Offline "
-format-offline-foreground = #80E6FE
+format-offline-foreground = #D78FFE
 
 label-song =  "%title% | %artist%"
 ; label-song =  "%title% "
@@ -136,18 +136,18 @@ label-song-ellipsis = true
 
 icon-play = ""
 icon-play-font = 2
-icon-play-foreground = #80E6FE
+icon-play-foreground = #D78FFE
 icon-pause = ""
 icon-pause-font = 2
-icon-pause-foreground = #80E6FE
+icon-pause-foreground = #D78FFE
 icon-stop = " "
-icon-stop-foreground = #80E6FE
+icon-stop-foreground = #D78FFE
 icon-prev = "玲"
 icon-prev-font = 2
-icon-prev-foreground = #80E6FE
+icon-prev-foreground = #D78FFE
 icon-next = "怜 "
 icon-next-font = 2
-icon-next-foreground = #80E6FE
+icon-next-foreground = #D78FFE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -157,7 +157,7 @@ type = internal/mpd
 interval = 2
 
 format-online = <label-song>
-format-online-foreground = #80E6FE
+format-online-foreground = #D78FFE
 
 format-playing = ${self.format-online}
 format-paused = ${self.format-online}
@@ -166,12 +166,12 @@ format-stopped = ${self.format-online}
 label-song =  "%title%"
 ;label-song =  "%title% - %artist%"
 
-label-song-foreground = #80E6FE
+label-song-foreground = #D78FFE
 label-song-maxlen = 20
 label-song-ellipsis = true
 
 icon-repeat = ""
-icon-repeat-foreground = #80E6FE
+icon-repeat-foreground = #D78FFE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -181,7 +181,7 @@ type = custom/text
 
 content = ""
 content-font = 3
-content-foreground = #80E6FE
+content-foreground = #D78FFE
 content-padding = 0
 click-left = music --albumArtCover
 
@@ -189,12 +189,12 @@ click-left = music --albumArtCover
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/cava
 
 format = <label>
 label = " %output% "
 format-foreground = #000B1E
-format-background = #80E6FE
+format-background = #D78FFE
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -202,10 +202,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

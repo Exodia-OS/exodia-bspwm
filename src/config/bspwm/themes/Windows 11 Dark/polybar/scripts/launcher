@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-THEME="$HOME/.config/bspwm/themes/Windows 11 Dark/polybar/rofi/launcher.rasi"
-
-rofi \
-	-show drun \
-	-theme "${THEME}"

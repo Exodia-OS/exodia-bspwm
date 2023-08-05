@@ -9,11 +9,11 @@
 
 * {
 
-background:			#1a1f26;
-background-alt:		#1c3875;
-foreground:			#0abdc6;
-selected:			#0b35a3;
-highlight:			#02a39d;
+background:			#26122C;
+background-alt:		#F72D93;
+foreground:			#D78FFE;
+selected:			#9f51c9;
+highlight:			#BE00CD;
 urgent:				#AC0000;
 on:					#9c0598;
 off:				#AC0000;

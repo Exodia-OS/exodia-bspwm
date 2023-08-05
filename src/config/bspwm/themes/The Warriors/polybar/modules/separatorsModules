@@ -47,7 +47,7 @@ type = custom/text
 content = "["
 
 ; content-background = ${color.BACKGROUND}
-content-foreground = #80E6FE
+content-foreground = #D78FFE
 content-padding = 0
 content-font = 5
 
@@ -58,7 +58,7 @@ type = custom/text
 content = "]"
 
 ; content-background = ${color.BACKGROUND}
-content-foreground = #80E6FE
+content-foreground = #D78FFE
 content-padding = 0
 content-font = 5
 
@@ -91,7 +91,7 @@ type = custom/text
 content = 
 
 content-background = ${color.background-bar}
-content-foreground = #66FFFF
+content-foreground = #D78FFE
 content-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -149,17 +149,17 @@ content-foreground = #989cff
 [module/opening-bracket]
 type = custom/text
 content = "["
-content-foreground = ${color.GREEN}
+content-foreground = #D78FFE
 content-padding = 0
-content-font = 5
+content-font = 3
 
 ; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/closing-bracket]
 type = custom/text
 content = "]"
-content-foreground = ${color.GREEN}
+content-foreground = #D78FFE
 content-padding = 0
-content-font = 5
+content-font = 3
 
 ; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
