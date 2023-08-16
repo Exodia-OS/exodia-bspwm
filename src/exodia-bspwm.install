@@ -218,6 +218,10 @@ RUN_MAIN (){
 				BACKUP
 				INSTALL
 				
+		else
+
+			echo -e ${Green}"\n[*] The New Config Files Located in ${BPurple}${CONFIG_DIR_SKEL}/${FILES_NAME}${Green} directory.\n" ${RESET_COLOR}
+				
 		fi
 
 	fi

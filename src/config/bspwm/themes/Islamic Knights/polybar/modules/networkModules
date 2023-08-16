@@ -123,5 +123,4 @@ format-foreground = #80E6FE
 click-left = sh ~/.config/bspwm/rofi/bin/network
 click-right = nmd &
 
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

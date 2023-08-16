@@ -1,0 +1,132 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS        #
+#                                   #
+#####################################
+
+# Graphics card #
+CARD=`ls /sys/class/backlight | head -n 1`
+
+# Get brightness #
+GET_BACKLIGHT() {
+
+	if [[ "$CARD" == *"intel_"* ]];
+		
+		then
+			
+			BNESS=`xbacklight -get`
+			LIGHT=${BNESS%.*}
+
+	else
+
+		LIGHT=$(printf "%.0f\n" `light -G`)
+
+	fi
+
+	echo "${LIGHT}%"
+
+}
+
+# Get icons #
+get_icon() {
+
+	backlight="$(GET_BACKLIGHT)"
+	current="${backlight%%%}"
+
+	if [[ ("$current" -ge "0") && ("$current" -le "20") ]];
+		
+		then
+			
+			icon='/usr/share/icons/dunst/brightness-20.png'
+
+	elif [[ ("$current" -ge "20") && ("$current" -le "40") ]];
+		
+		then
+			
+			icon='/usr/share/icons/dunst/brightness-40.png'
+
+	elif [[ ("$current" -ge "40") && ("$current" -le "60") ]];
+		
+		then
+			
+			icon='/usr/share/icons/dunst/brightness-60.png'
+
+	elif [[ ("$current" -ge "60") && ("$current" -le "80") ]];
+		
+		then
+			
+			icon='/usr/share/icons/dunst/brightness-80.png'
+
+	elif [[ ("$current" -ge "80") && ("$current" -le "100") ]];
+		
+		then
+			
+			icon='/usr/share/icons/dunst/brightness-100.png'
+
+	fi
+
+}
+
+# Increase brightness #
+INC_BACKLIGHT() {
+
+	if [[ "$CARD" == *"intel_"* ]];
+		
+		then
+			
+			xbacklight -inc 10 && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(GET_BACKLIGHT)"
+
+	else
+
+		light -A 5 && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(GET_BACKLIGHT)"
+
+	fi
+
+}
+
+# Decrease brightness #
+DEC_backlight() {
+
+	if [[ "$CARD" == *"intel_"* ]];
+		
+		then
+			
+			xbacklight -dec 10 && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(GET_BACKLIGHT)"
+
+	else
+
+		light -U 5 && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(GET_BACKLIGHT)"
+
+	fi
+
+}
+
+# Execute accordingly #
+if [[ "$1" == "--get" ]];
+	
+	then
+		
+		GET_BACKLIGHT
+
+elif [[ "$1" == "--inc" ]];
+	
+	then
+		
+		INC_BACKLIGHT
+
+elif [[ "$1" == "--dec" ]];
+	
+	then
+		
+		DEC_backlight
+
+else
+
+	GET_BACKLIGHT
+
+fi

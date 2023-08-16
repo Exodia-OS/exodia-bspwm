@@ -278,7 +278,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/notification-github.sh
 interval = 60
 label-background = ${color.BGL}
 click-left = google-chrome-stable --newtab https://github.com/notifications
@@ -326,8 +326,57 @@ click-left = ~/.config/bspwm/rofi/bin/themes
 
 [module/weather]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/weather
+exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/weather
 interval = 1
 click-left = google-chrome-stable http://api.openweathermap.org
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network_ext]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+
+format-connected = <label-connected>
+format-connected-prefix = 直
+format-connected-foreground = #80E6FE
+format-connected-background = ${color.BGL}
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = 睊
+format-disconnected-foreground = #FF0008
+format-disconnected-background = ${color.BGL}
+
+label-connected = "%{A1:nmd &:} %ifname% ∙  %signal% ∙ 歷 %local_ip% ∙ ﬉ %essid% ∙  %downspeed% ∙ 祝 %upspeed%%{A}"
+label-connected-background = ${color.BGL}
+
+label-disconnected = "%{A1:nmd &:} Disconnected%{A}"
+label-disconnected-foreground = #FF0008
+label-disconnected-background = ${color.BGL}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/checknet]
+type = custom/script
+exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/check-network
+tail = true
+interval = 5
+
+label = %output%
+label-background = ${color.BGL}
+format = <label>
+format-foreground = #80E6FE
+click-left = sh ~/.config/bspwm/rofi/bin/network
+click-right = nmd &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

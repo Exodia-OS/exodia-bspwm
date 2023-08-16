@@ -20,35 +20,45 @@ adapter = ${system.adapter}
 poll-interval = 2
 
 time-format = %H:%M
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging><label-charging>
 format-charging-prefix = " "
+format-charging-prefix-background = ${color.BGL}
 format-charging-prefix-font = 1
 format-charging-prefix-foreground = ${color.RED}
-format-discharging = <ramp-capacity> <label-discharging>
+
+format-discharging = <ramp-capacity><label-discharging>
 
 label-charging = %percentage%%
+label-charging-background = ${color.BGL}
+
 label-discharging = %percentage%%
+label-discharging-background = ${color.BGL}
 
 format-full = <label-full>
 format-full-prefix = " "
 format-full-prefix-font = 2
+format-full-prefix-background = ${color.BGL}
 format-full-prefix-foreground = ${color.RED}
-label-full = %percentage%%
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+label-full = %percentage%%
+label-full-background = ${color.BGL}
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 ramp-capacity-foreground = ${color.YELLOW}
+ramp-capacity-background = ${color.BGL}
 ramp-capacity-font = 2
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
 animation-charging-foreground = ${color.GREEN}
+animation-charging-background = ${color.BGL}
 animation-charging-font = 2
 animation-charging-framerate = 700
 
@@ -56,7 +66,7 @@ animation-charging-framerate = 700
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.BLUE}
@@ -74,20 +84,19 @@ label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e
 label-padding = 1
 label-font = 4
 format-prefix-foreground = #d19a66
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Japanese\\ Street/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 
-;label = %output% Updates
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
 
 format-font = 4
-label-foreground = #e92ef0
-label-background = ${color.BGL}
+label-foreground =  ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -117,20 +126,24 @@ interval = 30
 fixed-values = true
 
 format-mounted = <label-mounted>
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${color.background}
-format-mounted-prefix-background = ${color.cyan}
+format-mounted-prefix = ""
+format-mounted-prefix-font = 2
+format-mounted-prefix-foreground = ${color.CYAN}
+format-mounted-prefix-background = ${color.BGL}
 
 format-unmounted = <label-unmounted>
-format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${color.background}
-format-unmounted-prefix-background = ${color.cyan}
+format-unmounted-prefix = ""
+format-unmounted-prefix-font = 2
+format-unmounted-prefix-foreground = ${color.CYAN}
+format-unmounted-prefix-background = ${color.BGL}
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
+label-mounted-font = 4
 label-unmounted = " %mountpoint%: NA"
-label-mounted-foreground = ${color.background}
+label-unmounted-font = 4
+label-mounted-foreground = ${color.CYAN}
 
-label-mounted-background = ${color.cyan}
-label-unmounted-background = ${color.cyan}
+label-mounted-background = ${color.BGL}
+label-unmounted-background = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

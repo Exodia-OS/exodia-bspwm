@@ -95,19 +95,24 @@ ctrl + alt + Print
 
 # Brighness control #
 XF86MonBrightness{Up,Down}
-	brightness{ --inc, --dec}
+	bspbrightness{ --inc, --dec}
 	
 # Volume control #
 XF86Audio{RaiseVolume,LowerVolume}
-	volume{ --inc, --dec}
+	bspvolume{ --inc, --dec}
 
+# Volume Mute #
 XF86AudioMute
-	volume --toggle
-	
+	bspvolume --toggle
+
 # Music control #
 XF86Audio{Next,Prev,Play,Stop}
 	mpc {next,prev,toggle,stop}
 
+# Mic Volume control
+XF86Audio{Mute,MicMute}
+	bspvolume{ --toggle, --toggle-mic}
+	
 ##---------- Bspwm ----------##
 
 # Close App #

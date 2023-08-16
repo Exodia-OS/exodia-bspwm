@@ -1,0 +1,18 @@
+[color]
+BG = #1e222a
+BGL = #2c3038
+FG = #c8ccd4
+FGA = #808080
+
+BLACK = #000000
+WHITE = #FFFFFF
+RED = #e06c75
+GREEN = #98c379
+YELLOW = #e5c07b
+BLUE = #61afef
+PURPLE = #c678dd
+CYAN = #56b6c2
+
+background = 
+FOREGROUND = 
+BACKGROUND = 
