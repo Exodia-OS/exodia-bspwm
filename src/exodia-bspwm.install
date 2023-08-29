@@ -244,7 +244,7 @@ post_upgrade() {
 
 post_remove() {
 		
-	echo -e ${BRed} "\n[*] Removing config files for ${BCyan}${PKG_NAME}${BRed}... " ${RESET_COLOR}
+	echo -e ${BRed} "\n[-] Removing config files for ${BCyan}${PKG_NAME}${BRed}... " ${RESET_COLOR}
 	echo -e ${BRed} "   ==> ${BPurple}${CONFIG_DIR}/${FILES_NAME} ${BRed} directory." ${RESET_COLOR}
 	rm -rf  ${CONFIG_DIR}/${FILES_NAME}
 
