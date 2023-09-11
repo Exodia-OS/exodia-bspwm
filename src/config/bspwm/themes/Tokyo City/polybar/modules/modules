@@ -287,7 +287,7 @@ label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = " %layout% "
+label-layout = "  %layout% "
 label-layout-foreground = #F6768F
 label-layout-font = 4
 label-layout-background = ${color.BGL}

@@ -10,7 +10,7 @@
 #####################################
 
 # Environtment path #
-export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin"
+export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin:$HOME/.local/share/virtualenv/pip/bin"
 
 # bspwm config directory #
 BSPWM_DIR="$HOME/.config/bspwm"
@@ -31,10 +31,11 @@ cat "${BSPWM_DIR}/themes/${COLOR_SCHEME}/colorScheme" > "${XRES}"/colors
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc). #
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
-# setup connected monitors #
+# To support other applications that don't work on WMs #
+wmname LG3D
 
-# No. monitors #
-NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")
+# setup connected monitors #
+NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")  # No. monitors #
 
 if [[ ${NUM_OF_MONITORS} -ge 1 ]];
 

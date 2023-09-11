@@ -194,7 +194,7 @@ label-foreground = ${color.MAGENTA}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = "%layout%"
+label-layout = " %layout%"
 label-layout-foreground = ${color.MAGENTA}
 label-layout-background = ${color.BACKGROUND}
 label-layout-font = 3

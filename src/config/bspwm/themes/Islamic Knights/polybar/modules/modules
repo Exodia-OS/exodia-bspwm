@@ -196,7 +196,7 @@ label-background = #80E6FE
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = "%layout%"
+label-layout = " %layout%"
 label-layout-foreground = #80E6FE
 label-layout-background = ${color.background-bar}
 label-layout-font = 3

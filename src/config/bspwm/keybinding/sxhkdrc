@@ -71,6 +71,9 @@ ctrl + alt + l
 super + shift + m
 	music --albumArtCover
 
+super + shift + t
+	bsptmux
+
 ##---------- System Keys ----------##
 
 # Take a screenshot #

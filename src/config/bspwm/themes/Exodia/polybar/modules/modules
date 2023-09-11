@@ -293,7 +293,7 @@ ramp-signal-background = #8B60E5
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = " %layout% "
+label-layout = "  %layout% "
 label-layout-foreground = #8B60E5
 ; label-layout-background = ${color.GREEN}
 label-layout-font = 5

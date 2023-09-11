@@ -254,14 +254,15 @@ ramp-signal-background = ${color.mb}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
-label-layout-foreground = ${colors.primary}
+label-layout = " %layout%"
+; label-layout-foreground = ${color.primary}
+label-layout-background = ${color.mb}
 label-layout-font = 4
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = ${colors.background}
-label-indicator-background = ${colors.secondary}
+; label-indicator-foreground = ${color.background}
+label-indicator-background = ${color.mb}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
