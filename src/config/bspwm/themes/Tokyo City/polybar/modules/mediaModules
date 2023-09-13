@@ -125,7 +125,7 @@ icon-next-background = #2C3038
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Tokyo\\ City/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/Tokyo\\ City/polybar/scripts/cava -c average -f 60
 
 format = <label>
 label = "%output%"

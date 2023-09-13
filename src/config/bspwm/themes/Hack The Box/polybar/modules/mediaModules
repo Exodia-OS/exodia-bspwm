@@ -102,7 +102,7 @@ icon-next-foreground = ${color.CYAN}
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Hack\\ The\\ Box/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/Hack\\ The\\ Box/polybar/scripts/cava -c average -f 60
 
 format = <label>
 label = " %output% "

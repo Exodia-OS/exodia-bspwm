@@ -118,7 +118,7 @@ icon-repeat-foreground = #FF0677
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Emilia/polybar/scripts/cava
+exec =  ~/.config/bspwm/themes/Emilia/polybar/scripts/cava -c average -f 60
 
 format = <label>
 label = %output%
