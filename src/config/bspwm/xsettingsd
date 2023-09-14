@@ -1,6 +1,6 @@
-Net/ThemeName "Tokyonight-Dark-B"
-Net/IconThemeName "Elena-dark-icons"
-Gtk/CursorThemeName "WineTrix"
+Net/ThemeName "Tokyonight-Dark-BL"
+Net/IconThemeName "Hack"
+Gtk/CursorThemeName "ArchTrix"
 Net/EnableEventSounds 0
 Net/EnableInputFeedbackSounds 0
 Xft/DPI -1

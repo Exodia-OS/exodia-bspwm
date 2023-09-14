@@ -12,6 +12,13 @@
 # bspwm config directory #
 BSPWM_DIR="$HOME/.config/bspwm"
 MODE_STATUS=$(grep -oP 'all-windows-float = \K.*' "${BSPWM_DIR}/exodia.conf")
+if [[ -z $MODE_STATUS ]];
+
+   then
+
+      MODE_STATUS=false
+
+fi
 
 # remove all rules first #
 bspc rule -r *:*

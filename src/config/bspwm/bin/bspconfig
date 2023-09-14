@@ -32,20 +32,152 @@ getcolors() {
 
 getcolors
 
-# bspwm Configurations #
-bspc config border_width $(grep -oP 'bsp-border-width = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config window_gap   $(grep -oP 'bsp-window-gap = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config split_ratio  $(grep -oP 'bsp-split-ratio = \K.*' "${BSPWM_DIR}/exodia.conf")
+# ------------------------------------------------------------------------------ #
+if [[ -z "$BLUE" ]];
+
+	then
+
+		BLUE=#61afef
+fi
 
 bspc config focused_border_color  "${BLUE}"
+# ------------------------------------------------------------------------------ #
+
+if [[ -z "$BACKGROUND" ]];
+
+	then
+
+		BACKGROUND=#1e222a
+fi
+
 bspc config normal_border_color   "${BACKGROUND}"
+# ------------------------------------------------------------------------------ #
+
+if [[ -z "$MAGENTA" ]];
+
+	then
+
+		MAGENTA=#c678dd
+fi
+
 bspc config active_border_color   "${MAGENTA}"
+# ------------------------------------------------------------------------------ #
+
+if [[ -z "$GREEN" ]];
+
+	then
+
+		GREEN=#98c379
+fi
+
 bspc config presel_feedback_color "${GREEN}"
+# ------------------------------------------------------------------------------ #
 
-bspc config borderless_monocle $(grep -oP 'bsp-borderless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config gapless_monocle $(grep -oP 'bsp-gapless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config paddingless_monocle $(grep -oP 'bsp-paddingless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config single_monocle $(grep -oP 'bsp-single-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config focus_follows_pointer $(grep -oP 'bsp-focus-follows-pointer = \K.*' "${BSPWM_DIR}/exodia.conf")
-bspc config presel_feedback $(grep -oP 'bsp-presel-feedback = \K.*' "${BSPWM_DIR}/exodia.conf")
+# bspwm Configurations #
+BSP_BORDER_WIDTH=$(grep -oP 'bsp-border-width = \K.*' "${BSPWM_DIR}/exodia.conf")
 
+if [[ -z "$BSP_BORDER_WIDTH" ]];
+
+	then
+
+		BSP_BORDER_WIDTH=2
+fi
+
+bspc config border_width ${BSP_BORDER_WIDTH}
+# ------------------------------------------------------------------------------ #
+
+BSP_WINDOW_GAP=$(grep -oP 'bsp-window-gap = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_WINDOW_GAP" ]];
+
+	then
+
+		BSP_WINDOW_GAP=10
+fi
+
+bspc config window_gap ${BSP_WINDOW_GAP}
+# ------------------------------------------------------------------------------ #
+
+BSP_SPLIT_RATIO=$(grep -oP 'bsp-split-ratio = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_SPLIT_RATIO" ]];
+
+	then
+
+		BSP_SPLIT_RATIO=0.50
+fi
+
+bspc config split_ratio ${BSP_SPLIT_RATIO}
+# ------------------------------------------------------------------------------ #
+
+BSP_BORDERLESS_MONOCLE=$(grep -oP 'bsp-borderless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_BORDERLESS_MONOCLE" ]];
+
+	then
+
+		BSP_BORDERLESS_MONOCLE=true
+fi
+
+bspc config borderless_monocle ${BSP_BORDERLESS_MONOCLE}
+# ------------------------------------------------------------------------------ #
+
+BSP_GAPLESS_MONOCLE=$(grep -oP 'bsp-gapless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_GAPLESS_MONOCLE" ]];
+
+	then
+
+		BSP_GAPLESS_MONOCLE=true
+fi
+
+bspc config gapless_monocle ${BSP_GAPLESS_MONOCLE}
+# ------------------------------------------------------------------------------ #
+
+BSP_PADDINGLESS_MONOCLE=$(grep -oP 'bsp-paddingless-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_PADDINGLESS_MONOCLE" ]];
+
+	then
+
+		BSP_PADDINGLESS_MONOCLE=true
+fi
+
+bspc config paddingless_monocle ${BSP_PADDINGLESS_MONOCLE}
+# ------------------------------------------------------------------------------ #
+
+BSP_SINGLE_MONOCLE=$(grep -oP 'bsp-single-monocle = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_SINGLE_MONOCLE" ]];
+
+	then
+
+		BSP_SINGLE_MONOCLE=false
+fi
+
+bspc config single_monocle ${BSP_SINGLE_MONOCLE}
+# ------------------------------------------------------------------------------ #
+
+BSP_FOCUS_FOLLOWS_POINTER=$(grep -oP 'bsp-focus-follows-pointer = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_FOCUS_FOLLOWS_POINTER" ]];
+
+	then
+
+		BSP_FOCUS_FOLLOWS_POINTER=true
+fi
+
+bspc config focus_follows_pointer ${BSP_FOCUS_FOLLOWS_POINTER}
+# ------------------------------------------------------------------------------ #
+
+BSP_PRESEL_FEEDBACK=$(grep -oP 'bsp-presel-feedback = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ -z "$BSP_PRESEL_FEEDBACK" ]];
+
+	then
+
+		BSP_PRESEL_FEEDBACK=true
+fi
+
+bspc config presel_feedback ${BSP_PRESEL_FEEDBACK}
+# ------------------------------------------------------------------------------ #

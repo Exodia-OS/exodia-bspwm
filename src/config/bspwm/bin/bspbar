@@ -18,6 +18,12 @@ BSPWM_DIR="$HOME/.config/bspwm"
 
 # get the theme name to launch its bar #
 THEME=$(grep -Po 'polybar\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
+if [[ -z "$THEME" ]];
+
+	then
+
+		THEME="Japanese Street 2"
+fi
 
 # launch polybar #
 bash "${BSPWM_DIR}"/themes/"${THEME}"/polybar/launch.sh

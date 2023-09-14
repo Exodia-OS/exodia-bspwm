@@ -16,30 +16,182 @@ JGMENU_DIR="$HOME/.config/jgmenu"
 
 # get values #
 ICONS=$(grep -oP 'icons = \K.*' "${DIR}/exodia.conf")
+if [[ -z "$ICONS" ]];
+
+	then
+
+		ICONS=Elena-dark-icons
+fi
+
 THEME_NAME=$(grep -oP 'exodiaTheme = \K.*' "${DIR}/exodia.conf")
+if [[ -z "$THEME_NAME" ]];
+
+	then
+
+		THEME_NAME="Japanese Street 2"
+fi
+
 BACKGROUND_THEME=$(grep -oP 'background = \K.*' "${DIR}/exodia.conf")
+if [[ -z "$BACKGROUND_THEME" ]];
+
+	then
+
+		BACKGROUND_THEME=/usr/share/backgrounds/JapaneseCity.png
+fi
 
 GET_COLORS () {
 
 	FOREGROUND="$(xrdb -query | grep 'foreground:'| awk '{print $NF}')"
+	if [[ -z "$FOREGROUND" ]];
+
+		then
+
+			FOREGROUND=#c8ccd4
+	fi
+
 	BACKGROUND="$(xrdb -query | grep 'background:'| awk '{print $NF}')"
+	if [[ -z "$BACKGROUND" ]];
+
+		then
+
+			BACKGROUND=#1e222a
+	fi
+
 	CURSOR="$(xrdb -query | grep 'cursorColor:'| awk '{print $NF}')"
+	if [[ -z "$CURSOR" ]];
+
+		then
+
+			CURSOR=#abb2bf
+	fi
+
 	BLACK="$(xrdb -query | grep 'color0:'| awk '{print $NF}')"
+	if [[ -z "$BLACK" ]];
+
+		then
+
+			BLACK=#1e222a
+	fi
+
 	RED="$(xrdb -query | grep 'color1:'| awk '{print $NF}')"
+	if [[ -z "$RED" ]];
+
+		then
+
+			RED=#e06c75
+	fi
+
 	GREEN="$(xrdb -query | grep 'color2:'| awk '{print $NF}')"
+	if [[ -z "$GREEN" ]];
+
+		then
+
+			GREEN=#98c379
+	fi
+
 	YELLOW="$(xrdb -query | grep 'color3:'| awk '{print $NF}')"
+	if [[ -z "$YELLOW" ]];
+
+		then
+
+			YELLOW=#e5c07b
+	fi
+
 	BLUE="$(xrdb -query | grep 'color4:'| awk '{print $NF}')"
+	if [[ -z "$BLUE" ]];
+
+		then
+
+			BLUE=#61afef
+	fi
+
 	MAGENTA="$(xrdb -query | grep 'color5:'| awk '{print $NF}')"
+	if [[ -z "$MAGENTA" ]];
+
+		then
+
+			MAGENTA=#c678dd
+	fi
+
 	CYAN="$(xrdb -query | grep 'color6:'| awk '{print $NF}')"
+	if [[ -z "$CYAN" ]];
+
+		then
+
+			CYAN=#56b6c2
+	fi
+
 	WHITE="$(xrdb -query | grep 'color7:'| awk '{print $NF}')"
+	if [[ -z "$WHITE" ]];
+
+		then
+
+			WHITE=#abb2bf
+	fi
+
 	ALTBLACK="$(xrdb -query | grep 'color8:'| awk '{print $NF}')"
+	if [[ -z "$ALTBLACK" ]];
+
+		then
+
+			ALTBLACK=#545862
+	fi
+
 	ALTRED="$(xrdb -query | grep 'color9:'| awk '{print $NF}')"
+	if [[ -z "$ALTRED" ]];
+
+		then
+
+			ALTRED=#e06c75
+	fi
+
 	ALTGREEN="$(xrdb -query | grep 'color10:'| awk '{print $NF}')"
+	if [[ -z "$ALTGREEN" ]];
+
+		then
+
+			ALTGREEN=#98c379
+	fi
+
 	ALTYELLOW="$(xrdb -query | grep 'color11:'| awk '{print $NF}')"
+	if [[ -z "$ALTYELLOW" ]];
+
+		then
+
+			ALTYELLOW=#e5c07b
+	fi
+
 	ALTBLUE="$(xrdb -query | grep 'color12:'| awk '{print $NF}')"
+	if [[ -z "$ALTBLUE" ]];
+
+		then
+
+			ALTBLUE=#61afef
+	fi
+	
 	ALTMAGENTA="$(xrdb -query | grep 'color13:'| awk '{print $NF}')"
+	if [[ -z "$ALTMAGENTA" ]];
+
+		then
+
+			ALTMAGENTA=#c678dd
+	fi
+
 	ALTCYAN="$(xrdb -query | grep 'color14:'| awk '{print $NF}')"
+	if [[ -z "$ALTCYAN" ]];
+
+		then
+
+			ALTCYAN=#56b6c2
+	fi
+
 	ALTWHITE="$(xrdb -query | grep 'color15:'| awk '{print $NF}')"
+	if [[ -z "$ALTWHITE" ]];
+
+		then
+
+			ALTWHITE=#c8ccd4
+	fi
 	
 }
 
@@ -189,7 +341,7 @@ error-message {
 	_EOF_
 }
 
-main () {
+MAIN () {
 
 	GET_COLORS
 	BSP_TERM
@@ -200,4 +352,4 @@ main () {
 	
 }
 
-main
+MAIN
