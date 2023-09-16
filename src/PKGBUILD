@@ -19,7 +19,7 @@ depends=(
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
-	'mesa-utils' 'exodia-assistant'
+	'mesa-utils' 'exodia-assistant' 'exodia-backgrounds'
 	
 )
 
