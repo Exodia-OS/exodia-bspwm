@@ -58,6 +58,7 @@ CURRENT_PICOM=$(grep -Po 'picom\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.c
 CURRENT_KEYBINDING=$(grep -Po 'keybinding\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
 CURRENT_MULTI_BAR_MONITORS_STATUS=$(grep -Po 'multi-bar-monitors\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
 CURRENT_KEYBOARD_LAYOUTS=$(grep -Po 'keyboard-layouts\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
+CURRENT_MONITORS_LAYOUTS=$(grep -Po 'monitors-layouts\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
 
 CURRENT_BSP_BORDER_WIDTH=$(grep -Po 'bsp-border-width\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
 CURRENT_BSP_WINDOW_GAP=$(grep -Po 'bsp-window-gap\s*=\s*\K.*' ${CONFIG_DIR}/${FILES_NAME}/exodia.conf)
@@ -96,6 +97,7 @@ RESTORE_USER_CONFIG () {
 	sed -i "s#keybinding = .*#keybinding = ${CURRENT_KEYBINDING}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
 	sed -i "s#multi-bar-monitors = .*#multi-bar-monitors = ${CURRENT_MULTI_BAR_MONITORS_STATUS}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
 	sed -i "s#keyboard-layouts = .*#keyboard-layouts = ${CURRENT_KEYBOARD_LAYOUTS}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
+	sed -i "s#monitors-layouts = .*#monitors-layouts = ${CURRENT_MONITORS_LAYOUTS}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
 
 	sed -i "s#bsp-border-width = .*#bsp-border-width = ${CURRENT_BSP_BORDER_WIDTH}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
 	sed -i "s#bsp-window-gap = .*#bsp-window-gap = ${CURRENT_BSP_WINDOW_GAP}#" ${CONFIG_DIR}/${FILES_NAME}/exodia.conf
