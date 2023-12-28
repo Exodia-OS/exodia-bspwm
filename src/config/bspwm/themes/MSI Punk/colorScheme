@@ -1,0 +1,31 @@
+! ------------------------------------
+! 
+!  CyberPunk color scheme
+!
+!  @author      : 00xWolf
+!    GitHub    : @mmsaeed509
+!    Developer : Mahmoud Mohamed
+!  﫥  Copyright : Exodia OS
+!
+! ------------------------------------
+
+*background:	#060112
+*foreground:	#8884AD
+
+*color0:	#401052
+*color1:	#9d059e
+*color2:	#870540
+*color3:	#a443f7
+*color4:	#CB42EF
+*color5:	#8632E6
+*color6:	#B332E6
+*color7:	#E032E6
+
+*color8:	#B000FF
+*color9:	#EA00D9
+*color10:	#0ABDC6
+*color11:	#133E7C
+*color12:	#091833
+*color13:	#001EFF
+*color14:	#BD00FF
+*color15:	#D600FF

@@ -15,9 +15,6 @@ export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/
 # bspwm config directory #
 BSPWM_DIR="$HOME/.config/bspwm"
 
-# colors directory #
-XRES="$HOME/.Xresources.d"
-
 ##  -------------------------------------- Configurations --------------------------------------  ##
 
 # set keyboard Layouts #
@@ -32,6 +29,9 @@ fi
 setxkbmap -layout ${KEYBOARD_LAYOUTS}
 setxkbmap -option 'grp:alt_shift_toggle'
 # ------------------------------------------------------------------------------ #
+
+# colors directory #
+XRES="$HOME/.Xresources.d"
 
 # Updating Color Schemes #
 COLOR_SCHEME=$(grep -oP 'color-scheme = \K.*' "${BSPWM_DIR}/exodia.conf")
@@ -54,12 +54,23 @@ wmname LG3D
 
 # setup connected monitors #
 NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")  # No. monitors #
+MONITORS_LAYOUTS=$(grep -oP 'monitors-layouts = \K.*' "${BSPWM_DIR}/exodia.conf")
 
 if [[ ${NUM_OF_MONITORS} -ge 1 ]];
 
 	then
 		
-		bspmonitors
+		if [[ -z "$MONITORS_LAYOUTS" ]];
+
+			then
+
+				bspmonitors
+		
+		else
+
+			bash ${MONITORS_LAYOUTS}
+		
+		fi
 		
 fi
 # ------------------------------------------------------------------------------ #
@@ -69,7 +80,8 @@ workspaces() {
 	
 	name=1
 	
-	for monitor in `bspc query -M`; 
+	for monitor in `xrandr -q | grep -w 'connected' | cut -d' ' -f1`; 
+
 		do
 
 			bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
@@ -148,6 +160,7 @@ BACKGROUND=$(grep -oP 'background = \K.*' "${BSPWM_DIR}/exodia.conf")
 
 			BACKGROUND=/usr/share/backgrounds/JapaneseCity.png
 	fi
+
 feh --no-fehbg --bg-fill ${BACKGROUND}
 # ------------------------------------------------------------------------------ #
 

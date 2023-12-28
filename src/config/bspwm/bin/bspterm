@@ -11,7 +11,7 @@
 
 # launch alacritty with custom config for bspwm #
 
-CONFIG="$HOME/.config/bspwm/alacritty/alacritty.yml"
+CONFIG="$HOME/.config/bspwm/alacritty/alacritty.toml"
 
 if [ "$1" == "-float" ];
 	

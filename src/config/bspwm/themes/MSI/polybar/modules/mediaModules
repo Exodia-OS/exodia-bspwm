@@ -1,0 +1,173 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+
+; format-volume = <ramp-volume> <label-volume>
+format-volume = <bar-volume><label-volume>
+format-volume-font = 8
+format-volume-foreground = ${color.MAGENTA}
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-prefix-font = 4
+format-muted-prefix-foreground = ${color.red}
+
+label-muted = " Mute"
+muted-label-font = 4
+label-muted-foreground = ${color.red}
+
+
+label-volume = %percentage%%
+label-volume-foreground = ${color.MAGENTA}
+label-volume-font = 4
+
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奄
+ramp-volume-3 = 奔
+ramp-volume-4 = 奔
+ramp-volume-5 = 奔
+ramp-volume-6 = 墳
+ramp-volume-7 = 墳
+ramp-volume-8 = 墳
+ramp-volume-9 = 墳
+ramp-volume-font = 4
+ramp-volume-foreground = ${color.MAGENTA}
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+; Only applies if <bar-volume> is used
+bar-volume-width = 10
+bar-volume-gradient = false
+
+bar-volume-indicator = 󰮯
+bar-volume-indicator-font = 8
+bar-volume-indicator-foreground = ${color.MAGENTA}
+
+bar-volume-fill = ━
+bar-volume-fill-font = 8
+bar-volume-foreground-0 = ${color.MAGENTA}
+bar-volume-foreground-1 = ${color.MAGENTA}
+bar-volume-foreground-2 = ${color.MAGENTA}
+bar-volume-foreground-3 = ${color.MAGENTA}
+bar-volume-foreground-4 = ${color.MAGENTA}
+
+bar-volume-empty = 
+bar-volume-empty-font = 8
+bar-volume-empty-foreground = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+interval = 2
+
+; format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online = <icon-prev> <toggle> <icon-next>
+; format-online-prefix = "  "
+format-online-foreground = ${color.MAGENTA}
+format-playing = ${self.format-online}
+format-paused = <icon-prev> <toggle> <icon-next>
+
+format-offline = <label-offline>
+format-offline-prefix = "  "
+format-offline-prefix-foreground = ${color.MAGENTA}
+
+label-offline = "Offline "
+format-offline-foreground = ${color.MAGENTA}
+
+label-song =  "%title% | %artist%"
+; label-song =  "%title% "
+label-song-maxlen = 50
+label-song-ellipsis = true
+
+icon-play = ""
+icon-play-font = 2
+icon-play-foreground = ${color.MAGENTA}
+icon-pause = ""
+icon-pause-font = 2
+icon-pause-foreground = ${color.MAGENTA}
+icon-stop = " "
+icon-stop-foreground = ${color.MAGENTA}
+icon-prev = "玲"
+icon-prev-font = 2
+icon-prev-foreground = ${color.MAGENTA}
+icon-next = "怜 "
+icon-next-font = 2
+icon-next-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song]
+type = internal/mpd
+
+interval = 2
+
+format-online = <label-song>
+format-online-foreground = ${color.MAGENTA}
+
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+
+; label-song =  "[ %title% ]"
+label-song =  "%title% - %artist%"
+
+label-song-foreground = ${color.MAGENTA}
+label-song-maxlen = 50
+label-song-ellipsis = true
+
+icon-repeat = ""
+icon-repeat-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song-icon]
+
+type = custom/text
+
+content = ""
+content-font = 3
+content-foreground = ${color.MAGENTA}
+content-padding = 0
+click-left = music --albumArtCover
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec =  ~/.config/bspwm/themes/MSI/polybar/scripts/cava -c average -f 60
+
+format = <label>
+label = " %output% "
+format-foreground = ${color.MAGENTA}
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pulse-mic]
+
+type = custom/script
+exec = ~/.config/bspwm/themes/MSI/polybar/scripts/pulse-mic
+tail = true
+click-left  = ~/.config/bspwm/themes/MSI/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/MSI/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/MSI/polybar/scripts/pulse-mic --decrease &
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

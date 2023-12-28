@@ -82,17 +82,25 @@ else
    bspc rule -a github-desktop desktop ='^4' state=floating follow=on focus=on
    
    # jetBrains IDEs #
-   declare -a jetBrains=(jetbrains-clion jetbrains-idea jetbrains-pycharm jetbrains-fleet Toolbox)
+   declare -a jetBrains=(\
+   jetbrains-clion jetbrains-idea jetbrains-pycharm \
+   jetbrains-fleet jetbrains-webstorm jetbrains-gateway \
+   jetbrains-writerside jetbrains-mps jetbrains-clion-nova \
+   jetbrains-rustrover
+   )
+   
    for i in ${jetBrains[@]};
       
       do
          
-         bspc rule -a $i desktop='^4' state=floating follow=on focus=on;
+         # bspc rule -a $i desktop='^4' state=floating follow=on focus=on;
+         bspc rule -a $i state=floating follow=on focus=on;
       
       done
    
    # Markdown editors #
-   bspc rule -a inkdrop desktop ='^4' state=floating follow=on focus=on
+   # bspc rule -a inkdrop desktop ='^4' state=floating follow=on focus=on
+   bspc rule -a inkdrop state=floating follow=on focus=on
    
    
    # ----- apps open in office and docs workspaces ----- #
@@ -151,5 +159,6 @@ else
    bspc rule -a stalonetray state=floating manage=off
    bspc rule -a gwenview state=floating follow=on focus=on
    bspc rule -a Galculator state=floating follow=on focus=on
+   bspc rule -a PacketTracer state=floating follow=on focus=on
 
 fi

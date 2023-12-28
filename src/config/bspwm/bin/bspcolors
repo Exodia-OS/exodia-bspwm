@@ -198,35 +198,33 @@ GET_COLORS () {
 
 BSP_TERM () {
 
-	cat > "$DIR"/alacritty/colors.yml <<- _EOF_
-		## Colors configuration
-		colors:
-		  # Default colors
-		  primary:
-		    background: '${BACKGROUND}'
-		    foreground: '${FOREGROUND}'
+	cat > "$DIR"/alacritty/colors.toml <<- _EOF_
+		# Colors configuration #
+		[colors.primary]
+		background = '${BACKGROUND}'
+		foreground = '${FOREGROUND}'
 
-		  # Normal colors
-		  normal:
-		    black:   '${BLACK}'
-		    red:     '${RED}'
-		    green:   '${GREEN}'
-		    yellow:  '${YELLOW}'
-		    blue:    '${BLUE}'
-		    magenta: '${MAGENTA}'
-		    cyan:    '${CYAN}'
-		    white:   '${WHITE}'
+		# Normal colors #
+		[colors.normal]
+		black   = '${BLACK}'
+		red     = '${RED}'
+		green   = '${GREEN}'
+		yellow  = '${YELLOW}'
+		blue    = '${BLUE}'
+		magenta = '${MAGENTA}'
+		cyan    = '${CYAN}'
+		white   = '${WHITE}'
 
-		  # Bright colors
-		  bright:
-		    black:   '${ALTBLACK}'
-		    red:     '${ALTRED}'
-		    green:   '${ALTGREEN}'
-		    yellow:  '${ALTYELLOW}'
-		    blue:    '${ALTBLUE}'
-		    magenta: '${ALTMAGENTA}'
-		    cyan:    '${ALTCYAN}'
-		    white:   '${ALTWHITE}'
+		# Bright colors #
+		[colors.bright]
+		black   = '${ALTBLACK}'
+		red     = '${ALTRED}'
+		green   = '${ALTGREEN}'
+		yellow  = '${ALTYELLOW}'
+		blue    = '${ALTBLUE}'
+		magenta = '${ALTMAGENTA}'
+		cyan    = '${ALTCYAN}'
+		white   = '${ALTWHITE}'
 	_EOF_
 
 }
