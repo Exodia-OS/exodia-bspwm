@@ -55,7 +55,58 @@ echo -e "${BCyan}#############################${RESET_COLOR}"
 
 # get branch name (e.g master, main, etc... ) #
 Branch=$(git branch --show-current)
-DEFAULT_COMMIT_MSG=$(git status -s)
+
+# get default commit message based on changes #
+DEFAULT_COMMIT_MSG=""
+
+# IFS -> Internal Field Separator
+# IFS  in Bash. It is a special variable that determines how Bash recognizes word boundaries.
+# By default, IFS is set to space, tab, and newline characters. 
+while IFS=$'\n' read -r -d '' line;
+    
+    do
+
+        status=$(echo "$line" | awk '{print $1}')
+        file=$(echo "$line" | awk '{$1=""; print $0}' | sed -e 's/^[ \t]*//')
+
+        case "$status" 
+            
+            in
+
+                D)
+                    # Deleted #
+                    DEFAULT_COMMIT_MSG+="    ${BRed}==> deleted : $file \n${RESET_COLOR}"
+
+                    ;;
+
+                M)
+                    # Modified #
+                    DEFAULT_COMMIT_MSG+="    ${BCyan}==> modified : $file \n${RESET_COLOR}"
+
+                    ;;
+
+                \?\?)
+
+                    # Added #
+                    DEFAULT_COMMIT_MSG+="    ${BGreen}==> added : $file \n${RESET_COLOR}"
+
+                    ;;
+
+            esac
+
+    done < <(git status -s -z)
+
+# Remove the trailing comma and space, if any #
+DEFAULT_COMMIT_MSG=$(echo "$DEFAULT_COMMIT_MSG" | sed 's/, $//')
+
+# If no changes detected, use a default message #
+if [ -z "$DEFAULT_COMMIT_MSG" ];
+    
+    then
+        
+        DEFAULT_COMMIT_MSG="   ==> NO changes"
+
+fi
 
 echo -e "\n${BRed}[*] Your Current Branch : ${BYellow}${Branch}${RESET_COLOR}"
 
@@ -63,8 +114,7 @@ echo -e "\n${BRed}[*] Your Current Branch : ${BYellow}${Branch}${RESET_COLOR}"
 echo -e "\n${BPurple}[+] Updating Repo... \n${RESET_COLOR}"
 git pull 
 
-echo -e "\n${BPurple}[+] The new changes in the repo:- \n${RESET_COLOR}"
-git status -s
+echo -e "\n${BPurple}[+] The new changes in the repo:\n\n${BYellow}${DEFAULT_COMMIT_MSG}${RESET_COLOR}"
 
 echo -e "\n${BPurple}[+] Adding new changes to the repo... \n${RESET_COLOR}"
 git add --all .
@@ -81,13 +131,13 @@ else
 
     # use the default commit msg #
     echo ""
-    git commit -m "updated/added ${DEFAULT_COMMIT_MSG}"
+    git commit -m "${DEFAULT_COMMIT_MSG}"
 
 fi
 
 # push to repo #
 echo ""
-git push -u origin $Branch
+git push -u origin ${Branch}
 
 # D O N E! #
 echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"
