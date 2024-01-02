@@ -227,7 +227,7 @@ type = custom/script
 exec = ~/.config/bspwm/themes/MSI\\ 2/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = ${color.GREEN}
-click-left = google-chrome-stable --newtab https://github.com/notifications
+click-left = brave --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -273,6 +273,6 @@ click-left = ~/.config/bspwm/rofi/bin/themes
 type = custom/script
 exec = ~/.config/bspwm/themes/MSI\\ 2/polybar/scripts/weather
 interval = 1
-click-left = google-chrome-stable http://api.openweathermap.org
+click-left = brave http://api.openweathermap.org
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

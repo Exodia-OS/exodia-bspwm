@@ -320,7 +320,7 @@ interval = 60
 label-foreground = #56B6C2 
 label-background = ${color.BGL}
 
-click-left = google-chrome-stable --newtab https://github.com/notifications
+click-left = brave --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

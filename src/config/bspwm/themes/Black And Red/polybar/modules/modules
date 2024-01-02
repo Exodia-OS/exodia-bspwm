@@ -225,7 +225,7 @@ exec = ~/.config/bspwm/themes/Black\\ And\\ Red/polybar/scripts/notification-git
 interval = 60
 label-foreground = ${color.MAGENTA}
 label-font = 3
-click-left = google-chrome-stable --newtab https://github.com/notifications
+click-left = brave --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
