@@ -82,14 +82,24 @@ case $chosen in
 		fi 
         
         ;;
+
     $bmon)
-        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.yml -e bmon
+        
+        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.toml -e bmon
+        
         ;;
+
     $launch_cli)
-        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.yml -e nmtui
+        
+        alacritty --class 'alacritty-float,alacritty-float' --config-file ~/.config/bspwm/alacritty/alacritty.toml -e nmtui
+        
         ;;
+
     $launch)
+        
         nm-connection-editor
+        
         ;;
+        
 esac
 

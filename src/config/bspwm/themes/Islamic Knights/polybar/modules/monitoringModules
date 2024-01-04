@@ -111,8 +111,8 @@ format-unmounted-prefix-font = 3
 format-unmounted-prefix-foreground = #80E6FE
 format-unmounted-prefix-background = ${color.background-bar}
 
-label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
-; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e ncdu &:} %free%%{A}"
+; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e ncdu &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
 label-mounted-foreground = #80E6FE
 
@@ -142,7 +142,7 @@ format-prefix-foreground = #80E6FE
 
 
 ; label = "%mb_used%"
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:} %gb_used%%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e htop &:} %gb_used%%{A}"
 label-foreground = #80E6FE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -153,7 +153,7 @@ exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/updates-pacman.s
 interval = 180
 format = <label>
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output% %{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:} %output% %{A}"
 
 format-font = 3
 label-foreground = #80E6FE

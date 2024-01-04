@@ -28,20 +28,20 @@ format-discharging = <ramp-capacity><label-discharging>
 format-full = <label-full>
 format-full-prefix = ""
 format-full-prefix-font = 3
-format-full-prefix-foreground = #D78FFE
-format-full-prefix-background = ${color.background-bar}
+format-full-prefix-foreground = #25A9F1
+; format-full-prefix-background = ${color.background-bar}
 
 label-charging = "%percentage%%"
 label-discharging = "%percentage%%"
 label-full = "%percentage%%"
 
-label-charging-background = ${color.background-bar}
-label-discharging-background = ${color.background-bar}
-label-full-background = ${color.background-bar}
+; label-charging-background = ${color.background-bar}
+; label-discharging-background = ${color.background-bar}
+; label-full-background = ${color.background-bar}
 
-label-charging-foreground = #D78FFE
-label-discharging-foreground = #D78FFE
-label-full-foreground = #D78FFE
+label-charging-foreground = #25A9F1
+label-discharging-foreground = #25A9F1
+label-full-foreground = #25A9F1
 
 label-charging-font = 3
 label-discharging-font = 3
@@ -63,13 +63,13 @@ animation-charging-4 = ""
 
 ramp-capacity-font = 3
 
-ramp-capacity-foreground = #D78FFE
-ramp-capacity-background = ${color.background-bar}
+ramp-capacity-foreground = #25A9F1
+; ramp-capacity-background = ${color.background-bar}
 
 animation-charging-font = 3
 
-animation-charging-foreground = #D78FFE
-animation-charging-background = ${color.background-bar}
+animation-charging-foreground = #25A9F1
+; animation-charging-background = ${color.background-bar}
 animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -83,12 +83,12 @@ format = <label>
 
 format-prefix = ""
 format-prefix-font = 3
-format-prefix-foreground = #D78FFE
-format-prefix-background = ${color.background-bar}
+format-prefix-foreground = #66FFFF
+format-prefix-background = #02111f
 label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 3
-label-background = ${color.background-bar}
-label-foreground = #D78FFE
+label-background = #02111f
+label-foreground = #66FFFF
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -102,32 +102,32 @@ fixed-values = true
 format-mounted = <label-mounted>
 format-mounted-prefix = ""
 format-mounted-prefix-font = 3
-format-mounted-prefix-foreground = #D78FFE
-format-mounted-prefix-background = ${color.background-bar}
+format-mounted-prefix-foreground = #66FFFF
+format-mounted-prefix-background = #02111f
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = ""
 format-unmounted-prefix-font = 3
-format-unmounted-prefix-foreground = #D78FFE
-format-unmounted-prefix-background = ${color.background-bar}
+format-unmounted-prefix-foreground = #66FFFF
+format-unmounted-prefix-background = #02111f
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e ncdu &:} %free%%{A}"
 ; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e ncdu &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
-label-mounted-foreground = #D78FFE
+label-mounted-foreground = #66FFFF
 
-label-mounted-background = ${color.background-bar}
-label-unmounted-background = ${color.background-bar}
+label-mounted-background = #02111f
+label-unmounted-background = #02111f
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/ICE\\ Moon/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
-format-foreground = #D78FFE
-format-background = ${color.background-bar}
+format-foreground = #66FFFF
+format-background = #02111f
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -138,24 +138,27 @@ interval = 2
 
 format = <label>
 format-prefix = ""
-format-prefix-foreground = #D78FFE
+format-prefix-foreground = #66FFFF
+format-prefix-background = #02111f
 
 
 ; label = "%mb_used%"
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e htop &:} %gb_used%%{A}"
-label-foreground = #D78FFE
+label-foreground = #66FFFF
+label-background = #02111f
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/The\\ Warriors/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/ICE\\ Moon/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:}  %output% updates%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:} %output% %{A}"
 
 format-font = 3
-label-foreground = #D78FFE
+label-foreground = #66FFFF
+; label-background = ${color.background-bar}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

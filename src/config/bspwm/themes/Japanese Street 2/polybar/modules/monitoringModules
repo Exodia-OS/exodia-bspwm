@@ -80,7 +80,7 @@ format = <label>
 format-prefix = "" 
 format-prefix-font = 3
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e htop &:}%output%GB%{A}"
 label-padding = 1
 label-font = 4
 format-prefix-foreground = #d19a66
@@ -93,7 +93,7 @@ exec = ~/.config/bspwm/themes/Japanese\\ Street\\ 2/polybar/scripts/updates-pacm
 interval = 180
 format = <label>
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:} %output%%{A}"
 
 format-font = 4
 label-foreground =  ${color.GREEN}
@@ -137,7 +137,7 @@ format-unmounted-prefix-font = 2
 format-unmounted-prefix-foreground = ${color.CYAN}
 format-unmounted-prefix-background = ${color.BGL}
 
-label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e duf &:} %free%%{A}"
 label-mounted-font = 4
 label-unmounted = " %mountpoint%: NA"
 label-unmounted-font = 4

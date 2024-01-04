@@ -30,7 +30,7 @@ options="$terminal\n$files\n$editor\n$clifm\n$lpad\n$vim\n$caja"
 chosen="$(echo -e "$options" | $rofi_command -p "Run Apps With Root Privileges" -dmenu -selected-row 0)"
 case $chosen in
     $terminal)
-        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.yml'
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.toml'
         ;;
     $files)
         apps_as_root thunar
@@ -39,13 +39,13 @@ case $chosen in
         apps_as_root geany
         ;;
     $clifm)
-        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.yml -e ranger'
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.toml -e ranger'
         ;;
     $lpad)
         apps_as_root leafpad
         ;;
     $vim)
-        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.yml -e vim'
+        apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.toml -e vim'
         ;;
     $caja)
         apps_as_root caja

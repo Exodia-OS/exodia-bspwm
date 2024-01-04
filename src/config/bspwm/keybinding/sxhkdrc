@@ -57,7 +57,7 @@ super + shift + {g,e}
 
 # Terminal Apps #
 ctrl + alt + {r,h,b,n,v}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim,vim}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {ranger,htop,bashtop,nvim,vim}
 
 # Color Picker #
 super + p
