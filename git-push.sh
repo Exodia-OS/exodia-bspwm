@@ -98,7 +98,7 @@ while IFS=$'\n' read -r -d '' line;
 done < <(git status -s -z)
 
 # Remove the trailing comma and space, if any #
-DEFAULT_COMMIT_MSG=$(echo "$DEFAULT_COMMIT_MSG" | sed 's/, $//')
+DEFAULT_COMMIT_MSG=$(echo -e "$DEFAULT_COMMIT_MSG" | sed 's/, $//' | tr '\\' '\n')
 
 # If no changes detected, use a default message #
 if [ -z "$DEFAULT_COMMIT_MSG" ];
@@ -118,27 +118,37 @@ git pull
 echo -e "\n${BPurple}[+] The new changes in the repo:\n\n${BYellow}${DEFAULT_COMMIT_MSG}${RESET_COLOR}"
 
 # Loop through all arguments #
-while [[ $# -gt 0 ]]; do
-    case "$1" in
-        -t|--target-branch)
-            TARGET_BRANCH="$2"
-            shift 2
-            ;;
-        -m|--commit-msg)
-            DEFAULT_COMMIT_MSG="$2"
-            shift 2
-            ;;
-        --create-pr)
-            CREATE_PR=true
-            TARGET_PR_BRANCH="$2"
-            shift 2
-            ;;
-        *)
-            # Ignore unrecognized options #
-            shift
-            ;;
-    esac
+while [[ $# -gt 0 ]];
+    
+    do
+        
+        case "$1" in
+
+            -t|--target-branch)
+                TARGET_BRANCH="$2"
+                shift 2
+                ;;
+
+            -m|--commit-msg)
+                DEFAULT_COMMIT_MSG="$2"
+                shift 2
+                ;;
+
+            --create-pr)
+                CREATE_PR=true
+                TARGET_PR_BRANCH="$2"
+                shift 2
+                ;;
+                
+            *)
+                # Ignore unrecognized options #
+                shift
+                ;;
+
+        esac
+
 done
+
 echo -e "\n${BRed}[+] Target Branch : ${BYellow}${TARGET_BRANCH}${RESET_COLOR}"
 if [ "${TARGET_BRANCH}" != "${DEFAULT_BRANCH}" ];
     
