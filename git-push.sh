@@ -193,7 +193,7 @@ if [ "${CREATE_PR}" == true ] && [ -n "${TARGET_PR_BRANCH}" ];
     
     then
     
-        echo -e "\n${BBlue}[+] Creating a pull request from ${TARGET_BRANCH} to ${TARGET_PR_BRANCH}...${RESET_COLOR}"
+        echo -e "\n${BBlue}[+] Creating a pull request from ${BRed}${TARGET_BRANCH} ${BBlue}to ${BYellow}${TARGET_PR_BRANCH}...${RESET_COLOR}"
         gh pr create --base ${TARGET_PR_BRANCH} --head ${TARGET_BRANCH} --title "Pull Request: ${TARGET_BRANCH} to ${TARGET_PR_BRANCH}" --body "Please review and merge."
 
 fi
