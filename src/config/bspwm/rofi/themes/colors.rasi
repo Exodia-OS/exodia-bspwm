@@ -9,13 +9,13 @@
 
 * {
 
-background:			#1a1f26;
-background-alt:		#1c3875;
-foreground:			#0abdc6;
-selected:			#0b35a3;
-highlight:			#02a39d;
-urgent:				#AC0000;
-on:					#9c0598;
-off:				#AC0000;
+background:			#101419;
+background-alt:		#61038f;
+foreground:			#cc02f5;
+selected:			#6523b0;
+highlight:			#4f1e87;
+urgent:				#b081e5;
+on:					#9658dd;
+off:				#b081e5;
 
 }

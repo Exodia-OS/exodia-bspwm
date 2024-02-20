@@ -71,6 +71,7 @@ ctrl + alt + l
 super + shift + m
 	music --albumArtCover
 
+# Open Tmux #
 super + shift + t
 	bsptmux
 

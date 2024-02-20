@@ -1,6 +1,6 @@
-Net/ThemeName "Tokyonight-Dark-BL"
-Net/IconThemeName "Hack"
-Gtk/CursorThemeName "ArchTrix"
+Net/ThemeName "Tokyonight-Dark-B"
+Net/IconThemeName "Green-Icons"
+Gtk/CursorThemeName "Rage-Purple-Cursor"
 Net/EnableEventSounds 0
 Net/EnableInputFeedbackSounds 0
 Xft/DPI -1

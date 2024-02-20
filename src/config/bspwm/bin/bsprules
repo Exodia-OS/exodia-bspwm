@@ -35,6 +35,7 @@ else
 
    # ----- apps open in terminal workspaces ----- #
    declare -a terminals=(Alacritty Xfce4-terminal)
+
    for i in ${terminals[@]};
       
       do
@@ -43,8 +44,11 @@ else
       
       done
    
+   bspc rule -a "dev.warp.Warp" state=floating follow=on focus=on
+
    # ----- apps open in web workspaces ----- #
    declare -a web=(guiscrcpy kdeconnect.app MEGAsync Element Free qBittorrent Windscribe2 Protonvpn)
+   
    for i in ${web[@]};
       
       do
@@ -58,9 +62,9 @@ else
    bspc rule -a Google-chrome desktop='^2' follow=on focus=on
    bspc rule -a Brave-browser desktop='^2' follow=on focus=on
    
-   
    # ----- apps open in files workspaces ----- #
    declare -a files=(Pcmanfm Thunar Caja dolphin)
+
    for i in ${files[@]};
       
       do
@@ -71,6 +75,7 @@ else
    
    # ----- apps open in code workspaces ----- #
    declare -a code=(Geany code-oss Code kate Leafpad)
+
    for i in ${code[@]};
       
       do
@@ -106,7 +111,8 @@ else
    # ----- apps open in office and docs workspaces ----- #
    declare -a office=(Gucharmap Atril Evince wps wpp et pdf \
    libreoffice-writer libreoffice-calc libreoffice-impress \
-   libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
+   libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice
+   )
    
    for i in ${office[@]};
       
@@ -116,8 +122,11 @@ else
       
       done
    
+   bspc rule -a "ONLYOFFICE Desktop Editors" desktop='^5' follow=on focus=on
+
    # ----- apps open in Communication workspaces ----- #
    declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui discord)
+
    for i in ${comm[@]};
       
       do
@@ -128,6 +137,7 @@ else
    
    # ----- apps open in media workspaces ----- #
    declare -a media=(Music MPlayer Lxmusic Inkscape Gimp-2.10 obs vlc Spotify)
+
    for i in ${media[@]};
       
       do
@@ -140,25 +150,44 @@ else
    # ----- apps open in settings workspaces ----- #
    bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
    bspc rule -a GParted desktop='^8' follow=on focus=on
-   declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
+
+   declare -a settings=(\
+   Lxappearance Lxtask Lxrandr Arandr \
    System-config-printer.py Pavucontrol Exo-helper-1 \
-   Xfce4-power-manager-settings)
-   for i in ${settings[@]}; do
-      bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+   Xfce4-power-manager-settings
+   )
+
+   for i in ${settings[@]};
+      do
+         
+         bspc rule -a $i desktop='^8' state=floating follow=on focus=on;
+      
+      done
    
    bspc rule -a stacer desktop ='^8' state=floating follow=on focus=on
    bspc rule -a Xsensors desktop ='^8' state=floating follow=on focus=on
    
    # ----- special rules ----- #
-   declare -a floating=(alacritty-float Pcmanfm Onboard Yad 'Firefox:Places' \
-   Viewnior feh Nm-connection-editor)
-   for i in ${floating[@]}; do
-      bspc rule -a $i state=floating follow=on focus=on; done
+   declare -a floating=(\
+   alacritty-float Pcmanfm Onboard Yad 'Firefox:Places' \
+   Viewnior feh Nm-connection-editor
+   )
+
+   for i in ${floating[@]};
+      
+      do
+         
+         bspc rule -a $i state=floating follow=on focus=on;
+      
+      done
    
    bspc rule -a Conky state=floating manage=off
    bspc rule -a stalonetray state=floating manage=off
    bspc rule -a gwenview state=floating follow=on focus=on
    bspc rule -a Galculator state=floating follow=on focus=on
    bspc rule -a PacketTracer state=floating follow=on focus=on
+   bspc rule -a matplotlib state=floating follow=on focus=on
+   bspc rule -a "Podman Desktop" state=floating follow=on focus=on
+
 
 fi

@@ -199,6 +199,15 @@ GET_COLORS () {
 BSP_TERM () {
 
 	cat > "$DIR"/alacritty/colors.toml <<- _EOF_
+		#####################################
+		#                                   #
+		#  @author      : 00xWolf           #
+		#    GitHub    : @mmsaeed509       #
+		#    Developer : Mahmoud Mohamed   #
+		#  﫥  Copyright : Exodia OS         #
+		#                                   #
+		#####################################
+
 		# Colors configuration #
 		[colors.primary]
 		background = '${BACKGROUND}'

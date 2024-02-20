@@ -296,7 +296,7 @@ format-padding = 0
 ;   %class%    (second part of the WM_CLASS atom, new in version 3.7.0)
 ; Default: %title%
 label = %class%
-label-maxlen = 20
+label-maxlen = 15
 
 label-empty = "No App"
 label-empty-foreground = ${color.apps-foreground}

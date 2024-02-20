@@ -10,7 +10,7 @@
 #####################################
 
 # Environtment path #
-export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin:$HOME/.local/share/virtualenv/pip/bin"
+export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin"
 
 # bspwm config directory #
 BSPWM_DIR="$HOME/.config/bspwm"
@@ -160,7 +160,7 @@ BACKGROUND=$(grep -oP 'background = \K.*' "${BSPWM_DIR}/exodia.conf")
 
 			BACKGROUND=/usr/share/backgrounds/JapaneseCity.png
 	fi
-
+	
 feh --no-fehbg --bg-fill ${BACKGROUND}
 # ------------------------------------------------------------------------------ #
 
