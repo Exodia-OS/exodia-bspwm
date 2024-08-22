@@ -1,6 +1,6 @@
 ! ------------------------------------
 ! 
-!  Islamic Warrior color scheme
+!  Islamic Knights color scheme
 !
 !  @author      : 00xWolf
 !    GitHub    : @mmsaeed509
@@ -9,25 +9,25 @@
 !
 ! ------------------------------------
 
-*background:#1a1f26
-*foreground: #0abdc6
+*background: #03111C
+*foreground: #ABD3DB
 
 ! Colors 0-15.
-*color0:   #030F17
-*color1:   #26506F
-*color2:   #496773
-*color3:   #0F588A
-*color4:   #186DA7
-*color5:   #157DBF
-*color6:   #2597DB
-*color7:   #9FCDE3
+*color0:   #03111C
+*color1:   #265A70
+*color2:   #476171
+*color3:   #29728A
+*color4:   #47778E
+*color5:   #368BA1
+*color6:   #4A9FB3
+*color7:   #ABD3DB
 
-*color8:   #6F8F9E
-*color9:   #26506F
-*color10:  #496773
-*color11:  #0F588A
-*color12:  #186DA7
-*color13:  #157DBF
-*color14:  #2597DB
-*color15:  #9FCDE3
+*color8:   #779399
+*color9:   #265A70
+*color10:  #476171
+*color11:  #29728A
+*color12:  #47778E
+*color13:  #368BA1
+*color14:  #4A9FB3
+*color15:  #ABD3DB
 

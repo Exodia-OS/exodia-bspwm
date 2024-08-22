@@ -227,7 +227,7 @@ exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/notification-git
 interval = 60
 label-foreground = #80E6FE
 label-font = 3
-click-left = brave --newtab https://github.com/notifications
+click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -276,7 +276,7 @@ click-left = ~/.config/bspwm/rofi/bin/themes
 type = custom/script
 exec = ~/.config/bspwm/themes/Islamic\\ Knights/polybar/scripts/weather
 interval = 1
-click-left = brave http://api.openweathermap.org
+click-left = google-chrome-stable http://api.openweathermap.org
 format-foreground = #80E6FE
 format-background = ${color.background-bar}
 

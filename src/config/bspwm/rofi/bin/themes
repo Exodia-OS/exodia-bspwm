@@ -17,7 +17,7 @@ EXODIA_CONFIG_FILE="${DIR}/exodia.conf"
 
 # get No. themes #
 NUM_OF_THEMES=$(cd ${DIR}/themes && ls -d */ | cut -d '/' -f1 | wc -l)
-sed -i "s/str:.*/str: \" [${NUM_OF_THEMES}] Bspwm Themes Are Available In Exodia OS \\\n   Have fun with your favorite theme \";/" ${DIR}/rofi/themes/themes.rasi
+sed -i "s/str:.*/str: \" [${NUM_OF_THEMES}] Bspwm Themes Are Available In Exodia \\\n   Have fun with your favorite theme \";/" ${DIR}/rofi/themes/themes.rasi
 
 # Get available themes #
 AVAILABLE_THEMES=$(ls "$BSP")

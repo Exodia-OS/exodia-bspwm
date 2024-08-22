@@ -20,16 +20,16 @@ format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 format-muted-prefix = " 婢"
 format-muted-prefix-font = 3
-format-muted-prefix-foreground = #ff0000
-format-muted-prefix-background = ${color.GREEN}
+format-muted-prefix-foreground = #3DDC4F
+format-muted-prefix-background = #00
 
 label-volume = %percentage%%
-label-volume-foreground = ${color.BACKGROUND}
-label-volume-background = ${color.GREEN}
+label-volume-foreground = #3DDC4F
+label-volume-background = #00
 
 label-muted = " Mute"
 label-muted-foreground = #ff0000
-label-muted-background = ${color.GREEN}
+label-muted-background = #00
 
 ramp-volume-0 = " 奄 "
 ramp-volume-1 = " 奄 "
@@ -42,8 +42,8 @@ ramp-volume-7 = " 墳 "
 ramp-volume-8 = " 墳 "
 ramp-volume-9 = " 墳 "
 ramp-volume-font = 3
-ramp-volume-foreground = ${color.BACKGROUND}
-ramp-volume-background = ${color.GREEN}
+ramp-volume-foreground = #3DDC4F
+ramp-volume-background = #00
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -57,16 +57,16 @@ interval = 2
 ; format-online = <label-song> <icon-prev> <toggle> <icon-next>
 format-online = <icon-prev> <toggle> <icon-next>
 format-online-prefix = "  "
-format-online-foreground = #0ABDC6
+format-online-foreground = #3DDC4F
 format-playing = ${self.format-online}
 format-paused = <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
 format-offline-prefix = "  "
-format-offline-prefix-foreground = #0ABDC6
+format-offline-prefix-foreground = #3DDC4F
 
 label-offline = "Offline "
-format-offline-foreground = #0ABDC6
+format-offline-foreground = #3DDC4F
 
 ; label-song =  "%title% | %artist%"
 label-song =  "%title% "
@@ -75,18 +75,18 @@ label-song-ellipsis = true
 
 icon-play = ""
 icon-play-font = 2
-icon-play-foreground = #0ABDC6
+icon-play-foreground = #3DDC4F
 icon-pause = ""
 icon-pause-font = 2
-icon-pause-foreground = #0ABDC6
+icon-pause-foreground = #3DDC4F
 icon-stop = " "
-icon-stop-foreground = #0ABDC6
+icon-stop-foreground = #3DDC4F
 icon-prev = "玲"
 icon-prev-font = 2
-icon-prev-foreground = #0ABDC6
+icon-prev-foreground = #3DDC4F
 icon-next = "怜 "
 icon-next-font = 2
-icon-next-foreground = #0ABDC6
+icon-next-foreground = #3DDC4F
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -96,7 +96,7 @@ type = internal/mpd
 interval = 2
 
 format-online = <label-song>
-format-online-foreground = #0ABDC6
+format-online-foreground = #97dae7
 
 format-playing = ${self.format-online}
 format-paused = ${self.format-online}
@@ -105,12 +105,12 @@ format-stopped = ${self.format-online}
 label-song =  "[ %title% ]"
 ; label-song =  "%title% | %artist%"
 
-label-song-foreground = #0ABDC6
+label-song-foreground = #97dae7
 label-song-maxlen = 60
 label-song-ellipsis = true
 
 icon-repeat = ""
-icon-repeat-foreground = #0ABDC6
+icon-repeat-foreground = #FF0677
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -120,7 +120,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = #d40261
+content-foreground = #67C976
 content-padding = 0
 click-left = music --albumArtCover
 
@@ -128,12 +128,12 @@ click-left = music --albumArtCover
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/cava -c average -f 60
+exec =  ~/.config/bspwm/themes/Smoke/polybar/scripts/cava -c average -f 60
 
 format = <label>
 label = %output%
-format-foreground = ${color.BACKGROUND}
-format-background = ${color.GREEN}
+format-foreground = #3DDC4F
+format-background = #00
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -141,10 +141,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/Smoke/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/Smoke/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/Smoke/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/Smoke/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

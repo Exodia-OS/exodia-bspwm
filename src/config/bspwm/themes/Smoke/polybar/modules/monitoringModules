@@ -1,0 +1,155 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = ${system.battery}
+adapter = ${system.adapter}
+
+poll-interval = 2
+time-format = %H:%M
+
+format-charging = <animation-charging><label-charging>
+format-charging-prefix = 
+
+format-discharging = <ramp-capacity><label-discharging>
+
+format-full = <label-full>
+format-full-prefix = " "
+format-full-prefix-font = 3
+format-full-prefix-foreground = #4CA465
+format-full-prefix-background = #00
+
+label-charging = "%percentage%% "
+label-discharging = "%percentage%% "
+label-full = "%percentage%% "
+
+label-charging-background = #00
+label-discharging-background = #00
+label-full-background = #00
+
+label-charging-foreground = #4CA465
+label-discharging-foreground = #4CA465
+label-full-foreground = #4CA465
+
+label-charging-font = 3
+label-discharging-font = 3
+label-full-font = 3
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+
+
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+
+
+ramp-capacity-font = 3
+
+ramp-capacity-foreground = #4CA465
+ramp-capacity-background = #00
+
+animation-charging-font = 3
+
+animation-charging-foreground = #4CA465
+animation-charging-background = #00
+animation-charging-framerate = 750
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+
+format = <label>
+
+format-prefix = " "
+format-prefix-font = 3
+format-prefix-foreground = #3DDC4F
+format-prefix-background = #00
+label = "%{A1:stacer &:} %percentage%% %{A}"
+label-font = 3
+label-background = #00
+label-foreground = #3DDC4F
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+interval = 30
+fixed-values = true
+
+format-mounted = <label-mounted>
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = #3DDC4F
+format-mounted-prefix-background = #00
+
+format-unmounted = <label-unmounted>
+format-unmounted-prefix = " "
+format-unmounted-prefix-foreground = #3DDC4F
+format-unmounted-prefix-background = #00
+
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e duf &:} %free%%{A}"
+label-unmounted = " %mountpoint%: NA"
+label-mounted-foreground = #3DDC4F
+
+label-mounted-background = #00
+label-unmounted-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpuTemp]
+type = custom/script
+exec = ~/.config/bspwm/themes/Smoke/polybar/scripts/heatSensors
+interval = 1
+click-left = xsensors
+format-foreground = #3DDC4F
+format-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/memory]
+type = custom/script
+exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
+format = <label>
+format-prefix = "" 
+format-prefix-font = 3
+
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e htop &:}%output%GB%{A}"
+label-padding = 1
+label-font = 4
+format-prefix-foreground = #3DDC4F
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/bspwm/themes/Smoke/polybar/scripts/updates-pacman.sh
+interval = 180
+format = <label>
+
+;label = %output% Updates
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:}  %output% updates %{A}"
+
+format-font = 3
+label-foreground = #3DDC4F
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

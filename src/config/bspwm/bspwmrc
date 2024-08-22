@@ -17,6 +17,18 @@ BSPWM_DIR="$HOME/.config/bspwm"
 
 ##  -------------------------------------- Configurations --------------------------------------  ##
 
+# Load RGB keyboard Color Based On The Selected Theme #
+RGB_KEYBOARD=$(grep -oP 'RGB-keyboard = \K.*' "${BSPWM_DIR}/exodia.conf")
+if [[ -z "$RGB_KEYBOARD" ]];
+	
+	then
+	
+		RGB_KEYBOARD=JapaneseCity
+fi
+
+RGB-keyboard -${RGB_KEYBOARD}
+# ------------------------------------------------------------------------------ #
+
 # set keyboard Layouts #
 KEYBOARD_LAYOUTS=$(grep -oP 'keyboard-layouts = \K.*' "${BSPWM_DIR}/exodia.conf")
 if [[ -z "$KEYBOARD_LAYOUTS" ]];

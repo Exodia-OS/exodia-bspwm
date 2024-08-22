@@ -15,10 +15,10 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
-click-left = brave
+click-left = google-chrome-stable
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -28,10 +28,10 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
-click-left = brave https://web.whatsapp.com/
+click-left = google-chrome-stable https://web.whatsapp.com/
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -41,7 +41,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = VirtualBox %U
@@ -54,7 +54,7 @@ type = custom/text
 
 content = "ﭮ"
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = discord
@@ -67,7 +67,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = music --albumArtCover
@@ -80,7 +80,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = alacritty -e nvim
@@ -93,7 +93,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = bsp-powershell
@@ -106,7 +106,7 @@ type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = ${color.APPS}
+content-foreground = ${color.HTB_BLUE}
 content-padding = 0
 
 click-left = code

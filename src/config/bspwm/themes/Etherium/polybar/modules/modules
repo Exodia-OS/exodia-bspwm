@@ -9,17 +9,6 @@
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/sysTray]
-type = custom/text
-
-content = " SysTray : "
-; content-background = #8B60E5
-content-foreground = #CB42EF
-content-padding = 0
-content-font = 4
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/bna]
 type = custom/text
 
@@ -122,32 +111,32 @@ label-monitor = %name%
 
 label-focused = [%name%]
 label-focused-foreground = ${color.GREEN}
-label-focused-background = ${color.BGL}
+label-focused-background = ${color.BACKGROUND}
 label-focused-underline = ${color.GREEN}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #FF0064
-label-occupied-background = ${color.BGL}
-label-occupied-underline = #FF0064
+label-occupied-foreground = ${color.RED}
+label-occupied-background = ${color.BACKGROUND}
+label-occupied-underline = ${color.RED}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.BLUE}
-label-urgent-background = ${color.BGL}
+label-urgent-background = ${color.BACKGROUND}
 label-urgent-underline = ${color.BLUE}
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = #0a7a76
-label-empty-background = ${color.BGL}
+label-empty-foreground = ${color.YELLOW}
+label-empty-background = ${color.BACKGROUND}
 label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator = " ◆ "
 label-separator-padding = 0
-label-separator-foreground = ${color.ALTBLACK}
-label-separator-background = ${color.BGL}
+label-separator-foreground = #94F9C2
+label-separator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -155,8 +144,8 @@ label-separator-background = ${color.BGL}
 type = internal/bspwm
 
 format = <label-mode>
-; format-background = ${color.FOREGROUND}
-format-foreground = #0ABDC6
+format-background = #94F9C2
+format-foreground = ${color.BACKGROUND}
 format-padding = 1
 format-font = 4
 
@@ -185,36 +174,12 @@ format = <label>
 format-prefix = "  "
 format-prefix-font = 3
 format-prefix-foreground = ${color.BACKGROUND}
-format-prefix-background = #0ABDC6
+format-prefix-background = ${color.GREEN}
 
 label = "%time% "
 label-font = 4
 label-foreground = ${color.BACKGROUND}
-label-background = #0ABDC6
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-; If you use both a wired and a wireless network, add both modules in config.
-[module/netDownSpeed]
-type = internal/network
-interface = ${system.network_interface}
-
-interval = 1.0
-accumulate-stats = true
-unknown-as-up = true
-
-
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed% %{A}"
-; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-
-label-connected-background = ${color.GREEN}
-label-connected-foreground = ${color.BACKGROUND}
-label-connected-font = 4
-
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = ${color.GREEN}
-label-disconnected-foreground = ${color.BACKGROUND}
-label-disconnected-font = 4
+label-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -230,24 +195,23 @@ unknown-as-up = true
 format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = ${color.GREEN}
-format-connected-prefix-background = #0E1623
+format-connected-prefix-foreground = ${color.BACKGROUND}
+format-connected-prefix-background = ${color.GREEN}
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "  "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = ${color.GREEN}
-format-disconnected-prefix-background = #0E1623
+format-disconnected-prefix-foreground = ${color.BACKGROUND}
+format-disconnected-prefix-background = ${color.GREEN}
 
 ; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
 label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
-label-connected-background = #0E1623
-label-connected-foreground = ${color.GREEN}
+label-connected-background = ${color.GREEN}
+label-connected-foreground = ${color.BACKGROUND}
 
 label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline %{A}"
-label-disconnected-background = #0E1623
-label-disconnected-foreground = ${color.GREEN}
-
+label-disconnected-background = ${color.GREEN}
+label-disconnected-foreground = ${color.BACKGROUND}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/network]
@@ -294,14 +258,14 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = "  %layout% "
-label-layout-foreground = #0ABDC6
-; label-layout-background = ${color.GREEN}
+label-layout-foreground = #78DBA9
+; label-layout-background = #101419
 label-layout-font = 3
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = #0ABDC6
-; label-indicator-background = ${color.GREEN}
+label-indicator-foreground = #78DBA9
+; label-indicator-background = #101419
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -309,9 +273,9 @@ label-indicator-foreground = #0ABDC6
 type = custom/text
 
 ; content = ""
-content = ""
+content = ""
 content-font = 5
-content-foreground = ${color.GREEN}
+content-foreground = ${color.YELLOW}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
@@ -319,10 +283,10 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Etherium/polybar/scripts/notification-github.sh
 interval = 60
-label-foreground = #0ABDC6
-click-left = brave --newtab https://github.com/notifications
+label-foreground = ${color.GREEN}
+click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -333,7 +297,7 @@ content = ""
 content-font = 5
 
 ;content-font = 3
-content-foreground = #D0ECFE
+content-foreground = ${color.GREEN}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher
@@ -351,23 +315,14 @@ content-padding = 0
 click-left = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/themes]
 type = custom/text
 
 content = ""
 content-font = 5
-content-foreground = #CFD4E8
+content-foreground = #94E9DC
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/weather]
-type = custom/script
-exec = ~/.config/bspwm/themes/MSI\\ Punk\\ 2/polybar/scripts/weather
-interval = 1
-click-left = brave http://api.openweathermap.org
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

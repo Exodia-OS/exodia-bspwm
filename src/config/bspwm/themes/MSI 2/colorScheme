@@ -1,6 +1,6 @@
 ! ------------------------------------
 ! 
-!  00xWolf color scheme
+!  MSI 2 color scheme
 !
 !  @author      : 00xWolf
 !    GitHub    : @mmsaeed509
@@ -10,29 +10,29 @@
 ! ------------------------------------
 
 
-*background: #0c1018
-*foreground: #f1c4c0
+*background: #030101
+*foreground: #E1878A
 
-*color0:  #20242C
-*color8:  #a88986
+*color0:  #030101
+*color8:  #9D5E60
 
-*color1:  #F8506D
-*color9:  #F8506D
+*color1:  #B41D21
+*color9:  #B41D21
 
-*color2:  #F06576
-*color10: #F06576
+*color2:  #972124
+*color10: #972124
 
-*color3:  #DD4157
-*color11: #DD4157
+*color3:  #B42125
+*color11: #B42125
 
-*color4:  #FD4955
-*color12: #FD4955
+*color4:  #CB181F
+*color12: #CB181F
 
-*color5:  #E9698E
-*color13: #E9698E
+*color5:  #CB1E23
+*color13: #CB1E23
 
-*color6:  #EA7288
-*color14: #EA7288
+*color6:  #E91D25
+*color14: #E91D25
 
-*color7:  #782831
-*color15: #782831
+*color7:  #E1878A
+*color15: #E1878A

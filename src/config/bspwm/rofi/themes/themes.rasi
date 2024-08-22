@@ -8,10 +8,11 @@
  */
 
 configuration {
+
     show-icons:                 false;
-drun-display-format:        "{name}";
-disable-history:                true;
-sidebar-mode: 					false;
+    drun-display-format:        "{name}";
+    disable-history:                true;
+    sidebar-mode: 					false;
 }
 
 /*****----- Global Properties -----*****/
@@ -28,8 +29,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       800px;
-    height:                      50%;
+    width:                       1000px;
+    height:                      80%;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -63,7 +64,7 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     5px;
-    padding:                     100px;
+    padding:                     251px;
     background-color:            transparent;
     background-image:            url("~/.config/bspwm/themes/Exodia/preview.png", width);
     text-color:                  @foreground;
@@ -73,7 +74,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      true;
-    str: " [20] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
+    str: " [23] Bspwm Themes Are Available In Exodia \n   Have fun with your favorite theme ";
     padding:                     12px 15px;
     border-radius:               8px;
     background-color:            @background-alt;
@@ -131,7 +132,7 @@ element normal.normal {
     text-color:                  inherit;
 }
 element selected.normal {
-    background-image: linear-gradient(#cc02f5, #cc02f5, #101419);
+    background-image: linear-gradient(#D1CDDC, #D1CDDC, #0F0A10);
     text-color:                  @background;
 }
 element-text {

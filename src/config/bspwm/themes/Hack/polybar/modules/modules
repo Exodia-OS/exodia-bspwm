@@ -227,7 +227,7 @@ exec = ~/.config/bspwm/themes/Hack/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = #80E6FE
 label-font = 3
-click-left = brave --newtab https://github.com/notifications
+click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

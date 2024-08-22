@@ -19,7 +19,7 @@ content-foreground = ${color.apps-foreground}
 content-background = ${color.background-bar}
 content-padding = 0
 
-click-left = brave
+click-left = google-chrome-stable
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -33,7 +33,7 @@ content-foreground = ${color.apps-foreground}
 content-background = ${color.background-bar}
 content-padding = 0
 
-click-left = brave https://web.whatsapp.com/
+click-left = google-chrome-stable https://web.whatsapp.com/
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

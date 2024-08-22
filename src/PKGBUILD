@@ -3,7 +3,7 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=8.0
+pkgver=8.1
 pkgrel=6
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
@@ -19,7 +19,7 @@ depends=(
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
 	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
 	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
-	'mesa-utils' 'exodia-assistant' 
+	'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds' 
 	'catppuccin-backgrounds' 'exodia-cyberpunk-backgrounds'
 	'exodia-default-backgrounds' 'exodia-islamic-warrior-backgrounds' 
 	'extra-backgrounds' 'kali-backgrounds' 'mac-os-x-backgrounds' 

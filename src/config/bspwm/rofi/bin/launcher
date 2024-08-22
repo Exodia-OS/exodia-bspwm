@@ -2,6 +2,8 @@
 
 DIR="$HOME/.config/bspwm"
 
+export WINIT_X11_SCALE_FACTOR=1.2
+
 rofi \
 	-show drun \
 	-modi run,drun,ssh,filebrowser,window \

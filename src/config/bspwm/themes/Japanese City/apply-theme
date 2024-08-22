@@ -217,7 +217,7 @@ SET_GTK_THEME() {
 			# Update Cursor for `gtk-3` #
 			sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
 			# Update Cursor for `gtk-3` #
-			sed -i -e "s/cursor_theme_name=.*/cursor_theme_name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
+			sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
 
 	fi
 
