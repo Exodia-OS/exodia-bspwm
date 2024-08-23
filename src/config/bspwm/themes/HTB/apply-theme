@@ -201,8 +201,6 @@ SET_GTK_THEME() {
 			sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSPWM_DIR}/xsettingsd
 			sed -i -e "s|Inherits=.*|Inherits=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")|g" ${HOME}/.icons/default/index.theme
 
-	else
-
 	        # Update Theme for `gtk-2` #
 			sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
 			# Update Icons for `gtk-2` #
