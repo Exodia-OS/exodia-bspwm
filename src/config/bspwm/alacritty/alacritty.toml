@@ -1,5 +1,5 @@
-import = ["~/.config/bspwm/alacritty/colors.toml", "~/.config/bspwm/alacritty/fonts.toml"]
-live_config_reload = true
+general.import = ["~/.config/bspwm/alacritty/colors.toml", "~/.config/bspwm/alacritty/fonts.toml"]
+general.live_config_reload = true
 # "window.opacity" = 0.95
 
 [cursor]

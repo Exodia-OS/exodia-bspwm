@@ -128,7 +128,7 @@ icon-repeat-foreground = #25A9F1
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/themes/Etherium/polybar/scripts/cava -c average -f 60
+exec =  ~/.config/bspwm/themes/Ethereum/polybar/scripts/cava -c average -f 60
 
 format = <label>
 label = " %output% "
@@ -141,10 +141,10 @@ tail = true
 [module/pulse-mic]
 
 type = custom/script
-exec = ~/.config/bspwm/themes/Etherium/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/Ethereum/polybar/scripts/pulse-mic
 tail = true
-click-left  = ~/.config/bspwm/themes/Etherium/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/Etherium/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/Etherium/polybar/scripts/pulse-mic --decrease &
+click-left  = ~/.config/bspwm/themes/Ethereum/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/bspwm/themes/Ethereum/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/bspwm/themes/Ethereum/polybar/scripts/pulse-mic --decrease &
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

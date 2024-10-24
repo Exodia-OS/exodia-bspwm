@@ -117,7 +117,7 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/themes/Etherium/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/themes/Ethereum/polybar/scripts/heatSensors
 interval = 1
 click-left = xsensors
 format-foreground = ${color.BACKGROUND}
@@ -140,7 +140,7 @@ format-prefix-foreground = #d19a66
 
 [module/updates-pacman]
 type = custom/script
-exec = ~/.config/bspwm/themes/Etherium/polybar/scripts/updates-pacman.sh
+exec = ~/.config/bspwm/themes/Ethereum/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 

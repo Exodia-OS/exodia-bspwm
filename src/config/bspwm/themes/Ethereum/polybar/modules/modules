@@ -283,7 +283,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 [module/notification-github]
 type = custom/script
-exec = ~/.config/bspwm/themes/Etherium/polybar/scripts/notification-github.sh
+exec = ~/.config/bspwm/themes/Ethereum/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = ${color.GREEN}
 click-left = google-chrome-stable --newtab https://github.com/notifications
