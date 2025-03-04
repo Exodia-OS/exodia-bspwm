@@ -1,0 +1,338 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+BSPWM_DIR="$HOME/.config/bspwm"
+XRES="$HOME/.Xresources.d"
+NOTIFY_ICON="/usr/share/icons/dunst/themes.png"
+THEME_NAME=$(grep -Po 'exodiaTheme\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
+PREVIEW_IMG="${BSPWM_DIR}/themes/${THEME_NAME}/preview.png"
+THEME_CONFIG="${BSPWM_DIR}/themes/${THEME_NAME}/theme.conf"
+EXODIA_CONFIG_FILE="${BSPWM_DIR}/exodia.conf"
+CONFIG_DIR="$HOME/.config"
+
+# Get Theme config #
+GET_THEME_CONFIG() {
+
+	BACKGROUND=$(grep '^background\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BACKGROUND" ]];
+
+		then
+
+			BACKGROUND=/usr/share/backgrounds/JapaneseCity.png
+	fi
+
+
+	THEME=$(grep '^theme\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$THEME" ]];
+
+		then
+
+			THEME=Tokyonight-Dark-B
+	fi
+
+	ICONS=$(grep '^icons\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$ICONS" ]];
+
+		then
+
+			ICONS=Elena-dark-icons
+	fi
+
+	CURSOR=$(grep '^cursor\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$CURSOR" ]];
+
+		then
+
+			CURSOR=WineTrix
+	fi
+
+	RGB_KEYBOARD=$(grep '^RGB-keyboard\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$RGB_KEYBOARD" ]];
+
+		then
+
+			RGB_KEYBOARD=JapaneseCity
+	fi
+
+	PICOM=$(grep '^picom\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$PICOM" ]];
+
+		then
+
+			PICOM=default.conf
+	fi
+
+	KEYBINDING=$(grep '^keybinding\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$KEYBINDING" ]];
+
+		then
+
+			KEYBINDING=sxhkdrc
+	fi
+
+	BSP_BORDERLESS_WIDTH=$(grep '^bsp-border-width\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_BORDERLESS_WIDTH" ]];
+
+		then
+
+			BSP_BORDERLESS_WIDTH=2
+	fi
+
+	BSP_WINDOW_GAP=$(grep '^bsp-window-gap\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_WINDOW_GAP" ]];
+
+		then
+
+			BSP_WINDOW_GAP=10
+	fi
+
+	BSP_SPLIT_RATIO=$(grep '^bsp-split-ratio\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_SPLIT_RATIO" ]];
+
+		then
+
+			BSP_SPLIT_RATIO=0.50
+	fi
+
+	BSP_BORDERLESS_MONOCLE=$(grep '^bsp-borderless-monocle\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_BORDERLESS_MONOCLE" ]];
+
+		then
+
+			BSP_BORDERLESS_MONOCLE=true
+	fi
+
+	BSP_GAPLESS_MONOCLE=$(grep '^bsp-gapless-monocle\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_GAPLESS_MONOCLE" ]];
+
+		then
+
+			BSP_GAPLESS_MONOCLE=true
+	fi
+
+	BSP_PADDINGLESS_MONOCLE=$(grep '^bsp-paddingless-monocle\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_PADDINGLESS_MONOCLE" ]];
+
+		then
+
+			BSP_PADDINGLESS_MONOCLE=true
+	fi
+
+	BSP_SINGLE_MONOCLE=$(grep '^bsp-single-monocle\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_SINGLE_MONOCLE" ]];
+
+		then
+
+			BSP_SINGLE_MONOCLE=false
+	fi
+
+	BSP_FOCUS_FOLLOWS_POINTER=$(grep '^bsp-focus-follows-pointer\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_FOCUS_FOLLOWS_POINTER" ]];
+
+		then
+
+			BSP_FOCUS_FOLLOWS_POINTER=true
+	fi
+
+	BSP_PRESEL_FEEDBACK=$(grep '^bsp-presel-feedback\s*=' "${THEME_CONFIG}" | cut -d '=' -f2 | tr -d ' ')
+	if [[ -z "$BSP_PRESEL_FEEDBACK" ]];
+
+		then
+
+			BSP_PRESEL_FEEDBACK=true
+	fi
+
+}
+
+# Notify the user about applying the theme #
+NOTIFY_APPLYING_THEME() {
+	
+	dunstify -i "${NOTIFY_ICON}" "[*] Applying 
+	${THEME_NAME} Theme!"
+
+}
+
+# --- writing the new values to the config file `exodia.conf` and updating the config --- #
+
+# Updating Background #
+UPDATING_BACKGROUND() {
+
+	dunstify -i "" "[+] Updating Background"
+	sed -i "s#background = .*#background = ${BACKGROUND}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+
+# Updating Color Schemes #
+UPDATING_COLOR_SCHEMES() {
+
+	dunstify -i "" "[+] Updating Color Schemes"
+	sed -i "s#color-scheme = .*#color-scheme = ${THEME_NAME}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# set gtk theme, icons and cursor #
+SET_GTK_THEME() {
+
+	dunstify -i "" "[+] Setting gtk theme, icons and cursor"
+	sed -i "s#theme = .*#theme = ${THEME}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#icons = .*#icons = ${ICONS}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#cursor = .*#cursor = ${CURSOR}#" ${EXODIA_CONFIG_FILE}
+
+	if [[ `pidof xsettingsd` ]];
+	
+	    then
+	
+	        # Update Theme for `xsettingsd` #
+	        sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSPWM_DIR}/xsettingsd
+
+			# Update Icons for `xsettingsd` #
+			sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSPWM_DIR}/xsettingsd
+
+			# Update Cursor for `xsettingsd` #
+			sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSPWM_DIR}/xsettingsd
+			sed -i -e "s|Inherits=.*|Inherits=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")|g" ${HOME}/.icons/default/index.theme
+
+	        # Update Theme for `gtk-2` #
+			sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+			# Update Icons for `gtk-2` #
+			sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+			# Update Cursor for `gtk-2` #
+			sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+
+			# Update Theme for `gtk-3` #
+			sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
+			# Update Icons for `gtk-3` #
+			sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
+			# Update Cursor for `gtk-3` #
+			sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
+			# Update Cursor for `gtk-3` #
+			sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CONFIG_DIR}/gtk-3.0/settings.ini
+
+	fi
+
+}
+
+# Update bspwm settings #
+UPDATE_BSPWM_SETTINGS() {
+
+	dunstify -i "" "[+] Updating bspwm settings"
+
+	sed -i "s#bsp-border-width = .*#bsp-border-width = ${BSP_BORDERLESS_WIDTH}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-window-gap = .*#bsp-window-gap = ${BSP_WINDOW_GAP}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-split-ratio = .*#bsp-split-ratio = ${BSP_SPLIT_RATIO}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-borderless-monocle = .*#bsp-borderless-monocle = ${BSP_BORDERLESS_MONOCLE}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-gapless-monocle = .*#bsp-gapless-monocle = ${BSP_GAPLESS_MONOCLE}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-paddingless-monocle = .*#bsp-paddingless-monocle = ${BSP_PADDINGLESS_MONOCLE}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-single-monocle = .*#bsp-single-monocle = ${BSP_SINGLE_MONOCLE}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-focus-follows-pointer = .*#bsp-focus-follows-pointer = ${BSP_FOCUS_FOLLOWS_POINTER}#" ${EXODIA_CONFIG_FILE}
+	sed -i "s#bsp-presel-feedback = .*#bsp-presel-feedback = ${BSP_PRESEL_FEEDBACK}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# Setting polybar theme #
+SETTING_POLYBAR_THEME() {
+
+	dunstify -i "" "[+] Setting polybar theme"
+	pkill polybar
+	sed -i "s#polybar = .*#polybar = ${THEME_NAME}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# ----- Apply RGB Colors For Keyboard ----- #
+APPLY_KEYBOARD_RGB() {
+
+	dunstify -i "" "[+] Changing RGB colors For the Keyboard"
+	sed -i "s#RGB-keyboard = .*#RGB-keyboard = ${RGB_KEYBOARD}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# ----- Updating keybinding ----- #
+UPDATING_KEYBINDING() {
+
+	dunstify -i "" "[+] Updating keybinding"
+	sed -i "s#keybinding = .*#keybinding = ${KEYBINDING}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# ----- Updating picom config ----- #
+UPDATING_PICOM() {
+
+	dunstify -i "" "[+] Updating picom config"
+	sed -i "s#picom = .*#picom = ${PICOM}#" ${EXODIA_CONFIG_FILE}
+
+}
+
+# ----- set background for betterlockscreen based on the selected theme ----- #
+SET_BACKGROUND_BETTERLOCKSCREEN() {
+
+	STATUS=$(grep -Po 'change-betterlockscreen\s*=\s*\K.*' ${EXODIA_CONFIG_FILE})
+	if [[ ${STATUS} == "true" ]];
+	
+	    then
+
+	        dunstify -i "" "[+] Updating betterlockscreen Background"
+	        betterlockscreen -u ${BACKGROUND}
+
+	fi
+
+}
+
+# ----- reload config ----- #
+RELOAD_CONFIG() {
+
+	dunstify -i "" "[+] Reload The Configurations"
+	bspc wm --restart
+
+}
+
+# Notify the user about successfully applying the theme #
+NOTIFY_APPLIED_THEME() {
+
+	dunstify -i "${PREVIEW_IMG}" " ${THEME_NAME} Theme 
+	Applied Successfully [✔]"
+
+}
+
+# Call Functions #
+MAIN() {
+
+	GET_THEME_CONFIG
+
+	NOTIFY_APPLYING_THEME
+
+	UPDATING_BACKGROUND
+
+	UPDATING_COLOR_SCHEMES
+
+	SET_GTK_THEME
+
+	UPDATE_BSPWM_SETTINGS
+
+	SETTING_POLYBAR_THEME
+
+	APPLY_KEYBOARD_RGB
+
+	UPDATING_KEYBINDING
+
+	UPDATING_PICOM
+
+	SET_BACKGROUND_BETTERLOCKSCREEN
+
+	RELOAD_CONFIG
+
+	NOTIFY_APPLIED_THEME
+
+}
+
+
+# Execute Functions #
+MAIN

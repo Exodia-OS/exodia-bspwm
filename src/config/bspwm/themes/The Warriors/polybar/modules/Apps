@@ -18,7 +18,7 @@ content-font = 3
 content-foreground = ${color.apps-color}
 content-padding = 0
 
-click-left = google-chrome-stable
+click-left = brave
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -31,7 +31,7 @@ content-font = 3
 content-foreground = ${color.apps-color}
 content-padding = 0
 
-click-left = google-chrome-stable https://web.whatsapp.com/
+click-left = brave https://web.whatsapp.com/
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

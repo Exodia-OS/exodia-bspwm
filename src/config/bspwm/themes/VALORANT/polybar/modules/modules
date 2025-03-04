@@ -288,7 +288,7 @@ exec = ~/.config/bspwm/themes/VALORANT/polybar/scripts/notification-github.sh
 interval = 60
 label-foreground = #FC4652
 label-background = #313131
-click-left = google-chrome-stable --newtab https://github.com/notifications
+click-left = brave --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -259,7 +259,7 @@ format-background = ${color.YELLOW}
 type = custom/script
 exec = ~/.config/bspwm/themes/BlackArch/polybar/scripts/notification-github.sh
 interval = 60
-click-left = google-chrome-stable --newtab https://github.com/notifications
+click-left = brave --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

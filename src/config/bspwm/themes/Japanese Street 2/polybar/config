@@ -75,17 +75,17 @@ font-7 = "Material Design Icons:style=Bold:size18;4"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = menu space LD mod RD space LD bspwm RD space LD info-cava RD space LD mpd RD sep song sep xkeyboard 
-modules-center =   
+modules-left   = menu space LD mod RD space LD bspwm RD space LD info-cava RD space LD mpd RD sep song sep xkeyboard
+modules-center =
 modules-right  = volume sep pulse-mic space LD filesystem RD space backlight sep cpu sep cpuTemp sep memory space LD date RD space sysmenu
- 
+
 separator =
 spacing = 0
 
 dim-value = 1.0
 
 wm-name = bspwm
-locale = 
+locale =
 
 tray-position = center
 tray-detached = false
@@ -149,16 +149,16 @@ font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space xdomenu sep LD chrome Dspace whatsapp Dspace VirtualBox Dspace discord Dspace music Dspace nvim Dspace PowerShell Dspace MS_VisualStudioCode RD sep updates-pacman
-modules-center = LD network_ext RD 
-modules-right  = LD weather RD space LD notification-github RD space LD battery RD space LD checknet RD sep themes space 
- 
+modules-center = LD network_ext RD
+modules-right  = LD weather RD space LD notification-github RD space LD battery RD space LD checknet RD sep themes space
+
 separator =
 spacing = 0
 
 dim-value = 1.0
 
 wm-name = bspwm
-locale = 
+locale =
 
 wm-restack = bspwm
 
