@@ -181,14 +181,11 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p
-time-alt = %A, %d %B %Y
+time = "  %I:%M %p"
+
+time-alt = "  %b %d, %G"
 
 format = <label>
-format-prefix = "  "
-format-prefix-font = 3
-format-prefix-foreground = ${color.FOREGROUND}
-format-prefix-background = #3B4252
 
 label = %time%
 label-font = 4
@@ -373,8 +370,7 @@ click-left = jgmenu_run
 [module/themes]
 type = custom/text
 
-; content = ""
-content = ""
+content = ""
 content-font = 5
 content-foreground = #D06FE8
 content-background = ${color.BACKGROUND}

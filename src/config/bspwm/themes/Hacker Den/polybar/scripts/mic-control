@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Get the active microphone node ID
+get_mic_node() {
+    wpctl status | awk '
+        /Sources:/ {in_sources=1}
+        in_sources && /\*/ {
+            # Extract number between * and .
+            match($0, /\*[[:space:]]+([0-9]+)\./, arr)
+            print arr[1]
+            exit
+        }
+    '
+}
+
+MIC_NODE=$(get_mic_node)
+
+if [[ -z "$MIC_NODE" ]]; then
+    echo "%{T3}%{F#ff0000}%{B#00FA5C}  No Mic Detected"
+    exit 1
+fi
+
+get_status() {
+    STATUS=$(wpctl get-volume "$MIC_NODE" 2>/dev/null)
+    if [[ $? -ne 0 ]]; then
+        echo "%{T3}%{F#ff0000}%{B#00FA5C}  Mic Error"
+        return 1
+    fi
+
+    VOLUME=$(echo "$STATUS" | awk '{print $2 * 100}' | cut -d'.' -f1)
+    if echo "$STATUS" | grep -q MUTED; then
+        echo "%{T3}%{F#ff0000}%{B#00FA5C}  Muted"
+    else
+        echo "%{T3}%{F#101419}%{B#00FA5C}  ${VOLUME}%"
+    fi
+}
+
+toggle_mute() {
+    wpctl set-mute "$MIC_NODE" toggle
+}
+
+increase_volume() {
+    wpctl set-volume "$MIC_NODE" 5%+
+}
+
+decrease_volume() {
+    wpctl set-volume "$MIC_NODE" 5%-
+}
+
+case "$1" in
+    --mute) toggle_mute ;;
+    --up) increase_volume ;;
+    --down) decrease_volume ;;
+    *) get_status ;;
+esac

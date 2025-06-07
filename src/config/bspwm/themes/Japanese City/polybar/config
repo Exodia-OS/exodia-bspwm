@@ -72,7 +72,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space xdomenu sep LD mod RD space LD bspwm RD space LD info-cava RD space LD netDownSpeed RD space LD notification-github RD sep xkeyboard 
 modules-center = LDmpd space mpd space RDmpd  
-modules-right  = themes space LD cpu RD space LD updates-pacman RD space volume space pulse-mic space battery cpuTemp space network backlight space LD date RD space sysmenu space
+modules-right  = themes space LD cpu RD space LD updates-pacman RD space volume space mic-control space battery cpuTemp space network backlight space LD date RD space sysmenu space
  
 separator =
 spacing = 0

@@ -128,7 +128,7 @@ entry {
     background-color:            @selected;
     text-color:                  @background;
     cursor:                      text;
-    placeholder:                 " Search... ";
+    placeholder:                 " ";
     placeholder-color:           @background;
 }
 num-filtered-rows {

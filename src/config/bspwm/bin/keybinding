@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# kill yad to not interfere with this binds
+pkill yad || true
+
+# check if rofi is already running
+if pidof rofi > /dev/null;
+  
+    then
+    
+        pkill rofi
+
+fi
+
+# define the config files
+KEYBINDING="$HOME/.config/bspwm/bin/keybinding.md"
+ROFI_THEME="$HOME/.config/bspwm/rofi/themes/keybinding.rasi"
+
+# combine the contents of the keybinds files and filter for keybinds
+BINDS=$(cat "$KEYBINDING")
+
+
+# check for any keybinds to display
+if [[ -z "$BINDS" ]];
+    
+    then
+        
+        echo "no keybinding found."
+        exit 1
+
+fi
+
+# use rofi to display the keybinds with the modified content
+echo "$BINDS" | rofi -dmenu -i -config "$ROFI_THEME"

@@ -41,6 +41,10 @@ alt + F1
 super + n
 	nmd
 
+# Rofi Keybindings Menu #
+super + k
+	keybinding
+
 # Rofi Themes Menu #
 ctrl + alt + t
 	sh ~/.config/bspwm/rofi/bin/themes
@@ -128,7 +132,7 @@ super + {_,shift + }c
 	bspc node -{c,k}
 
 # Reload Keybindings #
-super + k
+super + shift + k
 	pkill -USR1 -x sxhkd
 
 # kill window #

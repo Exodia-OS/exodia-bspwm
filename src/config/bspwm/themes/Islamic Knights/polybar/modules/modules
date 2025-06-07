@@ -176,14 +176,11 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p
-time-alt = %A, %d %B %Y
+time = " %I:%M %p"
+
+time-alt = " %b %d, %G"
 
 format = <label>
-format-prefix = " "
-format-prefix-font = 3
-format-prefix-foreground = #000B1E
-format-prefix-background = #80E6FE
 
 label = " %time% "
 label-font = 3
@@ -262,7 +259,7 @@ type = custom/text
 
 content = " Themes"
 content-font = 3
-content-prefix = ""
+content-prefix = ""
 content-prefix-font= 5
 content-foreground = #80E6FE
 content-background = ${color.background-bar}

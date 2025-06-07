@@ -72,6 +72,7 @@ bar-volume-empty =
 bar-volume-empty-font = 8
 bar-volume-empty-foreground = #01161B
 
+click-right = pavucontrol
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/mpd]
@@ -162,13 +163,16 @@ tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/pulse-mic]
+[module/mic-control]
 
 type = custom/script
-exec =~/.config/bspwm/themes/Hack/polybar/scripts/pulse-mic
+exec = ~/.config/bspwm/themes/Hack/polybar/scripts/mic-control
 tail = true
-click-left  = ~/.config/bspwm/themes/Hack/polybar/scripts/pulse-mic --toggle &
-scroll-up   = ~/.config/bspwm/themes/Hack/polybar/scripts/pulse-mic --increase &
-scroll-down = ~/.config/bspwm/themes/Hack/polybar/scripts/pulse-mic --decrease &
+label = %output%
+
+click-right = pavucontrol
+click-left  = ~/.config/bspwm/themes/Hack/polybar/scripts/mic-control --mute
+scroll-up   = ~/.config/bspwm/themes/Hack/polybar/scripts/mic-control --up
+scroll-down = ~/.config/bspwm/themes/Hack/polybar/scripts/mic-control --down
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

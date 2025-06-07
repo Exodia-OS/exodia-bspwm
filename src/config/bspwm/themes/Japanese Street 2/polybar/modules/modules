@@ -175,12 +175,12 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p
+time =  %I:%M %p
 
-time-alt = %b %d, %G
+time-alt =  %b %d, %G
 
 format = <label>
-format-prefix = " "
+; format-prefix = " "
 format-prefix-font = 2
 format-prefix-foreground = ${color.CYAN}
 format-background = ${color.BGL}

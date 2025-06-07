@@ -73,7 +73,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space xdomenu sep mod pipL bspwm pipR notification-github sep updates-pacman 
 modules-center = mpd
-modules-right  = themes Dspace xkeyboard space battery space cpu cpuTemp space pulse-mic volume backlight space network space date Dspace sysmenu
+modules-right  = themes Dspace xkeyboard space battery space cpu cpuTemp space mic-control volume backlight space network space date Dspace sysmenu
  
 separator =
 spacing = 0

@@ -3,48 +3,49 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=8.5
-pkgrel=7
+pkgver=9.0
+pkgrel=1
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
 install=${pkgname}.install
 conflicts=('exodia-bspwm-predator')
-depends=(
 
-	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
-	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
-	'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
-	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
-	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
-	'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
-	'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds' 
-	'catppuccin-backgrounds' 'exodia-cyberpunk-backgrounds'
-	'exodia-default-backgrounds' 'exodia-islamic-warrior-backgrounds' 
-	'extra-backgrounds' 'kali-backgrounds' 'mac-os-x-backgrounds' 
-	'msi-backgrounds' 'parrot-backgrounds' 'tokyo-backgrounds' 'windows-backgrounds'
-	
+# Added source and checksum for package integrity
+source=("https://github.com/Exodia-OS/exodia-bspwm/archive/v${pkgver}.tar.gz")
+sha256sums=('SKIP') # Replace 'SKIP' with the actual checksum for better security
+
+# Organized dependencies for better readability
+depends=(
+    'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
+    'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
+    'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
+    'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
+    'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
+    'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
+    'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds'
+    'catppuccin-backgrounds' 'exodia-cyberpunk-backgrounds'
+    'exodia-default-backgrounds' 'exodia-islamic-warrior-backgrounds'
+    'extra-backgrounds' 'kali-backgrounds' 'mac-os-x-backgrounds'
+    'msi-backgrounds' 'parrot-backgrounds' 'tokyo-backgrounds' 'windows-backgrounds'
 )
 
+# Improved file operations with error handling
 prepare() {
-
-	cp -af ../config/. ${srcdir}
-
+    cp -af ../config/. ${srcdir} || exit 1
 }
 
 package() {
+    local CONFIG_DIR=${pkgdir}/etc/skel/.config
+    local BSPWM_DIR=${CONFIG_DIR}/bspwm
 
-	local CONFIG_DIR=${pkgdir}/etc/skel/.config
-	local BSPWM_DIR=${CONFIG_DIR}/bspwm
+    mkdir -p "${CONFIG_DIR}" "${BSPWM_DIR}" || exit 1
 
-	mkdir -p "${CONFIG_DIR}" "${BSPWM_DIR}"
+    cp -r ${srcdir}/* "${CONFIG_DIR}" || exit 1
 
-	cp -r ${srcdir}/*	"${CONFIG_DIR}"
+    chmod +x "${BSPWM_DIR}"/bin/* || exit 1
+    chmod +x "${BSPWM_DIR}"/rofi/bin/* || exit 1
 
-	chmod +x "${BSPWM_DIR}"/bin/*
-	chmod +x "${BSPWM_DIR}"/rofi/bin/*
-
-	install -Dm 755 ${srcdir}/bspwm/bspwmrc "${BSPWM_DIR}"/bspwmrc
-	
+    install -Dm 755 ${srcdir}/bspwm/bspwmrc "${BSPWM_DIR}"/bspwmrc || exit 1
 }

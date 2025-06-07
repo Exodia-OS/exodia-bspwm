@@ -72,14 +72,13 @@ font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Banana:style=Regular:antialilas=true;size=6;2"
 font-6 = "Font Awesome 6 Free Solid:size=10;3"
 font-7 = "Material Design Icons Desktop:size=12;3"
 font-8 = "MesloLGS NF:style=Regular:size=15;4"
 
-modules-left   = xdomenu sep LD cpu RD space LD notification-github RD space LD battery RD space LD cpuTemp RD space LD network RD space LD xkeyboard RD
+modules-left   = menu sep LD cpu RD space LD notification-github RD space LD battery RD space LD cpuTemp RD space LD network RD space LD xkeyboard RD
 modules-center = LD bspwm RD
-modules-right  = BL song BR sep LD mpd RD space LD pulse-mic RD space LD volume RD space LD backlight RD space LD date RD sep themes
+modules-right  = BL song BR sep LD mpd RD space LD mic-control RD space LD volume RD space LD backlight RD space LD date RD sep themes
  
 spacing = 0
 separator =

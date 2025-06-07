@@ -1,0 +1,48 @@
+@theme "~/.config/bspwm/rofi/themes/keybinding-config.rasi"
+
+* {
+    font: "JetBrains Mono Nerd Font 10";
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+  children:
+    [ "inputbar", "message", "listview"];
+}
+
+/* ---- Entry ---- */
+entry {
+  expand: true;
+  placeholder: " Search Keybinds";
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 1;
+  lines: 8;
+  fixed-height: false;
+  scrollbar: true;
+  spacing: 6px;
+  cycle: true;
+}
+
+window {
+  width: 60%;
+  height: 80%;
+}
+
+/* ---- Elements ---- */
+element {
+  orientation: horizontal;
+}
+
+element-icon {
+  	size: 0%;
+}
+
+element-text {
+    horizontal-align: 0.0;
+    vertical-align: 0.5;
+    margin: 0px;
+    padding: 0px;
+}

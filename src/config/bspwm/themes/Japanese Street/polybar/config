@@ -72,7 +72,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = menu space LD mod RD space LD bspwm RD space LD weather RD space LD mpd RD sep song sep xkeyboard 
 modules-center =   
-modules-right  = volume sep pulse-mic sep backlight sep cpu sep cpuTemp sep battery sep network LD date RD space sysmenu
+modules-right  = volume sep mic-control sep backlight sep cpu sep cpuTemp sep battery sep network LD date RD space sysmenu
  
 separator =
 spacing = 0

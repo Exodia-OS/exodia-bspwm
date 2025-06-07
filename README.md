@@ -23,6 +23,51 @@
 
 <!-- ###########################################  ########################################### -->
 
+# bspwm-Exodia
+
+BSPWM Configurations for Exodia OS. This repository contains a collection of configurations, themes, and scripts to enhance your BSPWM experience. It is designed to provide a visually appealing and highly customizable desktop environment.
+
+## Features
+
+- Pre-configured BSPWM setup for Exodia OS.
+- A wide variety of themes with previews.
+- Custom scripts for managing windows, monitors, and more.
+- Integration with tools like Rofi, Picom, and Dunst.
+- Easy-to-use theme switching.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Exodia-OS/exodia-bspwm.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd exodia-bspwm
+   ```
+3. Run the installation script:
+   ```bash
+   ./src/makepkg.sh
+   ```
+
+## Usage
+
+- **Themes**: Switch between themes by navigating to the desired theme folder under `src/config/themes/` and running the `apply-theme` script.
+- **Scripts**: Use the custom scripts in `src/config/bspwm/bin/` for managing various aspects of your BSPWM setup.
+- **Configuration**: Modify the configuration files in `src/config/bspwm/` to suit your preferences.
+
+## Contributing
+
+Contributions are welcome! If you have ideas for new themes, scripts, or improvements, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Screenshots
+
+Check out the available themes in the [Available Themes Previews](#available-themes-previews) section above for a glimpse of what this project offers.
+
 <!-- Available Themes Previews -->
 
 <h2 align="center">Available Themes Previews</h2>

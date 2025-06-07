@@ -154,14 +154,10 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p
-time-alt = %A, %d %B %Y
+time = " %I:%M %p"
+time-alt = " %A, %d %B %Y"
 
 format = <label>
-format-prefix = " "
-format-prefix-font = 3
-format-prefix-foreground = ${color.BACKGROUND}
-format-prefix-background = ${color.color-cayn}
 
 label = %time%
 label-font = 4
@@ -266,8 +262,7 @@ click-left = brave --newtab https://github.com/notifications
 [module/themes]
 type = custom/text
 
-; content = ""
-content = ""
+content = ""
 content-font = 5
 content-background = ${color.YELLOW}
 content-foreground = ${color.BACKGROUND}

@@ -62,29 +62,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # To support other applications that don't work on WMs #
 wmname LG3D
-# ------------------------------------------------------------------------------ #
 
-# setup connected monitors #
-NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")  # No. monitors #
-MONITORS_LAYOUTS=$(grep -oP 'monitors-layouts = \K.*' "${BSPWM_DIR}/exodia.conf")
-
-if [[ ${NUM_OF_MONITORS} -ge 1 ]];
-
-	then
-		
-		if [[ -z "$MONITORS_LAYOUTS" ]];
-
-			then
-
-				bspmonitors
-		
-		else
-
-			bash ${MONITORS_LAYOUTS}
-		
-		fi
-		
-fi
 # ------------------------------------------------------------------------------ #
 
 # Workspaces Configurations #
@@ -120,6 +98,29 @@ bsprules
 
 
 ##  ------------------------- Autostart Apps -------------------------  ##
+
+# setup connected monitors #
+NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")  # No. monitors #
+MONITORS_LAYOUTS=$(grep -oP 'monitors-layouts = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+if [[ ${NUM_OF_MONITORS} -ge 1 ]];
+
+	then
+		
+		if [[ -z "$MONITORS_LAYOUTS" ]];
+
+			then
+
+				bspmonitors
+		
+		else
+
+			bash ${MONITORS_LAYOUTS}
+		
+		fi
+		
+fi
+# ------------------------------------------------------------------------------ #
 
 # Kill if already running #
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc picom
@@ -190,6 +191,7 @@ bspcomp
 bspbar
 bspdunst 
 bspfloat &
+
 # ------------------------------------------------------------------------------ #
 
 # Lauch Exodia OS Assistant #
