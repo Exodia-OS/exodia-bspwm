@@ -14,19 +14,8 @@ export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/
 
 # bspwm config directory #
 BSPWM_DIR="$HOME/.config/bspwm"
+EXODIA_ASSISTANT_CONFIG_DIR="$HOME/.config/exodia-assistant"
 
-##  -------------------------------------- Configurations --------------------------------------  ##
-
-# Load RGB keyboard Color Based On The Selected Theme #
-RGB_KEYBOARD=$(grep -oP 'RGB-keyboard = \K.*' "${BSPWM_DIR}/exodia.conf")
-if [[ -z "$RGB_KEYBOARD" ]];
-	
-	then
-	
-		RGB_KEYBOARD=JapaneseCity
-fi
-
-RGB-keyboard -${RGB_KEYBOARD}
 # ------------------------------------------------------------------------------ #
 
 # set keyboard Layouts #
@@ -194,21 +183,25 @@ bspfloat &
 
 # ------------------------------------------------------------------------------ #
 
-# Lauch Exodia OS Assistant #
-STATUS=$(grep -Po 'exodia-assistant-auto-start\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
-
-if [[ -z "$STATUS" ]];
+# Launch Exodia OS Assistant #
+if [[ -f "${EXODIA_ASSISTANT_CONFIG_DIR}/settings.yaml" ]]; 
 	
 	then
+    	
+		STATUS=$(grep -Po 'auto-start:\s*\K.*' "${EXODIA_ASSISTANT_CONFIG_DIR}/settings.yaml")
+
+else
+
+    STATUS=$(grep -Po 'exodia-assistant-auto-start\s*=\s*\K.*' "${BSPWM_DIR}/exodia.conf")
+
+fi
+
+if [[ "${STATUS}" == "true" ]];
 	
+	then
+    	
 		exodia-welcome
-
-elif [[ ${STATUS} == "true" ]];
-	
-	then
-
-    	exodia-welcome
-
+		
 fi
 
 ##  ------------------------------------- END --------------------------------------------------  ##
