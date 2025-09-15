@@ -127,3 +127,19 @@ content = "%{T5})%{T-}"
 content-background = ${color.BACKGROUND}
 content-foreground = #989cff
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD2]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = #00
+content-foreground = ${color.BG}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD3]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = #00
+content-foreground = ${color.BG}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

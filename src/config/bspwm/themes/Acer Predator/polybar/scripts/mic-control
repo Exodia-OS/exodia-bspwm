@@ -16,22 +16,22 @@ get_mic_node() {
 MIC_NODE=$(get_mic_node)
 
 if [[ -z "$MIC_NODE" ]]; then
-    echo "%{T3}%{F#ff0000} No Mic Detected"
+    echo "%{T3}%{F#ff0000}  No Mic Detected"
     exit 1
 fi
 
 get_status() {
     STATUS=$(wpctl get-volume "$MIC_NODE" 2>/dev/null)
     if [[ $? -ne 0 ]]; then
-        echo "%{T3}%{F#ff0000} Mic Error"
+        echo "%{T3}%{F#ff0000}  Mic Error"
         return 1
     fi
 
     VOLUME=$(echo "$STATUS" | awk '{print $2 * 100}' | cut -d'.' -f1)
     if echo "$STATUS" | grep -q MUTED; then
-        echo "%{T3}%{F#ff0000} Muted"
+        echo "%{T3}%{F#c8ccd4}  %{F#808080}Muted"
     else
-        echo "%{T3}%{F#80E6FE} ${VOLUME}%"
+        echo "%{T3}%{F#80E6FE}  ${VOLUME}%"
     fi
 }
 

@@ -28,7 +28,9 @@ interval = 5
 ;   <label-volume> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-format-volume = <ramp-volume> <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+# format-volume = <ramp-volume> <bar-volume>
+format-volume-background = ${color.BGL}
 
 ; Available tags:
 ;   <label-muted> (default)
@@ -37,10 +39,12 @@ format-volume = <ramp-volume> <bar-volume>
 format-muted = <label-muted>
 format-muted-prefix = 
 format-muted-prefix-font = 2
+format-muted-background = ${color.BGL}
 
 ; Available tokens:
 ;   %percentage% (default)
-;label-volume = %percentage%%
+label-volume = %percentage%%
+label-volume-foreground = #4ECEC7
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -130,12 +134,14 @@ type = internal/mpd
 interval = 2
 
 format-online = <label-song>
+format-online-foreground = ${color.GREEN}
 
 format-playing = ${self.format-online}
 format-paused = ${self.format-online}
 format-stopped = ${self.format-online}
 
-label-song =  "%title%"
+label-song =  " %title%"
+
 ; label-song =  "%artist% - %title%"
 label-song-maxlen = 25
 label-song-ellipsis = true
@@ -160,7 +166,7 @@ type = custom/script
 exec = ~/.config/bspwm/themes/Acer\\ Predator/polybar/scripts/mic-control
 tail = true
 label = %output%
-
+label-background = ${color.BGL}
 click-right = pavucontrol
 click-left  = ~/.config/bspwm/themes/Acer\\ Predator/polybar/scripts/mic-control --mute
 scroll-up   = ~/.config/bspwm/themes/Acer\\ Predator/polybar/scripts/mic-control --up

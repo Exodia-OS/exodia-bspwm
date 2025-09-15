@@ -1,0 +1,185 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; Global WM Settings ;;
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+# load files #
+include-file = ./system
+include-file = ./colors
+
+# contains brightness, workspaces, Date, etc.... #
+include-file = ./modules/modules
+
+# contains Music, microphone, etc.... #
+include-file = ./modules/mediaModules
+
+# contains CPU, Temperature, etc.... #
+include-file = ./modules/monitoringModules
+
+# contains the separators (e.g  , | , <| ,  ,etc..) #
+include-file = ./modules/separatorsModules
+
+# contains the Apps (e.g chrome, etc..) #
+include-file = ./modules/Apps
+
+;; --------------------------- bar main --------------------------- ;;
+
+[bar/main]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 100%
+height = 20
+offset-x = 0%
+offset-y = 0%
+
+background = ${color.BACKGROUND-top}
+foreground = ${color.FG}
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 5
+border-color = ${color.BACKGROUND-top}
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size18;4"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = sysmenu Dspace Finder Dspace File Dspace Edit Dspace View Dspace Go Dspace Window Dspace Help
+modules-center =
+modules-right  = xkeyboard Dspace date Dspace
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-name = bspwm
+locale =
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.BACKGROUND-top}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+; bspwm
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+;; ------------------------------ bar sec ------------------------------ ;;
+
+[bar/sec]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = true
+fixed-center = true
+
+width = 85%
+height = 50
+offset-x = 7.5%
+offset-y = 0.5%
+
+background = ${color.BACKGROUND}
+foreground = ${color.FG}
+
+radius-top = 8
+radius-bottom = 8
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 2
+border-color = ${color.BACKGROUND-border}
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size18;4"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = 
+modules-center = 
+modules-right  = 
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-name = bspwm
+locale =
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+; bspwm
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+;; ----------------------------- settings ----------------------------- ;;
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

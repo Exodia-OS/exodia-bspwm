@@ -16,6 +16,18 @@ export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/
 BSPWM_DIR="$HOME/.config/bspwm"
 EXODIA_ASSISTANT_CONFIG_DIR="$HOME/.config/exodia-assistant"
 
+##  -------------------------------------- Configurations --------------------------------------  ##
+
+# Load RGB keyboard Color Based On The Selected Theme #
+RGB_KEYBOARD=$(grep -oP 'RGB-keyboard = \K.*' "${BSPWM_DIR}/exodia.conf")
+if [[ -z "$RGB_KEYBOARD" ]];
+	
+	then
+	
+		RGB_KEYBOARD=JapaneseCity
+fi
+
+RGB-keyboard -${RGB_KEYBOARD}
 # ------------------------------------------------------------------------------ #
 
 # set keyboard Layouts #

@@ -70,19 +70,19 @@ exec = ~/.config/bspwm/themes/Acer\\ Predator/polybar/scripts/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.BLUE}
-
+format-background = ${color.BGL}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/memory]
 type = custom/script
 exec = exec free -g | sed -n 's/^Mem:\\s\\+[0-9]\\+\\s\\+\\([0-9]\\+\\)\\s.\\+/\\1/p'
 format = <label>
-format-prefix = "" 
+format-prefix = " " 
 format-prefix-font = 3
-
+format-background = ${color.BGL}
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e htop &:}%output%GB%{A}"
 label-padding = 1
-label-font = 4
+label-font = 3
 format-prefix-foreground = #d19a66
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -92,11 +92,11 @@ type = custom/script
 exec = ~/.config/bspwm/themes/Acer\\ Predator/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
-
+format-background =  ${color.BGL}
+format-foreground =  ${color.GREEN}
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e sudo pacman -Syyu &:} %output%%{A}"
 
 format-font = 4
-label-foreground =  ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -106,7 +106,7 @@ type = internal/cpu
 interval = 1
 
 format = <label>
-
+format-background = ${color.BGL}
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-foreground = ${color.PURPLE}

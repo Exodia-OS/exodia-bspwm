@@ -37,7 +37,7 @@ content-foreground = #3B4252
 
 [module/LD2]
 type = custom/text
-content = "%{T10}%{T-}"
+content = "%{T10}%{T-}"
 content-background = #3B4252
 content-foreground = ${color.BACKGROUND}
 
@@ -66,3 +66,17 @@ content-background = #3B4252
 content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+# | Direction                       | Symbol | Unicode  |
+# | ------------------------------- | ------ | -------- |
+# | Left                            | ``    | `U+E0BA` |
+
+# | Left (thicker)                  | ``    | `U+E0BE` |
+# | Right                           | ``    | `U+E0B8` |
+
+# | Right (thicker)                 | ``    | `U+E0BC` |
+# | Up                              | ``    | `U+E0BB` |
+# | Down                            | ``    | `U+E0BD` |
+# | Branch (used in git prompts)    | ``    | `U+E0A0` |
+# | Lock (used for read-only files) | ``    | `U+E0A2` |
+# | Divider (vertical bar)          | ``    | `U+E0B3` |
+# | Divider (vertical bar, thick)   | ``    | `U+E0B9` |

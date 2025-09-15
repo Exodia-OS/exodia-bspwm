@@ -1,0 +1,20 @@
+[color]
+BG = #090A0A
+BGL = #2c3038
+FG = #c8ccd4
+FGA = #808080
+
+BLACK = #000000
+WHITE = #FFFFFF
+RED = #e06c75
+GREEN = #4ECEC7
+YELLOW = #e5c07b
+BLUE = #61afef
+PURPLE = #c678dd
+CYAN = #56b6c2
+
+background = 
+FOREGROUND = 
+BACKGROUND-top = #202020
+BACKGROUND = #0F0F0F
+BACKGROUND-border = #B7B7B7

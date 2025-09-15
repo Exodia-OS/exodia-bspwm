@@ -1,0 +1,33 @@
+! ------------------------------------
+! 
+!  MacOS Light color scheme
+!
+!  @author      : 00xWolf
+!    GitHub    : @mmsaeed509
+!    Developer : Mahmoud Mohamed
+!  﫥  Copyright : Exodia OS
+!
+! ------------------------------------
+
+
+*background:  #FFFFFF
+*foreground:  #000000
+*cursorColor: #007AFF
+
+*color0:  #000000
+*color1:  #FF3B30
+*color2:  #34C759
+*color3:  #FFCC00
+*color4:  #007AFF
+*color5:  #AF52DE
+*color6:  #5AC8FA
+*color7:  #8E8E93
+
+*color8:  #8E8E93
+*color9:  #FF453A
+*color10: #30D158
+*color11: #FFD60A
+*color12: #0A84FF
+*color13: #BF5AF2
+*color14: #64D2FF
+*color15: #FFFFFF

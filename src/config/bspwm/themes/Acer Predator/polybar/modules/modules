@@ -31,8 +31,8 @@ card = intel_backlight
 ;   <label> (default)
 ;   <ramp>
 ;   <bar>
-format = <ramp> <label>
-
+format = <label> <ramp>
+format-foreground = ${color.CYAN}
 ; Available tokens:
 ;   %percentage% (default)
 label = %percentage%%
@@ -50,7 +50,6 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -67,8 +66,8 @@ enable-scroll = true
 ;   <label> (default)
 ;   <ramp>
 ;   <bar>
-format = <ramp> <label>
-
+format = <label> <ramp>
+format-foreground = ${color.CYAN}
 ; Available tokens:
 ;   %percentage% (default)
 label = %percentage%%
@@ -86,7 +85,6 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -233,13 +231,13 @@ ramp-signal-font = 2
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = " %layout%"
-label-layout-foreground = ${color.FG}
+label-layout = "%layout% "
+label-layout-foreground = ${color.CYAN}
 label-layout-font = 4
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = ${color.FG}
+label-indicator-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -260,7 +258,7 @@ interval = 1.0
 
 time = " %I:%M %p"
 
-time-alt = " %b %d, %G"
+time-alt = " %G, %b %d"
 
 format = <label>
 ; format-prefix = "  "
@@ -292,6 +290,7 @@ type = custom/text
 content = ""
 content-font = 3
 content-foreground = ${color.GREEN}
+content-background = ${color.BG}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
@@ -305,6 +304,7 @@ content = ""
 content-font = 3
 
 content-foreground = ${color.GREEN}
+content-background = ${color.BG}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher
@@ -350,7 +350,7 @@ format-disconnected-prefix = 睊
 format-disconnected-foreground = #FF0008
 format-disconnected-background = ${color.BGL}
 
-label-connected = "%{A1:nmd &:} %ifname% ∙  %signal% ∙ 歷 %local_ip% ∙ ﬉ %essid% ∙  %downspeed% ∙ 祝 %upspeed%%{A}"
+label-connected = "%{A1:nmd &:} %ifname%   %signal%  歷 %local_ip%  ﬉ %essid%   %downspeed%  祝 %upspeed%%{A}"
 label-connected-background = ${color.BGL}
 
 label-disconnected = "%{A1:nmd &:} Disconnected%{A}"

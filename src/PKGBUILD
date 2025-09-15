@@ -3,21 +3,16 @@
 #
 
 pkgname=exodia-bspwm
-pkgver=9.0
-pkgrel=2
+pkgver=10.0
+pkgrel=0
 pkgdesc="BSPWM Config For Exodia OS"
 arch=('any')
 url="https://github.com/Exodia-OS/exodia-bspwm"
 license=('GPL3')
 install=${pkgname}.install
 conflicts=('exodia-bspwm-predator')
-
-# Added source and checksum for package integrity
-source=("https://github.com/Exodia-OS/exodia-bspwm/archive/v${pkgver}.tar.gz")
-sha256sums=('SKIP') # Replace 'SKIP' with the actual checksum for better security
-
-# Organized dependencies for better readability
 depends=(
+
     'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo' 'tint2'
     'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
     'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
@@ -31,21 +26,25 @@ depends=(
     'msi-backgrounds' 'parrot-backgrounds' 'tokyo-backgrounds' 
 )
 
-# Improved file operations with error handling
 prepare() {
-    cp -af ../config/. ${srcdir} || exit 1
+
+	cp -af ../config/. ${srcdir}
+
 }
 
+
 package() {
-    local CONFIG_DIR=${pkgdir}/etc/skel/.config
-    local BSPWM_DIR=${CONFIG_DIR}/bspwm
 
-    mkdir -p "${CONFIG_DIR}" "${BSPWM_DIR}" || exit 1
+	local CONFIG_DIR=${pkgdir}/etc/skel/.config
+	local BSPWM_DIR=${CONFIG_DIR}/bspwm
 
-    cp -r ${srcdir}/* "${CONFIG_DIR}" || exit 1
+	mkdir -p "${CONFIG_DIR}" "${BSPWM_DIR}"
 
-    chmod +x "${BSPWM_DIR}"/bin/* || exit 1
-    chmod +x "${BSPWM_DIR}"/rofi/bin/* || exit 1
+	cp -r ${srcdir}/*	"${CONFIG_DIR}"
 
-    install -Dm 755 ${srcdir}/bspwm/bspwmrc "${BSPWM_DIR}"/bspwmrc || exit 1
+	chmod +x "${BSPWM_DIR}"/bin/*
+	chmod +x "${BSPWM_DIR}"/rofi/bin/*
+
+	install -Dm 755 ${srcdir}/bspwm/bspwmrc "${BSPWM_DIR}"/bspwmrc
+	
 }

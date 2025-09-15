@@ -1,0 +1,33 @@
+! ------------------------------------
+! 
+!  MacOS Dark color scheme
+!
+!  @author      : 00xWolf
+!    GitHub    : @mmsaeed509
+!    Developer : Mahmoud Mohamed
+!  﫥  Copyright : Exodia OS
+!
+! ------------------------------------
+
+
+*background:  #1C1C1E
+*foreground:  #FFFFFF
+*cursorColor: #007AFF
+
+*color0:  #1C1C1E
+*color1:  #FF453A
+*color2:  #32D74B
+*color3:  #FFD60A
+*color4:  #007AFF
+*color5:  #BF5AF2
+*color6:  #64D2FF
+*color7:  #8E8E93
+
+*color8:  #48484A
+*color9:  #FF453A
+*color10: #30D158
+*color11: #FFD60A
+*color12: #0A84FF
+*color13: #BF5AF2
+*color14: #64D2FF
+*color15: #FFFFFF

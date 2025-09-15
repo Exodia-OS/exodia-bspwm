@@ -9,11 +9,10 @@
 !
 ! ------------------------------------
 
-
 *background: #090a0a
 *foreground: #dfe1e1
 
-*color0: #191c1c
+*color0: #090a0a
 *color1: #247270
 *color2: #2A817E
 *color3: #2E908D

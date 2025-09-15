@@ -97,8 +97,10 @@ LAUNCH_SINGLE_BAR() {
 	done
 
 	# Launch polybar #
-	polybar -q main -c   "$DIR"/config &
-	polybar -q sec  -c   "$DIR"/config &
+	polybar -q left -c    "$DIR"/config &
+	polybar -q main -c    "$DIR"/config &
+	polybar -q right -c   "$DIR"/config &
+	polybar -q sec  -c    "$DIR"/config &
 
 }
 
@@ -139,7 +141,9 @@ LAUNCH_MULTI_BAR() {
 		
 		do
 
+			MONITOR=$MON polybar -q left -c   "$DIR"/config &
 			MONITOR=$MON polybar -q main -c   "$DIR"/config &
+			MONITOR=$MON polybar -q right -c   "$DIR"/config &
 			MONITOR=$MON polybar -q sec  -c   "$DIR"/config &
 	
 	done

@@ -1,0 +1,207 @@
+#!/bin/bash
+
+# bspwm config directory #
+BSPWM_DIR="$HOME/.config/bspwm"
+
+API_KEY=$(grep -oP 'weather-API = \K.*' "${BSPWM_DIR}/exodia.conf")
+CITY_ID=$(grep -oP 'weather-city-ID = \K.*' "${BSPWM_DIR}/exodia.conf")
+
+# Weather data #
+KEY=$API_KEY
+ID=$CITY_ID
+UNIT="metric"	# Available options : 'metric' or 'imperial'
+
+# Get data #
+GET_WEATHER_INFO() {
+	
+	weather=$(curl -sf "http://api.openweathermap.org/data/2.5/weather?APPID="$KEY"&id="$ID"&units="$UNIT"")
+
+	if [ ! -z "$weather" ];
+		
+		then
+
+			WEATHER_TEMP=`echo "$weather" | jq ".main.temp" | cut -d "." -f 1`
+			WEATHER_ICON_CODE=`echo "$weather" | jq -r ".weather[].icon" | head -1`
+			weather_description=`echo "$weather" | jq -r ".weather[].description" | head -1 | sed -e "s/\b\(.\)/\u\1/g"`
+
+			# Big long if statement of doom #
+			if [ "$WEATHER_ICON_CODE" == "50d"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					weather_quote="Forecast says it's misty \nMake sure you don't get lost on your way..."
+					WEATHER_HEX="#84afdb"
+
+			elif [ "$WEATHER_ICON_CODE" == "50n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
+					WEATHER_HEX="#84afdb"
+
+			elif [ "$WEATHER_ICON_CODE" == "01d"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..."
+					WEATHER_HEX="#ffd86b"
+
+			elif [ "$WEATHER_ICON_CODE" == "01n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's a clear night \nYou might want to take a evening stroll to relax..."
+					WEATHER_HEX="#fcdcf6"
+
+			elif [ "$WEATHER_ICON_CODE" == "02d"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "02n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's a cloudy night \nHow about some hot chocolate and a warm bed?"
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "03d"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "03n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's a cloudy night \nHow about some hot chocolate and a warm bed?"
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "04d"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "04n"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's a cloudy night \nHow about some hot chocolate and a warm bed?"
+					WEATHER_HEX="#adadff"
+
+			elif [ "$WEATHER_ICON_CODE" == "09d"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
+					WEATHER_HEX="#6b95ff"
+
+			elif [ "$WEATHER_ICON_CODE" == "09n"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE=" It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
+					WEATHER_HEX="#6b95ff"
+
+			elif [ "$WEATHER_ICON_CODE" == "10d"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
+					WEATHER_HEX="#6b95ff"
+
+			elif [ "$WEATHER_ICON_CODE" == "10n"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE=" It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
+					WEATHER_HEX="#6b95ff"
+
+			elif [ "$WEATHER_ICON_CODE" == "11d"  ];
+			
+				then
+
+					WEATHER_ICON=""
+					WEATHER_QUOTE="There's storm for forecast today \nMake sure you don't get blown away..."
+					WEATHER_HEX="#ffeb57"
+
+			elif [ "$WEATHER_ICON_CODE" == "11n"  ];
+				
+				then
+
+					WEATHER_ICON=""
+					WEATHER_QUOTE="There's gonna be storms tonight \nMake sure you're warm in bed and the windows are shut..."
+					WEATHER_HEX="#ffeb57"
+
+			elif [ "$WEATHER_ICON_CODE" == "13d"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's gonna snow today \nYou'd better wear thick clothes and make a snowman as well!"
+					WEATHER_HEX="#e3e6fc"
+
+			elif [ "$WEATHER_ICON_CODE" == "13n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="It's gonna snow tonight \nMake sure you get up early tomorrow to see the sights..."
+					WEATHER_HEX="#e3e6fc"
+
+			elif [ "$WEATHER_ICON_CODE" == "40d"  ];
+			
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="Forecast says it's misty \nMake sure you don't get lost on your way..."
+					WEATHER_HEX="#84afdb"
+
+			elif [ "$WEATHER_ICON_CODE" == "40n"  ];
+				
+				then
+
+					WEATHER_ICON=" "
+					WEATHER_QUOTE="Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
+					WEATHER_HEX="#84afdb"
+
+			else
+
+				WEATHER_ICON=" "
+				WEATHER_QUOTE="Sort of odd, I don't know what to forecast \nMake sure you have a good time!"
+				WEATHER_HEX="#adadff"
+
+			fi
+
+			echo -e "%{T3}%{B#2c3038}%{F#4ECEC7}$WEATHER_ICON%{F#4ECEC7}$WEATHER_TEMP °C"
+	
+		else
+
+				echo -e "%{T3}%{B#2c3038}%{F#4ECEC7} No Data"
+
+		fi
+
+}
+
+# Execute #
+GET_WEATHER_INFO
