@@ -18,17 +18,17 @@ sha256sums=('SKIP') # Replace 'SKIP' with the actual checksum for better securit
 
 # Organized dependencies for better readability
 depends=(
-    'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
+    'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo' 'tint2'
     'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
     'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
-    'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
+    'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot' 'lsd'
     'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
-    'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'lsd'
+    'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'windows-backgrounds'
     'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds'
     'catppuccin-backgrounds' 'exodia-cyberpunk-backgrounds'
     'exodia-default-backgrounds' 'exodia-islamic-warrior-backgrounds'
     'extra-backgrounds' 'kali-backgrounds' 'mac-os-x-backgrounds'
-    'msi-backgrounds' 'parrot-backgrounds' 'tokyo-backgrounds' 'windows-backgrounds'
+    'msi-backgrounds' 'parrot-backgrounds' 'tokyo-backgrounds' 
 )
 
 # Improved file operations with error handling
