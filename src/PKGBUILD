@@ -16,7 +16,7 @@ depends=(
     'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo' 'tint2'
     'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp' 'xwinwrap-git'
     'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
-    'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot' 'lsd'
+    'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot' 'lsd' 'mpv'
     'wmname' 'xsensors' 'stacer' 'powershell-preview-bin' 'mpvpaper'
     'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'windows-backgrounds'
     'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds'
