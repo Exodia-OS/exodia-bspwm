@@ -14,7 +14,7 @@ conflicts=('exodia-bspwm-predator')
 depends=(
 
     'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo' 'tint2'
-    'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
+    'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp' 'xwinwrap-git'
     'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
     'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot' 'lsd'
     'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
