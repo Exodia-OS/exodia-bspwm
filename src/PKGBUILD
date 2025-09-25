@@ -17,7 +17,7 @@ depends=(
     'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp' 'xwinwrap-git'
     'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
     'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot' 'lsd'
-    'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
+    'wmname' 'xsensors' 'stacer' 'powershell-preview-bin' 'mpvpaper'
     'exodia-oh-my-posh' 'jgmenu' 'exodia-jgmenu' 'windows-backgrounds'
     'mesa-utils' 'exodia-assistant' 'mortal-kombat-x-backgrounds'
     'catppuccin-backgrounds' 'exodia-cyberpunk-backgrounds'
